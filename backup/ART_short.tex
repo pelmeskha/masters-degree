@@ -1,0 +1,590 @@
+
+\documentclass[preprint,12pt]{elsarticle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{float} 
+\usepackage{mathrsfs}
+\usepackage{nicematrix}
+\usepackage{subcaption}
+\usepackage[font={small,it}]{caption}
+
+\DeclareMathOperator\arctanh{arctanh}
+\captionsetup{justification=centering}
+\newtheorem{theorem}{Statement}
+
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\sn}{sn}
+
+\journal{Applied Mathematics And Computation}
+
+\begin{document}
+
+\begin{frontmatter}
+
+
+\title{Numerical study of soliton solutions of the cubic-quintic-septic nonlinear Schr\"{o}dinger equation}
+
+
+
+\author{V.A. Medvedev \corref{mycorrespondingauthor}}
+\cortext[mycorrespondingauthor]{Corresponding author}
+\ead{viktormedvedev12115551@gmail.com}
+\author{N.A. Kudryashov}
+\ead{nakudr@gmail.com}
+
+\address{Department of Applied Mathematics, National Research Nuclear University MEPhI (Moscow Engineering Physics Institute), 31 Kashirskoe Shosse, 115409 Moscow, Russian Federation}
+
+
+\begin{abstract}
+The problem of pulse propagation described by the nonlinear Schr\"{o}dinger equation with non-Kerr nonlinearity of the third, fifth and seventh powers is considered. Optical solitons of the considered equation are found. The area of acceptable model parameters is presented. A modification of the split-step Fourier method for the numerical study of the wave propagation processes is presented. The process of the interaction of soliton pulse with a disturbance in the initial condition is analyzed. The influence of higher nonlinearity powers on the nonlinear Schr\"{o}dinger equation soliton solutions is studied. The results are discussed. Two possible types of pulse behavior depending on the model parameters are discovered. It is shown that low-intensity solitons are less sensitive to additional nonlinearity powers in the model equation. As a result of numerical analysis, the stability of optical solitons of the cubic-quintic-septic nonlinear Schr\"{o}dinger equation is proved.
+\end{abstract}
+
+%%Graphical abstract
+\begin{graphicalabstract}
+%\includegraphics{grabs}
+\end{graphicalabstract}
+
+%%Research highlights
+\begin{highlights}
+\item Pulse propagation processes described by the generalized nonlinear Schr\"{o}dinger equation are modeled
+\item The interaction of a soliton pulse with external disturbance is modeled
+\item The impact of higher nonlinearity powers in the generalized Schr\"{o}dinger equation is investigated 
+\end{highlights}
+
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+Cubic-quintic-septic nonlinear Schr\"{o}dinger equation \sep Split-step Fourier scheme \sep Optical soliton \sep Numerical modeling \sep Nonlinear optics \sep Nonlinear differential equations
+%% PACS codes here, in the form: \PACS code \sep code
+\PACS 42.65.-k \sep 42.65.Tg \sep 02.60.-x \sep 02.60.Cb
+%% MSC codes here, in the form: \MSC code \sep code
+\MSC 65T50 \sep 78A60 \sep 35Q55 \sep 35Q51
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+\end{keyword}
+
+\end{frontmatter}
+
+
+\section{Introduction}\label{sec0}
+
+In 1973, A. Hasegawa and F. Tappert formulated the conditions for the existence of light optical solitons in single-mode optical fibers, and suggested the possibility of their use in signal transmission\cite{Rad19,Hasegawa1973}.  In 1980, the feasibility of light solitons in single-mode optical fibers was confirmed experimentally by Mollenauer, Stolen and Gordon \cite{Rad01,Rad02}, which caused a powerful impetus to the development of nonlinear optics \cite{Rad14,Rad15,Rad16,Rad03}.
+
+It is well-known that the nonlinear Schr\"{o}dinger (NLS) equation, which includes the group velocity dispersion and self-phase modulation, is the main nonlinear equation used to describe the pulse dynamics. The classical NLS equation takes the following form:
+\begin{equation}\label{eq1}
+iu_{t}+u_{xx}+a|u|^2 u=0,
+\end{equation}
+where \(u(x,t)\) is a complex function, \(i^{2}=-1\) and \(a\) is a model parameter. This equation is parabolic, which determines the properties of the applicability of numerical and analytical methods. The solitons of the NLS equation have the group of waves envelope form, which allows them to be used in the group properties of the wave packet description.
+
+In order to increase the bit rate of the optical fiber, it is desirable to use shorter pulses. As the pulses become shorter, the role of higher-order physical effects, such as high-order dispersion \cite{Rad5,Rad8,Rad020,Rad014,Rad016}, self-steepening \cite{UZUNOV2022170137}, and intrapulse stimulated Raman scattering \cite{WANG2022120667,GROMOV201488}, become important and the dynamics of nonlinear wave packets should be described by the higher-order nonlinear Schr\"{o}dinger family equations. Moreover, to describe the shorter pulse propagation in a highly nonlinear optical fiber, it is necessary to take into account the higher non-Kerr nonlinear terms in the model \cite{Rad9,Rad015,Rad017,Rad018,Rad019}. Therefore, various generalizations of the NLS equation are studied in papers \cite{Rad10,Rad11,Rad17,Rad18}. 
+
+Taking into account all the aforecited physical factors significantly complicates the analytical study of the processes described by the proposed mathematical models. Therefore, with the development of computational capabilities, numerical methods are increasingly used for research.
+
+For instance, the NLS equation as a classical field model was numerically studied in papers \cite{Rad04,Rad05}. These papers verified the instability of uniform solutions and revealed that instability does not grow unboundedly as expected in linear theory. Also these works revealed the fact, that solution returns to the initial conditions periodically. This phenomenon, known as recurrence, was also observed in works of Fermi, Pasta and Ulam \cite{Rad06}. In addition to nonlinear optics, the NLS equation finds its application in plasma physics and deep inviscid water theory.
+
+Among the schemes for solving the NLS equation numerically, are finite difference and split-step Fourier methods \cite{Rad04,Rad07}. Among the more advanced schemes, we can note papers \cite{Rad08,Rad09,Rad010,Rad011,Rad012,Rad013,QIN2022126580}, where space discretization is being made mainly by finite differences or finite elements methods, and time discretization is made by using the explicit variable time-step method \cite{Rad08,Rad09}, the leapfrog scheme \cite{Rad010}, a modified Crank-Nicolson scheme \cite{Rad011} and other ways. Due to well-studied properties, the NLS equation is suitable for the validation of newly developed numerical methods.
+
+Despite the variety of proposed mathematical models, the question of which one is most suitable for describing the processes of pulse propagation remains open.
+In this paper, we consider one of generalizations of the NLS equation - a cubic-quintic-septic nonlinear Schr\"{o}dinger equation, which was presented in Ref. \cite{Rad3}. 
+
+This equation takes the following form:
+\begin{equation}\label{eq2}
+iu_{t}+au_{xx}+b_{1}|u|^2 u+b_{2}|u|^4 u+b_{3}|u|^6 u=0,
+\end{equation}
+where \(u(x,t)\) is a complex function, \(a\), \(b_{1}\), \(b_{2}\) and \(b_{3}\) are model parameters. In case \(b_{3}=0\) the study of Eq. (\ref{eq2}) was presented in book \cite{Rad02}.
+
+This paper is organized as follows.
+In Section \ref{ch2}, we construct an analytical solution of Eq. (\ref{eq2}) in the form of a solitary wave using the implicit function method and the simplest equation method \cite{Rad4}. We also depict the area of acceptable model parameters, in which soliton solution exists. In Section \ref{ch3}, we describe a modified split-step Fourier method for modeling the propagation processes described by Eq. (\ref{eq2}) and give a simplified flowchart of the program code for numerical computations. In Section \ref{ch6}, we apply the Fourier method for modeling a solitary wave propagation process described by Eq. (\ref{eq2}). In Section \ref{ch8}, we simulate the interaction of a soliton pulse from the area of conditional stable parameters with disturbance in the initial condition and discuss the fact of pulse stability. In Section \ref{ch9}, we investigate the impact of higher nonlinearity powers on the numerical solution of the NLS equation.
+
+\section{Analytical solution for the cubic-quintic-septic nonlinear Schr\"{o}dinger equation}\label{ch2}
+Let us look for the optical one-moded solitons of Eq. (\ref{eq2}) in the form
+\begin{equation}\label{eq3}
+u(x,t)=y(z)e^{i(kx-\omega t-\theta_{0})}, \quad z=x-c_{0}t,\quad k,\omega,c_{0},\theta_{0} \in \mathbb{R},
+\end{equation}
+where \(y(z)\) is a real function. Substituting (\ref{eq3}) with Eq. (\ref{eq2}) we obtain the overdetermined system of equations for \(y(z)\) in the form
+\begin{equation} \label{eq4}
+a y_{zz}+b_{3} y^{7} +b_{2} y^{5} + b_{1} y^{3}+\left(\omega-ak^{2}\right) y=0,
+\end{equation}
+\begin{equation} \label{eq5}
+(2 a k-c_{0})y_{z}=0.
+\end{equation}
+
+Eq. (\ref{eq5}) is satisfied at \(c_{0}=2ak\). Eq. (\ref{eq4}) has the first integral in the following form:
+\begin{equation} \label{eq6}
+ay_{z}^{2}+\frac{b_{3} y^{8} }{4}+\frac{b_{2} y^{6} }{3}+\frac{b_{1} y^{4} }{2}+\left(\omega-ak^{2}\right) y^{2} =c_{1}.
+\end{equation}
+
+Using a new variable \(y(z)=\sqrt{V(z)}\), Eq. (\ref{eq6}) can be written as:
+\begin{equation} \label{eq7}
+\frac{ a}{4}V_{z}^{2}+\frac{b_{3}}{4}V^{5} +\frac{b_{2}}{3}V^{4} +\frac{b_{1}}{2}V^{3}+\left( \omega- ak^{2}\right)V^{2}-c_{1} V=0.
+\end{equation}
+
+We look for a solution of Eq. (\ref{eq7}) in the form \(V(z)=F(\xi),\,\xi=\psi(z)\), assuming \(c_{1}=0\) and
+\begin{equation} \label{eq8}
+\xi_{z}=\pm F(\xi),
+\end{equation}
+which yields:
+\begin{equation}\label{eq9}
+F_{\xi}^{2}+\frac{ b_{3}}{a}F^{3}+\frac{4 b_{2}}{3 a} F^{2}+\frac{2b_{1}}{a}F+4\left(\frac{\omega}{a} -k^{2}\right)=0.
+\end{equation}
+
+Eq. (\ref{eq9}) can be written as:
+\begin{equation}\label{eq10}
+\begin{aligned}
+\begin{split}
+\left[\frac{d}{d\xi}\left(F+\frac{4 b_{2}}{9 b_{3}}\right)\right]^{2}+
+\frac{b_{3}}{a}\left(F+\frac{4 b_{2}}{9 b_{3}}\right)^{3}&+
+\frac{2 (27 b_{3} b_{1}-8 b_{2}^{2}) }{27 a b_{3}}\left(F+\frac{4 b_{2}}{9 b_{3}}\right)+\\
+&+\frac{128 b_{2}^{3}}{729 a b_{3}^{2}}-\frac{8 b_{1} b_{2}}{9 a b_{3}}-4 k^{2}+\frac{4 \omega}{a}=0.
+\end{split}
+\end{aligned}
+\end{equation}
+
+Introducing new constants:
+\begin{equation}
+\begin{aligned}
+\begin{split}
+&g_{2}=\frac{64 b_{2}^{2}}{27 b_{3}^{2}}-\frac{8 b_{1}}{b_{3}},\\
+&g_{3}=\frac{512 b_{2}^{3}}{729 b_{3}^{3}}
+-\frac{32 b_{1} b_{2}}{9 b_{3}^{2}}
+-\frac{16 a \,k^{2}}{b_{3}}
++\frac{16 \omega}{b_{3}},\\
+&\psi=-F-\frac{4 b_{2}}{9 b_{3}},
+\end{split}
+\end{aligned}
+\end{equation}
+Eq. (\ref{eq10}) can be written in the form:
+\begin{equation}\label{eq12}
+\left(\left(2\sqrt{\frac{a}{b_{3}}}\right)\psi_{\xi}\right)^{2}=4 \psi^{3}-g_{2} \psi-g_{3}.
+\end{equation}
+
+A general solution of Eq. (\ref{eq12}) is expressed via the Weierstrass elliptic function, which yields:
+\begin{equation}\label{eq13}
+F(\xi)=-\wp\left(\left[\frac{1}{2}\sqrt{\frac{b_{3}}{a}}\left(\xi-\xi_{0}\right)\right];g_{2};g_{3}\right)-\frac{4 b_{2}}{9 b_{3}}.
+\end{equation}
+
+Taking into account condition (\ref{eq8}), it is possible to find \(\xi(z)\) in the form of the quadrature integral 
+\begin{equation}
+z-z_{0}=\pm\int \frac{d\xi}{F(\xi)}=\mp \int \frac{d\xi}{\wp\left(\left[\frac{1}{2}\sqrt{\frac{b_{3}}{a}}\left(\xi-\xi_{0}\right)\right];g_{2};g_{3}\right) + \frac{4 b_{2}}{9 b_{3}} },
+\end{equation}
+that in the general case cannot be calculated. 
+
+However, this integral can be calculated for a special form of \(F(\xi)\).
+Using the approach from paper \cite{Rad4}, we look for the solution of Eq. (\ref{eq9}) in the form:
+\begin{equation} \label{eq15}
+F(\xi)=M_{0}+M_{1}\,Q(\xi)+M_{2}\,Q^{2}(\xi),
+\end{equation}
+where \(Q(\xi)\) is the solution of the Riccati equation
+\begin{equation}\label{eq16}
+Q_{\xi}=\mu\,(Q^{2}-Q),
+\end{equation}
+in the form:
+\begin{equation}
+Q(\xi)=\frac{1}{1+\exp\left(\mu(\xi-\xi_{0})\right)}.
+\end{equation}
+
+Using (\ref{eq16}) and substituting Eq. (\ref{eq15}) into equation (\ref{eq9}), we get the polynomial in \(Q(\xi)\) equal to zero:
+\begin{equation}
+\begin{aligned}
+\begin{split}
+&\left(\frac{b_{3} M_{2}^{3}}{a}+4 \mu^{2} M_{2}^{2}\right) Q(\xi)^{6}+
+\left(4 \mu^{2} M_{1} M_{2}-8 \mu^{2} M_{2}^{2}+\frac{3 b_{3} M_{1} M_{2}^{2}}{a}\right) Q(\xi)^{5}+\\
+&+\left(\frac{4 b_{2} M_{2}^{2}}{3 a}-8 \mu^{2} M_{1} M_{2}+\mu^{2} M_{1}^{2}+4 \mu^{2} M_{2}^{2}+\frac{3 b_{3} M_{0} M_{2}^{2}}{a}+\frac{3 b_{3} M_{1}^{2} M_{2}}{a}\right) Q(\xi)^{4}+\\
+&+\left(4 \mu^{2} M_{1} M_{2}+\frac{b_{3} M_{1}^{3}}{a}-2 \mu^{2} M_{1}^{2}+\frac{8 b_{2} M_{1} M_{2}}{3 a}+\frac{6 b_{3} M_{0} M_{1} M_{2}}{a}\right) Q(\xi)^{3}+\\
+&+\left(\frac{2 b_{1} M_{2}}{a}+\frac{4 b_{2} M_{1}^{2}}{3 a}+\mu^{2} M_{1}^{2}+\frac{3 b_{3} M_{0}^{2} M_{2}}{a}+\frac{3 b_{3} M_{0} M_{1}^{2}}{a}+\frac{8 b_{2} M_{0} M_{2}}{3 a}\right) Q(\xi)^{2}+\\
+&+\left(\frac{2 b_{1} M_{1}}{a}+\frac{3 b_{3} M_{0}^{2} M_{1}}{a}+\frac{8 b_{2} M_{0} M_{1}}{3 a}\right) Q(\xi)+\\
+&+\left(\frac{4 b_{2} M_{0}^{2}}{3 a}+\frac{2 b_{1} M_{0}}{a}+\frac{b_{3} M_{0}^{3}}{a}-4 k^{2}+\frac{4 \omega}{a}\right)=0.
+\end{split}
+\end{aligned}
+\end{equation}
+
+Since \(Q(\xi) \neq 0\), the coefficients of this polynomial are equal to zero. This leads us to the following system of constraints:
+\begin{equation}\label{eq19}
+\begin{cases}
+\omega=\cfrac{a (-4 \mu^{2} M_{0}^{3}-\mu^{2} M_{0}^{2} M_{1}+4 k^{2} M_{1})}{4 M_{1}},\\
+b_{1}=\cfrac{a \mu^{2} M_{0} (6 M_{0}+M_{1})}{M_{1}},\\
+b_{2}=-\cfrac{3 a \mu^{2} (12 M_{0}+M_{1})}{4 M_{1}},\\
+b_{3}=\cfrac{4 a \mu^{2}}{M_{1}},\\
+M_{2}=-M_{1}.
+\end{cases}
+\end{equation}
+
+So we can write an exact form of \(F(\xi)\):
+\begin{equation}
+F(\xi)=M_{0}+\frac{M_{1}}{1+e^{\mu(\xi-\xi_{0})}}-\frac{M_{1}}{\left(1+e^{\mu(\xi-\xi_{0})}\right)^{2}}.
+\end{equation}
+
+For this type of \(F(\xi)\) the following expression can be integrated:
+\begin{equation}
+\frac{d \xi}{F(\xi)}=dz,
+\end{equation}
+and the dependence between \(\xi\) and \(z\) takes the following form:
+\begin{equation} \label{eq22}
+z=z_{0}+\frac{\xi}{M_{0}}+\frac{2 M_{1}}{\mu M_{0} \sqrt{4 M_{0} M_{1}+M_{1}^{2}}} \arctanh \left(\frac{2 {\mathrm e}^{\mu (\xi-\xi_{0})} M_{0}+2 M_{0}+M_{1}}{\sqrt{4 M_{0} M_{1}+M_{1}^{2}}}\right).
+\end{equation}
+
+The solution of Eq. (\ref{eq6}) at \(c_{1}=0\) is now expressed by the formula:
+\begin{equation}\label{eq23}
+y(\xi)=\left[ M_{0}+\frac{M_{1}}{1+e^{\mu(\xi-\xi_{0})}}-\frac{M_{1}}{\left(1+e^{\mu(\xi-\xi_{0})}\right)^{2}}\right]^{\frac{1}{2}},
+\end{equation}
+where \(M_{0}\), \(M_{1}\), \(\xi_{0}\) are arbitrary constants, \(\xi(z)\) is determined by means of Eq. (\ref{eq22}), and the constraints (\ref{eq19}) between the model coefficients are satisfied.
+
+The solution of Eq. (\ref{eq2}) takes the following form:
+\begin{equation}\label{eq24}
+u(x,t)=y(z)e^{i(kx-\omega t-\theta_{0})}, \quad z=x-2akt,
+\end{equation}
+where \(a\), \(k\), \(\theta_{0}\) are arbitrary constants. 
+
+Taking into account \(z\), \(\xi (z)\), \(y(\xi)\) \(\in \mathbb{R}\), from (\ref{eq22}) and (\ref{eq23}) we get constraints for parameters \(M_{0}\) and \(M_{1}\):
+\begin{equation} \label{eq25}
+\left|\frac{2 {\mathrm e}^{\mu (\xi-\xi_{0})} M_{0}+2 M_{0}+M_{1}}{\sqrt{4 M_{0} M_{1}+M_{1}^{2}}}\right|< 1,
+\end{equation}
+\begin{equation} \label{eq26}
+M_{0}+\frac{M_{1}}{1+e^{\mu(\xi-\xi_{0})}}-\frac{M_{1}}{\left(1+e^{\mu(\xi-\xi_{0})}\right)^{2}}\ge 0.
+\end{equation}
+
+These constraints are satisfied on a finite interval of \(\xi\) due to the presence of the exponent in (\ref{eq25}), which imposes additional restrictions while building a solution.
+
+Conditions (\ref{eq25}) and (\ref{eq26}) are satisfied due to the real values of \(z\), \(\xi (z)\), \(y(\xi)\) and the positive values of \(b_{1}\), \(b_{2}\), \(b_{3}\) in the next area of the parameters \(M_{1}\) and \( M_{0}\) (see Fig. \ref{fig1}):
+\begin{equation} \label{eq27}
+\begin{cases}
+M_{0}<0,\\
+-4 M_{0} < M_{1} < -6 M_{0}.
+\end{cases}
+\end{equation}
+
+\begin{figure}[H]  %% color here
+\center
+\includegraphics[width=6cm,trim={0 0 0 0},clip]{fig1.png} 
+\caption{Acceptable values of \(M_{1}\) and \( M_{0}.\)}
+\label{fig1}
+\end{figure}
+
+\section{Modification of the split-step Fourier method for modeling processes described by cubic-quintic-septic nonlinear Schr\"{o}dinger equation}\label{ch3}
+
+We consider a family of generalized NLS equations that can be written as follows:
+\begin{equation}
+u_{t}=i\mathscr{L} [u]+i\mathscr{N}[u]u,
+\end{equation}
+As example, at \(\mathscr{L} [u] \equiv u_{xx},  \,\,  \mathscr{N} [u] \equiv a|u|^2\) we obtain the well-known nonlinear Shr\"{o}dinger equation (\ref{eq1}).
+
+To implement a Fourier method, we denote a periodic boundary conditions, which yields:
+\begin{equation} \label{eq30}
+\begin{aligned}
+\begin{cases}
+u\left(-\frac{L}{2},t\right)=u\left(\frac{L}{2},t\right),\\
+\cfrac{\partial u}{\partial x}\left(-\frac{L}{2},t\right)=\cfrac{\partial u}{\partial x}\left(\frac{L}{2},t\right).
+\end{cases}
+\end{aligned}
+\end{equation}
+
+Assuming \( x \in [-\frac{1}{2} L, \frac{1}{2} L]\), \( t \in [0, T]\), we divide x-interval in \(N\) equal parts with a spatial step
+\begin{equation}
+h=\frac{L}{N}.
+\end{equation}
+
+The space grid points are denoted as
+\begin{equation}
+x_{j}=jh, \quad j= -\frac{N}{2}, \ldots , \frac{N}{2}.
+\end{equation}
+
+Let \(\boldsymbol{U}^{m}\) be a grid approximation of a solution on a time layer \(m\) and \(\boldsymbol{V}^{m}\) be an interim solution. In this case, the initial conditions are set in \(\boldsymbol{U}^{0}\). In general, the split-step scheme can be written as follows\cite{Rad1}:
+\begin{equation}\label{eq34}
+\boldsymbol{U}^{m+1}=e^{i\tau\mathscr{L}}\boldsymbol{V}^m,
+\end{equation}
+where
+\begin{equation}\label{eq33}
+\boldsymbol{V}^m=e^{i\tau\mathscr{N}[\boldsymbol{U}^m]}\boldsymbol{U}^m.
+\end{equation}
+
+Applying the split-step Fourier method, it is proposed to use the discrete Fourier transform for the grid function \(\boldsymbol{V}^m\) to construct a solution on a next time layer:
+\begin{equation} 
+\hat{\boldsymbol{V}}^m=\frac{h}{L}\exp\left(-i \boldsymbol{\mu} \boldsymbol{x}^{T}\right)\cdot \boldsymbol{V}^{m},
+\end{equation}
+where \(\hat{\boldsymbol{V}}^m\) is the vector of Fourier coefficients, \(\boldsymbol{\mu}=\left(\mu_{-N/2},\ldots,\mu_{N/2-1}\right)^{T}\) is the transform frequency vector \(\mu_{n}=\frac{2\pi n}{L}\), \(\boldsymbol{x}=\left(x_{-N/2},\ldots,x_{N/2-1}\right)^{T}\) are the grid point coordinates.
+
+There is a ratio between \(\hat{\boldsymbol{U}}^{m+1}\) and \(\hat{\boldsymbol{V}}^{m}\),
+\begin{equation} \label{eq46}
+\hat{\boldsymbol{U}}^{m+1}=\exp\left(-i \left(\boldsymbol{\mu}\circ \boldsymbol{\mu}\right) \tau\right)\circ \hat{\boldsymbol{V}}^{m}.
+\end{equation}
+which is obtained by substituting a corresponding Fourier series for \(\boldsymbol{U}^{m+1}\) and \(\boldsymbol{V}^{m}\) in Eq. (\ref{eq34}). Here \(x\circ y\) refers to the Hadamard product.
+
+The solution on the next time layer is found by the inverse Fourier transform using Eq. (\ref{eq46}):
+\begin{equation} 
+\boldsymbol{U}^{m+1}=\exp\left(i \boldsymbol{\mu} \boldsymbol{x}^{T}\right)\cdot \hat{\boldsymbol{U}}^{m+1}.
+\end{equation}
+
+Modifying the method for the Eq. (\ref{eq2}), operators \(\mathscr{L} [u]\) and \(\mathscr{N}[u]\) take the form:
+\begin{equation}
+\begin{cases}
+\mathscr{L} [u] \equiv a u_{xx},  \\
+\mathscr{N} [u] \equiv b_{1}|u|^2+ b_{2}|u|^4+ b_{3}|u|^6.
+\end{cases}
+\end{equation}
+
+A simplified flowchart for the numerical solution of the pulse propagation problem with periodic boundary conditions using the split-step Fourier method depicted on Fig. \ref{fig2}. 
+\begin{figure}[H]
+\begin{center}
+\begin{minipage}[h]{0.48\linewidth} %% color here
+\includegraphics[width=1\linewidth]{fig2.png}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=0.85\linewidth]{fig3.png}
+\end{minipage}
+\end{center}
+\caption{Flowchart for modeling the pulse propagation process using the Fourier method}
+\label{fig2}
+\end{figure}
+
+\section{Application of the Fourier method for modeling pulse propagation process described by the cubic-quintic-septic nonlinear Schr\"{o}dinger equation}\label{ch6}
+Let us consider Eq. (\ref{eq2}) and perform a computation for certain parameters \(M_{0}\) and \(M_{1}\), fulfilling the constraints (\ref{eq27}). The analytical solution is determined by the formulas (\ref{eq22}), (\ref{eq23}) and (\ref{eq24}). Let
+\begin{equation} 
+a=1,\quad
+k=2,\quad
+\mu=0.5,\quad
+\xi_{0}=0,\quad
+\theta_{0}=0,\quad
+z_{0}=0,
+\end{equation}
+then the parameters \(\omega,\,b_{1},\,b_{2},\,b_{3}\) are determined by the formulas (\ref{eq19}).
+
+The wave profile \(y(z)\) is given in Fig. \ref{fig8}. The initial condition takes the following form:
+\begin{equation}\label{eq51}
+u(x,0)=y\left(\xi(x)\right)\cdot e^{i(kx-\theta_{0})}
+\end{equation}
+\begin{figure}[H]
+\center
+\includegraphics[width=0.5\linewidth]{fig10.eps}
+\caption{Plot of y(z) at the parameters \(M_{0}=-0.5,\, M_{1}=2.3.\)}
+\label{fig8}
+\end{figure}
+
+The simulated wave profile is shown in Fig. \ref{fig9}. The relative error for calculation at the specified parameters does not exceed 0.2\%.
+\begin{figure}[H] %% color here
+\begin{center}
+\includegraphics[width=0.5\linewidth]{fig11.eps}
+\end{center}
+\caption{Numerical solution module for the initial condition (\ref{eq51})\\
+at the parameters
+\(L=450,\, T=40,\, h=0.5,\, \tau=0.25\), 
+\(z_{0}=-70,\, M_{0}=-0.5,\, M_{1}=2.3\)}
+\label{fig9}
+\end{figure}
+
+Let us perform a computation for longer times. Analytical and numerical profiles at the moment \(t=4000\) are depicted in Fig. \ref{fig10a}. The dependence of a relative error over time is illustrated in Fig. \ref{fig10b}.
+\begin{figure}[H]
+\begin{center}
+\begin{minipage}[h]{0.48\linewidth} %% color here
+\includegraphics[width=1\linewidth]{fig12.eps}
+\subcaption{Solution module at t=4000} 
+\label{fig10a}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig13.eps}
+\subcaption{Relative error over time step}
+\label{fig10b}
+\end{minipage}
+\end{center}
+\caption{Numerical results for the initial profile (\ref{eq51}) at the parameters
+\(L=400,\, T=4000,\, h=0.5,\, \tau=0.25\), 
+\(M_{0}=-0.5,\, M_{1}=2.5\)}
+\label{fig10}
+\end{figure}
+So far, the obtained results allow us to preliminarily conclude that the analytical solution built in Section \ref{ch2} is stable and can be used to describe pulse propagation processes.
+
+\section{Interaction of soliton with perturbation in initial conditions}\label{ch8}
+Let us consider a numerical modeling of the pulse propagation at initial perturbation. We disturb the initial condition, corresponding to solution (\ref{eq24}) of Eq. (\ref{eq2}) in the following way:
+\begin{equation} \label{eq52}
+u(x,0)=y\left(\xi\left(x\right)\right)\cdot e^{i(kx-\theta_{0})}+Ae^{-\nu(x-x_{0})^{2}}.
+\end{equation}
+The corresponding numerical solutions are depicted in Fig. \ref{fig17}.
+\begin{figure}[H] %% color here
+\begin{center}
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig18.eps}
+\subcaption{Module of initial profile (\ref{eq52}) }
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig19.eps}
+\subcaption{Module of numerical solution}
+\end{minipage}
+\end{center}
+\caption{Plots of numerical results at the parameters \(M_{0}=-1.5,\,M_{1}=7,\, a=1,\, k=2,\, \mu=0.5,\, \xi_{0}=0,\,z_{0}=-80,\, \theta_{0}=0\), \\
+\(L=300,\, T=50,\, h=0.5,\, \tau=0.25,\,A=0.2,\,\nu=0.06,\, x_{0}=25\).}
+\label{fig17}
+\end{figure}
+This simulation allows us to conclude that the soliton specified by the parameters \(M_{0}=-1.5,\,M_{1}=7\), interacts with the given perturbation and does not lose the ability to propagate. The pulse profile is restored after interaction.
+
+\section{Analysis of the higher-power nonlinearities influence}\label{ch9}
+At \(a=1,\, b_{2}=b_{3}=0\), the Eq. (\ref{eq2}) becomes the classical NLS equation (\ref{eq1}). The solution Eq. (\ref{eq1}) in the form of a solitary wave has been found in paper \cite{Rad2} and takes the following form:
+\begin{equation} \label{eq48}
+u(x,t)=\frac{4(k^{2}-\omega)}{2 a (k^{2}-\omega) e^{-\left(x-c_{0}t-z_{0}\right)\sqrt{(k^{2}-\omega)}}+e^{\left(x-c_{0}t-z_{0}\right)\sqrt{(k^{2}-\omega)}}}\cdot e^{i(kx-\omega t-\theta_{0})},
+\end{equation}
+where \(c_{0}=2k\) and \( k,\, \omega,\, z_{0},\, \theta_{0}\) are arbitrary constants.
+
+We build a numerical solution for the perturbed equation (\ref{eq1}) in the form
+\begin{equation}
+iu_{t}+u_{xx}+a|u|^2 u+\varepsilon_{1}|u|^4 u+\varepsilon_{2}|u|^6 u=0,
+\end{equation}
+where \(\varepsilon_{1}\) and \(\varepsilon_{2}\) are equation disturbance parameters. The initial condition corresponding to Eq. (\ref{eq48}) takes the following form:
+\begin{equation}\label{eq55}
+u(x,0)=\frac{4(k^{2}-\omega)}{2 a (k^{2}-\omega) e^{-x\sqrt{(k^{2}-\omega)}}+e^{x\sqrt{(k^{2}-\omega)}}}\cdot e^{i(kx-\theta_{0})}
+\end{equation}
+
+In the absence of the highest nonlinear powers at \(\varepsilon_{1}=0,\,\varepsilon_{2}=0\), a stable process of pulse propagation is observed (see Fig. \ref{fig21}).
+\begin{figure}[H]
+\begin{center}
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig31.eps}
+\subcaption{Moment t=0}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig32.eps}
+\subcaption{Moment t=130}
+\end{minipage}
+\end{center}
+\caption{Numerical solutions for the initial profile (\ref{eq55}) at
+\(L=300,\, T=130,\)\\ \(h=0.25,\, \tau=0.0625,\)
+\(a=0.1,\,\varepsilon_{1}=0,\,\varepsilon_{2}=0,\, \omega=2.5,\, k=1.6,\, \theta_{0}=0\).}
+\label{fig21}
+\end{figure}
+
+Considering an influence of nigher nonlinearity powers, we take \(\varepsilon_{1} = 0.01\) and \(\varepsilon_{2}=0\). The simulation results presented in Fig. \ref{fig21_1} allow us to conclude that for the given parameters, the main peak of the pulse begins to oscillate, while propagating further. 
+\begin{figure}[H] %% color here
+\begin{center}
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig33.eps}
+\subcaption{Numerical solution profile at t=34.81}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig34.eps}
+\subcaption{Relative error over time}
+\end{minipage}
+\end{center}
+\caption{Computation results for the initial profile (\ref{eq55}).\\ 
+\(L=300,\, T=300,\, h=0.25,\, \tau=0.0625,\)\\
+\(a=0.1,\,\varepsilon_{1}=0.01,\,\varepsilon_{2}=0,\, \omega=2.5,\, k=1.6,\, \theta_{0}=0\).}
+\label{fig21_1}
+\end{figure}
+
+When the higher power is taken into account at \(\varepsilon_{2}=0.01\), the main peak oscillations become more pronounced and their frequency changes (see Fig. \ref{fig48}). This behavior does not cease to manifest itself when the computational grid is subdivided. 
+\begin{figure}[H] %% color here
+\begin{center}
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig35.eps}
+\subcaption{Numerical solution profile at t=30.37}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig36.eps}
+\subcaption{Relative error over time}
+\end{minipage}
+\end{center}
+\caption{Computation results for the initial profile (\ref{eq55}).\\ 
+\(L=300,\, T=300,\, h=0.25,\, \tau=0.0625,\)\\
+\(a=0.1,\,\varepsilon_{1}=0.01,\,\varepsilon_{2}=0.01,\, \omega=2.5,\, k=1.6,\, \theta_{0}=0\).}
+\label{fig48}
+\end{figure}
+
+When the parameter \(\varepsilon_{1}\) was increased up to 0.02, the initial pulse decayed after self-focusing. Results are shown in Fig. \ref{fig50}.
+\begin{figure}[H]%% color here
+\begin{center}
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig37.eps}
+\subcaption{Numerical solution profile at t=22.5}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig38.eps}
+\subcaption{Numerical solution profile at t=27}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig39.eps}
+\subcaption{Numerical solution profile at t=30}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig40.eps}
+\subcaption{Relative error over time}
+\end{minipage}
+\end{center}
+\caption{Computation results for the initial profile (\ref{eq55}).\\ 
+\(L=400,\, T=50,\, h=0.25,\, \tau=0.0625,\)\\
+\(a=0.1,\,\varepsilon_{1}=0.02,\,\varepsilon_{2}=0.01,\, \omega=2.5,\, k=1.6,\, \theta_{0}=0\).}
+\label{fig50}
+\end{figure}
+
+It is found that the pulses of lower intensity are less sensitive to the influence of nonlinearities. The figure \ref{fig22} shows the oscillating pulse behavior at the parameters \(a=\varepsilon_{1}=\varepsilon_{2}=1\).
+\begin{figure}[H]%% color here
+\begin{center}
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig41.eps}
+\subcaption{Numerical solution profile at t=30}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig42.eps}
+\subcaption{Relative error over time}
+\end{minipage}
+\end{center}
+\caption{Computation results for the initial profile (\ref{eq55}).\\ 
+\(L=300,\, T=60,\, h=0.25,\, \tau=0.0625,\)\\
+\(a=1,\,\varepsilon_{1}=1,\,\varepsilon_{2}=1,\, \omega=0.3,\, k=0.67,\, \theta_{0}=0\).}
+\label{fig22}
+\end{figure}
+
+Fig. \ref{fig233} shows that the periodic behavior is stable when modeled on a sufficiently fine mesh.
+\begin{figure}[H]%% color here
+\begin{center}
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig43.eps}
+\subcaption{Solution profiles at t=2000}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.48\linewidth}
+\includegraphics[width=1\linewidth]{fig44.eps}
+\subcaption{Relative error over time}
+\end{minipage}\\
+\end{center}
+\caption{Computation results for the initial profile (\ref{eq55}).\\
+\(L=100,\, T=2000,\, h=0.1,\, \tau=0.01,\) \\
+\(a=7,\,\varepsilon_{1}=1,\,\varepsilon_{2}=1,\, \omega=2,\, k=1.6,\, \theta_{0}=0\).}
+\label{fig233}
+\end{figure}
+
+Taking into account higher powers of nonlinearity in the modeling of the pulse propagation process described by the generalized Schr\"{o}dinger equation, two variants of soliton behavior are possible, depending on the model and perturbation parameters. The first possible behavior is a transition to an oscillating type of propagation. The soliton main peak begins to oscillate near the maximum level of the unperturbed solution. This variant is more typical of solitons with a lower maximum modulus and for models with coefficients \(\varepsilon_{1},\,\varepsilon_{2} \ll a\). With an increase in the coefficients of nonlinearities, it is possible for the initial solitary wave to decay after self-focusing as shown in Fig. \ref{fig22}. Higher amplitude pulses decay earlier.
+
+\section{Conclusions}\label{ch11}
+In this paper, we have considered the numerical modeling of the pulse propagation process in a nonlinear medium with periodic boundary conditions described by the cubic-quintic-septic nonlinear Schr\"{o}dinger equation (\ref{eq2}). We have obtained the analytical solution in the form of a solitary wave (\ref{eq24}) and investigated the area of acceptable model parameters. We have modified the split-step Fourier method for modeling pulse propagation processes. We have numerically studied the pulse propogation process. We have simulated the interaction of an optical soliton of Eq. (\ref{eq2}) with a perturbation in the initial condition. We analyzed the influence of the higher nonlinearity powers to the optical solitons of the NLS equation. 
+
+The following findings are observed from the simulation results:
+\begin{enumerate}
+  \setlength\itemsep{1em}
+  \item The optical solitons of the cubic-quintic-septic nonlinear Schr\"{o}dinger equation propagate steadily.
+  \item The optical soliton of the cubic-quintic-septic nonlinear Schr\"{o}dinger equation is not destryed after interaction with disturbance.
+  \item Taking into account the higher degrees of nonlinearity, the solitons of the NLS equation undergo two possible variants of behavior - periodical and collapsing.
+  \item There exist critical values of the parameters of higher nonlinearities, at which the pulse is destroyed.
+  \item Solitons of lower intensity are more resistant to nonlinearities in the equation of a model.
+\end{enumerate}
+
+\section*{Acknowledgments}
+This research was supported by Russian Science Foundation Grant No. 23-41-00070, https://rscf.ru/en/project/23-41-00070/.
+\section*{CONFLICT OF INTEREST}
+The authors declare that they have no conflicts of interest.
+\section*{ORCID}
+Viktor A. Medvedev https://orcid.org/0000-0003-1198-4474\\
+Nikolay A. Kudryashov https://orcid.org/0000-0001-5926-9715
+%==============================================
+%\nocite{*}% Show all bib entries - both cited and uncited; comment this line to view only cited bib entries;
+
+\bibliographystyle{unsrt}
+\bibliography{export}
+
+\end{document}
