@@ -142,27 +142,27 @@
 	Несмотря на разнообразие предложенных математических моделей, вопрос о том, какая из них наиболее подходит для описания процессов распространения импульсов, остается открытым.
 	В текущей работе иссоедовано одно из обобщённых уравнений - нелинейное уравнение Шрёдингера с нелинейностями третьего, пятого и седьмого порядков, впервые предствленное в работе \cite{Rad3}:
 	\begin{equation}\label{eq120-1}
-	iu_{t}+au_{xx}+b_{1}|u|^2 u+b_{2}|u|^4 u+b_{3}|u|^6 u=0,
+		iu_{t}+au_{xx}+b_{1}|u|^2 u+b_{2}|u|^4 u+b_{3}|u|^6 u=0,
 	\end{equation}
 	где \(u(x,t)\) - комплекснозначная функция, \(a\), \(b_{1}\), \(b_{2}\) и \(b_{3}\) - параметры модели. Для случая \(b_{3}=0\) исследование уравнения (\ref{eq120-1}) представлено в книге \cite{Rad02}.\\\\
 	Целями данной работы являются:
 	\begin{enumerate}
-	\item аналитическое нахождение точного решения представленного уравнения,
-	\item численное моделирование процессов распространения построенного импульса с целью установления факта его устойчивости, 
-	\item анализ влияния высших степеней нелинейности в математической модели. 
+		\item аналитическое нахождение точного решения представленного уравнения,
+		\item численное моделирование процессов распространения построенного импульса с целью установления факта его устойчивости, 
+		\item анализ влияния высших степеней нелинейности в математической модели. 
 	\end{enumerate}
 	В работе решаются следующие задачи: 
 	\begin{enumerate}
-	\item Построение аналитического решения исходного уравнения в виде уединённой волны с импользованием метода прямых вычислений. 
-	\item Определение области параметров модели, при которых построенное решение существует.
-	\item Модификация метода Фурье для численного решения задачи распространения оптических импульсов, описываемых математической моделью. 
-	\item С целью установления факта устойчивости построенных решений - численное моделирование процессов:
-	\begin{enumerate}
-	\item распространения построенной уединённой волны,  
-	\item распространения построенных солитонов при наличии возмущений в начальных условиях,  
-	\item распространения построенных солитонов при наличии возмущений в уравнении,
-	\item взаимодействия построенных солитонов друг с другом в присутствии возмущений в математической модели.
-	\end{enumerate}
+		\item Построение аналитического решения исходного уравнения в виде уединённой волны с импользованием метода прямых вычислений. 
+		\item Определение области параметров модели, при которых построенное решение существует.
+		\item Модификация метода Фурье для численного решения задачи распространения оптических импульсов, описываемых математической моделью. 
+		\item С целью установления факта устойчивости построенных решений - численное моделирование процессов:
+		\begin{enumerate}
+			\item распространения построенной уединённой волны,  
+			\item распространения построенных солитонов при наличии возмущений в начальных условиях,  
+			\item распространения построенных солитонов при наличии возмущений в уравнении,
+			\item взаимодействия построенных солитонов друг с другом в присутствии возмущений в математической модели.
+		\end{enumerate}
 	\end{enumerate}
 
 	Результаты работы представлены в следующем порядке. В разделе \ref{ch210} построено аналитическое решение для уравнения (\ref{eq120-1}) в форме уединённой волны с использованием метода неявных функций и метода простейших уравнений \cite{Rad4}. Проиллюстрирована область значений параметров модели, при которых построенное решение существует. В разделе \ref{ch220} описан модифицированный метод Фурье для моделирования процессов распространения оптических импульсов, описываемых уравнением (\ref{eq120-1}). Представлена блок-схема соответствующего программного кода для численного анализа. В разделе \ref{ch310} представлено применение метода Фурье для моделирования процесса распространения уединенной волны, описываемого уравнением (\ref{eq120-1}). В разделе \ref{ch320} смоделировано взаимодействие солитонного импульса с возмущением в начальном условии. В разделе также исследован процесс распространения импульса в условиях случайного шума в начальном условии и обсуждён факт устойчивости построенного оптического солитона. В разделе \ref{ch330} исследовано влияние более высоких степеней нелинейности на процесс распространения уединенной волны описывыемой НУШ. В разделе \ref{ch340} смоделированы процессы столкновения солитонов уравнения НУШ при наличии членов с более высокой нелинейностью при различных параметрах модели.
@@ -411,133 +411,133 @@
 
 	Applying the split-step Fourier method, it is proposed to use the discrete Fourier transform for the grid function \(\boldsymbol{V}^m\) to construct a solution on a next time layer:
 	\begin{equation} 
-	\hat{\boldsymbol{V}}^m=\frac{h}{L}\exp\left(-i \boldsymbol{\mu} \boldsymbol{x}^{T}\right)\cdot \boldsymbol{V}^{m},
+		\hat{\boldsymbol{V}}^m=\frac{h}{L}\exp\left(-i \boldsymbol{\mu} \boldsymbol{x}^{T}\right)\cdot \boldsymbol{V}^{m},
 	\end{equation}
 	where \(\hat{\boldsymbol{V}}^m\) is the vector of Fourier coefficients, \(\boldsymbol{\mu}=\left(\mu_{-N/2},\ldots,\mu_{N/2-1}\right)^{T}\) is the transform frequency vector \(\mu_{n}=\frac{2\pi n}{L}\), \(\boldsymbol{x}=\left(x_{-N/2},\ldots,x_{N/2-1}\right)^{T}\) are the grid point coordinates.
 
 	There is a ratio between \(\hat{\boldsymbol{U}}^{m+1}\) and \(\hat{\boldsymbol{V}}^{m}\),
 	\begin{equation} \label{eq46}
-	\hat{\boldsymbol{U}}^{m+1}=\exp\left(-i \left(\boldsymbol{\mu}\circ \boldsymbol{\mu}\right) \tau\right)\circ \hat{\boldsymbol{V}}^{m},
+		\hat{\boldsymbol{U}}^{m+1}=\exp\left(-i \left(\boldsymbol{\mu}\circ \boldsymbol{\mu}\right) \tau\right)\circ \hat{\boldsymbol{V}}^{m},
 	\end{equation}
 	which is obtained by substituting a corresponding Fourier series for \(\boldsymbol{U}^{m+1}\) and \(\boldsymbol{V}^{m}\) in Eq. (\ref{eq34}). Here \(x\circ y\) refers to the Hadamard product.
 
 	The solution on the next time layer is found by the inverse Fourier transform using Eq. (\ref{eq46}):
 	\begin{equation} 
-	\boldsymbol{U}^{m+1}=\exp\left(i \boldsymbol{\mu} \boldsymbol{x}^{T}\right)\cdot \hat{\boldsymbol{U}}^{m+1}.
+		\boldsymbol{U}^{m+1}=\exp\left(i \boldsymbol{\mu} \boldsymbol{x}^{T}\right)\cdot \hat{\boldsymbol{U}}^{m+1}.
 	\end{equation}
 
 	Modifying the method for the Eq. (\ref{eq200-4}), operators \(\mathscr{L} [u]\) and \(\mathscr{N}[u]\) take the form:
 	\begin{equation}
-	\begin{cases}
-	\mathscr{L} [u] \equiv u_{xx},  \\
-	\mathscr{N} [u] \equiv |u|^2+ \varepsilon_{2}|u|^4+ \varepsilon_{3}|u|^6.
-	\end{cases}
+		\begin{cases}
+		\mathscr{L} [u] \equiv u_{xx},  \\
+		\mathscr{N} [u] \equiv |u|^2+ \varepsilon_{2}|u|^4+ \varepsilon_{3}|u|^6.
+		\end{cases}
 	\end{equation}
 
 	A simplified flowchart for the numerical solution of the pulse propagation problem with periodic boundary conditions using the split-step Fourier method depicted on Fig. \ref{fig2}. 
 	\begin{figure}[H]
-	\begin{center}
-	\begin{minipage}[h]{0.48\linewidth} %% color here
-	\includegraphics[width=1\linewidth]{fig2.png}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[h]{0.48\linewidth}
-	\includegraphics[width=0.75\linewidth]{fig3.png}
-	\end{minipage}
-	\end{center}
-	\caption{Flowchart for modeling the pulse propagation process using the Fourier method.}
-	\label{fig2}
+		\begin{center}
+			\begin{minipage}[h]{0.48\linewidth} %% color here
+				\includegraphics[width=1\linewidth]{fig2.png}
+			\end{minipage}
+			\hfill
+			\begin{minipage}[h]{0.48\linewidth}
+				\includegraphics[width=0.75\linewidth]{fig3.png}
+			\end{minipage}
+		\end{center}
+		\caption{Flowchart for modeling the pulse propagation process using the Fourier method.}
+		\label{fig2}
 	\end{figure}
 \section{Численный анализ}\label{ch300}
 \subsection{Применение метода Фурье для моделирования процесса распространения уединённой волны, описываемой уравнением Шрёдингера с тремя нелинейностями}\label{ch310}
 	Let us consider Eq. (\ref{eq200-4}). To verify the analytical calculations, we numerically simulate the process of propagation of a solitary wave (\ref{eq24}). We perform a computation for certain parameters \(M_{0}\) and \(M_{1}\), fulfilling the constraints (\ref{eq27}). Parameters \(\varepsilon_{1}\),\,\(\varepsilon_{2}\),\,\(\omega\) and \(\mu\) are determined by formulas (\ref{eq19}). The result of the modeling are depicted on Fig.\ref{fig10}. Analytical and numerical profiles at the moment \(t=16\) are depicted in Fig. \ref{fig10a}.
 
 	\begin{figure}[H]
-	\begin{center}
-	\begin{minipage}[h]{0.48\linewidth} %% color here
-	\includegraphics[width=1\linewidth]{fig11.eps}
-	\subcaption{Numerical solution surface plot} 
-	\label{fig10a}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[h]{0.48\linewidth}
-	\includegraphics[width=1\linewidth]{fig12.eps}
-	\subcaption{Solution module at t=16}
-	\label{fig10b}
-	\end{minipage}
-	\end{center}
-	\caption{Propagation of a solitary wave (\ref{eq24}) \\
-	at the parameters
-	\(L=120,\, T=16,\, h=0.2,\, \tau=0.04\), 
-	\(z_{0}=-20,\,k=1.6,\, M_{0}=-1.48,\, M_{1}=6.16\).}
-	\label{fig10}
+		\begin{center}
+			\begin{minipage}[h]{0.48\linewidth} %% color here
+				\includegraphics[width=1\linewidth]{fig11.eps}
+				\subcaption{Numerical solution surface plot} 
+				\label{fig10a}
+			\end{minipage}
+			\hfill
+			\begin{minipage}[h]{0.48\linewidth}
+				\includegraphics[width=1\linewidth]{fig12.eps}
+				\subcaption{Solution module at t=16}
+				\label{fig10b}
+			\end{minipage}
+		\end{center}
+		\caption{Propagation of a solitary wave (\ref{eq24}) \\
+		at the parameters
+		\(L=120,\, T=16,\, h=0.2,\, \tau=0.04\), 
+		\(z_{0}=-20,\,k=1.6,\, M_{0}=-1.48,\, M_{1}=6.16\).}
+		\label{fig10}
 	\end{figure}
 	The relative error for calculation at the specified parameters does not exceed 0.08\%.  The dependence of a relative error over time is illustrated in Fig. \ref{fig11a}.
 
 	\begin{figure}[H]
-	\begin{center}
-	\begin{minipage}[h]{0.48\linewidth} %% color here
-	\includegraphics[width=1\linewidth]{fig13.eps}
-	\subcaption{Relative error over time at \(h=0.2,\, \tau=0.04\)} 
-	\label{fig11a}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[h]{0.48\linewidth}
-	\includegraphics[width=1\linewidth]{fig45.eps}
-	\subcaption{Maximum relative error over grid space step \(h\)}
-	\label{fig11b}
-	\end{minipage}
-	\end{center}
-	\caption{Numerical results at the parameters
-	\(L=120,\, T=16\), 
-	\(M_{0}=-1.48,\, M_{1}=6.16\).}
-	\label{fig11}
+		\begin{center}
+			\begin{minipage}[h]{0.48\linewidth} %% color here
+				\includegraphics[width=1\linewidth]{fig13.eps}
+				\subcaption{Relative error over time at \(h=0.2,\, \tau=0.04\)} 
+				\label{fig11a}
+			\end{minipage}
+			\hfill
+			\begin{minipage}[h]{0.48\linewidth}
+				\includegraphics[width=1\linewidth]{fig45.eps}
+				\subcaption{Maximum relative error over grid space step \(h\)}
+				\label{fig11b}
+			\end{minipage}
+		\end{center}
+		\caption{Numerical results at the parameters
+		\(L=120,\, T=16\), 
+		\(M_{0}=-1.48,\, M_{1}=6.16\).}
+		\label{fig11}
 	\end{figure}
 	Since grid convergence is achieved (see Fig. \ref{fig11b}), we claim that all analytical calculations are correct. Hence, we conclude that the analytical solution built in Section \ref{ch210} describe a stable soliton which can be used for signal transmission.
 \subsection{Взаимодействие солитона с возмущением в начальных условиях}\label{ch320}
 	Let us consider a numerical modeling of the pulse propagation at initial perturbation. We disturb the initial condition, corresponding to solution (\ref{eq24}) of Eq. (\ref{eq200-4}) in the following way:
 	\begin{equation} \label{eq52}
-	u(x,0)=y\left(\xi\left(x\right)\right)\cdot e^{i(kx-\theta_{0})}+Ae^{-\nu(x-x_{0})^{2}}.
+		u(x,0)=y\left(\xi\left(x\right)\right)\cdot e^{i(kx-\theta_{0})}+Ae^{-\nu(x-x_{0})^{2}}.
 	\end{equation}
 	The corresponding numerical solutions are depicted in Fig. \ref{fig17}.
 	\begin{figure}[H] %% color here
-	\begin{center}
-	\begin{minipage}[h]{0.48\linewidth}
-	\includegraphics[width=1\linewidth]{fig18.eps}
-	\subcaption{Module of initial profile (\ref{eq52}) }
-	\end{minipage}
-	\hfill
-	\begin{minipage}[h]{0.48\linewidth}
-	\includegraphics[width=1\linewidth]{fig19.eps}
-	\subcaption{Module of numerical solution}
-	\end{minipage}
-	\end{center}
-	\caption{Plots of numerical results at the parameters \(M_{0}=-3,\,M_{1}=12.34,\, k=3,\, \xi_{0}=0,\,z_{0}=-80,\, \theta_{0}=0\), \\
-	\(L=300,\, T=32,\, h=0.25,\, \tau=0.625,\,A=0.2,\,\nu=0.06,\, x_{0}=25\).}
-	\label{fig17}
+		\begin{center}
+			\begin{minipage}[h]{0.48\linewidth}
+				\includegraphics[width=1\linewidth]{fig18.eps}
+				\subcaption{Module of initial profile (\ref{eq52}) }
+			\end{minipage}
+			\hfill
+			\begin{minipage}[h]{0.48\linewidth}
+				\includegraphics[width=1\linewidth]{fig19.eps}
+				\subcaption{Module of numerical solution}
+			\end{minipage}
+		\end{center}
+		\caption{Plots of numerical results at the parameters \(M_{0}=-3,\,M_{1}=12.34,\, k=3,\, \xi_{0}=0,\,z_{0}=-80,\, \theta_{0}=0\), \\
+		\(L=300,\, T=32,\, h=0.25,\, \tau=0.625,\,A=0.2,\,\nu=0.06,\, x_{0}=25\).}
+		\label{fig17}
 	\end{figure}
 	This simulation allows us to conclude that the soliton specified by the parameters \(M_{0}=-3,\,M_{1}=12.34\), interacts with the given perturbation and does not lose the ability to propagate. The pulse profile is restored after interaction.
 
 	It is found that the soliton (\ref{eq200-4}) is stable when propagating in a medium with random noise of the following type:
 	\begin{equation} \label{eq522}
-	u(x,0)=y\left(\xi\left(x\right)\right)\cdot e^{i(kx-\theta_{0})}+A\cdot rand(x).
+		u(x,0)=y\left(\xi\left(x\right)\right)\cdot e^{i(kx-\theta_{0})}+A\cdot rand(x).
 	\end{equation}
 	The corresponding illustrations are depicted in Fig. \ref{fig172}.	
 	\begin{figure}[H] %% color here
-	\begin{center}
-	\begin{minipage}[h]{0.48\linewidth}
-	\includegraphics[width=1\linewidth]{fig46.eps}
-	\subcaption{Module of numerical solution}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[h]{0.48\linewidth}
-	\includegraphics[width=1\linewidth]{fig47.eps}
-	\subcaption{Wave profiles at t=32}
-	\end{minipage}
-	\end{center}
-	\caption{Plots of numerical results at the parameters \(M_{0}=-3,\,M_{1}=12.34,\, k=3,\, \xi_{0}=0,\,z_{0}=-80,\, \theta_{0}=0\), \\
-	\(L=300,\, T=32,\, h=0.25,\, \tau=0.0625,\,A=0.05\).}
-	\label{fig172}
+		\begin{center}
+			\begin{minipage}[h]{0.48\linewidth}
+				\includegraphics[width=1\linewidth]{fig46.eps}
+				\subcaption{Module of numerical solution}
+			\end{minipage}
+			\hfill
+			\begin{minipage}[h]{0.48\linewidth}
+				\includegraphics[width=1\linewidth]{fig47.eps}
+				\subcaption{Wave profiles at t=32}
+			\end{minipage}
+		\end{center}
+		\caption{Plots of numerical results at the parameters \(M_{0}=-3,\,M_{1}=12.34,\, k=3,\, \xi_{0}=0,\,z_{0}=-80,\, \theta_{0}=0\), \\
+		\(L=300,\, T=32,\, h=0.25,\, \tau=0.0625,\,A=0.05\).}
+		\label{fig172}
 	\end{figure}
 
 	The simulations carried out in this section confirm the stability of the solitons obtained in Section \ref{ch210}.
@@ -546,21 +546,21 @@
 
 	At \(\varepsilon_{2}=0,\,\varepsilon_{3}=0\), the Eq. (\ref{eq200-4}) takes the form:
 	\begin{equation}\label{e6}
-	iu_{t}+u_{xx}+|u|^2 u=0.
+		iu_{t}+u_{xx}+|u|^2 u=0.
 	\end{equation}
 	This well-known NLS equation is completely integrable. The solution of Eq. (\ref{e6}) in the form of a solitary wave has been found in paper \cite{Rad3} and takes the following form:
 	\begin{equation} \label{eq48}
-	u(x,t)=\frac{4(k^{2}-\omega)}{2 (k^{2}-\omega) e^{-\left(x-c_{0}t-z_{0}\right)\sqrt{(k^{2}-\omega)}}+e^{\left(x-c_{0}t-z_{0}\right)\sqrt{(k^{2}-\omega)}}}\cdot e^{i(kx-\omega t-\theta_{0})},
+		u(x,t)=\frac{4(k^{2}-\omega)}{2 (k^{2}-\omega) e^{-\left(x-c_{0}t-z_{0}\right)\sqrt{(k^{2}-\omega)}}+e^{\left(x-c_{0}t-z_{0}\right)\sqrt{(k^{2}-\omega)}}}\cdot e^{i(kx-\omega t-\theta_{0})},
 	\end{equation}
 	where \(c_{0}=2k\) and \( k,\, \omega,\, z_{0},\, \theta_{0}\) are arbitrary constants.
 	The initial condition corresponding to Eq. (\ref{eq48}) takes the form:
 	\begin{equation}\label{eq55}
-	u(x,0)=\frac{4\,(k^{2}-\omega)}{2 (k^{2}-\omega) e^{-(x-z_{0})\sqrt{(k^{2}-\omega)}}+e^{(x-z_{0})\sqrt{(k^{2}-\omega)}}}\cdot e^{i(kx-\theta_{0})}
+		u(x,0)=\frac{4\,(k^{2}-\omega)}{2 (k^{2}-\omega) e^{-(x-z_{0})\sqrt{(k^{2}-\omega)}}+e^{(x-z_{0})\sqrt{(k^{2}-\omega)}}}\cdot e^{i(kx-\theta_{0})}
 	\end{equation}
 
 	At \(\varepsilon_{3}=0\), the solution of the Eq. (\ref{eq200-4}) was found and takes following the form:
 	\begin{equation}\label{e7}
-	u(x,t)=\left(\frac{4\,\mu\, e^{\sqrt{\mu}\,(x-2kt-z_{0})}}{1+4\, e^{\sqrt{\mu}\,(x-2kt-z_{0})}+(4+4\, \mu\, \nu) \,e^{2\sqrt{\mu}\,(x-2kt-z_{0})}}\right)^{\frac{1}{2}}\cdot e^{i(kx-\omega t-\theta_{0})},
+		u(x,t)=\left(\frac{4\,\mu\, e^{\sqrt{\mu}\,(x-2kt-z_{0})}}{1+4\, e^{\sqrt{\mu}\,(x-2kt-z_{0})}+(4+4\, \mu\, \nu) \,e^{2\sqrt{\mu}\,(x-2kt-z_{0})}}\right)^{\frac{1}{2}}\cdot e^{i(kx-\omega t-\theta_{0})},
 	\end{equation}
 	where \(\mu=4(\omega-k^{2})\), \(\nu=\cfrac{4 \varepsilon_{2}}{3}\) and \( k,\, \omega,\, z_{0},\, \theta_{0}\) are arbitrary constants. We note that at \(\varepsilon_{2}=0\) Eq. (\ref{e7}) coincides with Eq. (\ref{eq48}).
 
@@ -571,57 +571,57 @@
 
 	When the nonlinearity parameter \(\varepsilon_{2}\ne 0\) is taken into account, the decay of the initial pulse is observed. Decay is accompanied by soliton oscillations and energy emission. It is observed that the soliton (\ref{eq55}), when oscillating and emitting energy, transforms into a stable soliton solution coinciding with the Eq. (\ref{e7}). The simulation result is illustrated in Fig. \ref{fig21_1} and \ref{fig21_2}.
 	\begin{figure}[H] %% color here
-	\begin{center}
-	\begin{minipage}[h]{0.48\linewidth}
-	\includegraphics[width=1\linewidth]{fig33.eps}
-	\subcaption{Solution profile at t=25}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[h]{0.48\linewidth}
-	\includegraphics[width=1\linewidth]{fig34.eps}
-	\subcaption{Solution profile at t=200}
-	\end{minipage}
-	\end{center}
-	\caption{Results for the initial pulse (\ref{eq55}) at
-	\(L=200,\, T=200,\, h=0.25,\, \tau=0.0625,\)
-	\(\varepsilon_{2}=-1,\,\varepsilon_{3}=0,\, \omega=0.2,\, k=0.707\).}
-	\label{fig21_1}
+		\begin{center}
+			\begin{minipage}[h]{0.48\linewidth}
+				\includegraphics[width=1\linewidth]{fig33.eps}
+				\subcaption{Solution profile at t=25}
+			\end{minipage}
+			\hfill
+			\begin{minipage}[h]{0.48\linewidth}
+				\includegraphics[width=1\linewidth]{fig34.eps}
+				\subcaption{Solution profile at t=200}
+			\end{minipage}
+		\end{center}
+		\caption{Results for the initial pulse (\ref{eq55}) at
+		\(L=200,\, T=200,\, h=0.25,\, \tau=0.0625,\)
+		\(\varepsilon_{2}=-1,\,\varepsilon_{3}=0,\, \omega=0.2,\, k=0.707\).}
+		\label{fig21_1}
 	\end{figure}
 
 	Relative error between analytical solution (\ref{e7}) and numerical solution over time is illustrated in Fig. \ref{fig21_2a}. 
 	\begin{figure}[H]
-	\begin{center}
-	\begin{minipage}[h]{0.48\linewidth}
-	\includegraphics[width=1\linewidth]{fig48.eps}
-	\subcaption{Relative error over time}
-	\label{fig21_2a}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[h]{0.48\linewidth}
-	\includegraphics[width=1\linewidth]{fig49.eps}
-	\subcaption{Solution profile at t=2500}
-	\label{fig21_2b}
-	\end{minipage}
-	\end{center}
-	\caption{Results for the initial pulse (\ref{eq55}) at
-	\(L=200,\, T=200,\, h=0.25,\, \tau=0.0625,\)
-	\(\varepsilon_{2}=-1,\,\varepsilon_{3}=0,\, \omega=0.2,\, k=0.707\).}
-	\label{fig21_2}
+		\begin{center}
+			\begin{minipage}[h]{0.48\linewidth}
+				\includegraphics[width=1\linewidth]{fig48.eps}
+				\subcaption{Relative error over time}
+				\label{fig21_2a}
+			\end{minipage}
+			\hfill
+			\begin{minipage}[h]{0.48\linewidth}
+				\includegraphics[width=1\linewidth]{fig49.eps}
+				\subcaption{Solution profile at t=2500}
+				\label{fig21_2b}
+			\end{minipage}
+		\end{center}
+		\caption{Results for the initial pulse (\ref{eq55}) at
+		\(L=200,\, T=200,\, h=0.25,\, \tau=0.0625,\)
+		\(\varepsilon_{2}=-1,\,\varepsilon_{3}=0,\, \omega=0.2,\, k=0.707\).}
+		\label{fig21_2}
 	\end{figure}
 
 	When the highest power is taken into account at \(\varepsilon_{3}\ne0\), oscillatory behavior persists. It is found that the sign of the \(\varepsilon_{3}\) affects the damping rate of oscillations. At \(\varepsilon _{3}<0\) the damping is more intense and the amplitude of the stable pulse is reduce. At \(\varepsilon _{3}>0\) the oscillations stop at longer times with increased stable pulse amplitude. The illustrations of the pulse amplitude behavior are depicted in Fig. \ref{fig48}. Here the parameter \(\delta\) is the relative size of the oscillations gap.
 	\begin{figure}[H] %% color here
-	\begin{minipage}[h]{1\linewidth}
-	\includegraphics[width=1\linewidth]{fig35.eps}
-	\subcaption{\(\varepsilon_{2}=-0.5,\,\varepsilon_{3}=0\)}
-	\includegraphics[width=1\linewidth]{fig36.eps}
-	\subcaption{\(\varepsilon_{2}=-0.5,\,\varepsilon_{3}=-0.25\)}
-	\includegraphics[width=1\linewidth]{fig37.eps}
-	\subcaption{\(\varepsilon_{2}=-0.5,\,\varepsilon_{3}=0.25\)}
-	\end{minipage}
-	\caption{The behavior of the pulse (\ref{eq55}) amplitude in the presence of the highest nonlinearities.
-	\(L=200,\, T=5000,\, h=0.25,\, \tau=0.0625,\, \omega=0.2,\, k=0.707\).}
-	\label{fig48}
+		\begin{minipage}[h]{1\linewidth}
+			\includegraphics[width=1\linewidth]{fig35.eps}
+			\subcaption{\(\varepsilon_{2}=-0.5,\,\varepsilon_{3}=0\)}
+			\includegraphics[width=1\linewidth]{fig36.eps}
+			\subcaption{\(\varepsilon_{2}=-0.5,\,\varepsilon_{3}=-0.25\)}
+			\includegraphics[width=1\linewidth]{fig37.eps}
+			\subcaption{\(\varepsilon_{2}=-0.5,\,\varepsilon_{3}=0.25\)}
+		\end{minipage}
+		\caption{The behavior of the pulse (\ref{eq55}) amplitude in the presence of the highest nonlinearities.
+		\(L=200,\, T=5000,\, h=0.25,\, \tau=0.0625,\, \omega=0.2,\, k=0.707\).}
+		\label{fig48}
 	\end{figure}
 
 	We conclude that the solitary waves of the NLS equation when propagating in a medium with higher nonlinear terms, are transformed into stable solitons of a generalized non-integrable model. This transition is accompanied by the energy emission and oscillations of the initial pulse. It is found that the addition of a 7th power nonlinear term affects the rate of transformation into a stable soliton. The sign of \(\varepsilon_{3}\) affects the duration of the oscillations and the amplitude of the stable impulse.
@@ -633,89 +633,89 @@
 	Simulation results at \(k_{1}=-k_{2},\,\omega_{1}=\omega_{2},\,z_{0,1}=-z_{0,2},\,\theta_{0,1}=\theta_{0,2}+Delta \theta\) are illustrated in Fig. \ref{fig50} and Fig. \ref{fig51}.
 
 	\begin{figure}[H]
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig52.eps}
-	\subcaption{\(\Delta \theta=0,\)\\\( \varepsilon_{2}=0.2,\,\varepsilon_{3}=-0.1\)}
-	\end{minipage}
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig55.eps}
-	\subcaption{\(\Delta \theta=\frac{\pi}{2},\)\\\( \varepsilon_{2}=0.2,\,\varepsilon_{3}=-0.1\)}
-	\end{minipage}
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig58.eps}
-	\subcaption{\(\Delta \theta=\pi,\)\\\( \varepsilon_{2}=0.2,\,\varepsilon_{3}=-0.1\)}
-	\end{minipage}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig52.eps}
+			\subcaption{\(\Delta \theta=0,\)\\\( \varepsilon_{2}=0.2,\,\varepsilon_{3}=-0.1\)}
+		\end{minipage}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig55.eps}
+			\subcaption{\(\Delta \theta=\frac{\pi}{2},\)\\\( \varepsilon_{2}=0.2,\,\varepsilon_{3}=-0.1\)}
+		\end{minipage}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig58.eps}
+			\subcaption{\(\Delta \theta=\pi,\)\\\( \varepsilon_{2}=0.2,\,\varepsilon_{3}=-0.1\)}
+		\end{minipage}
 
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig53.eps}
-	\subcaption{\(\Delta \theta=0,\)\\\( \varepsilon_{2}=0.4,\,\varepsilon_{3}=-0.2\)}
-	\end{minipage}
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig56.eps}
-	\subcaption{\(\Delta \theta=\frac{\pi}{2},\)\\\( \varepsilon_{2}=0.4,\,\varepsilon_{3}=-0.2\)}
-	\end{minipage}
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig59.eps}
-	\subcaption{\(\Delta \theta=\pi,\)\\\( \varepsilon_{2}=0.4,\,\varepsilon_{3}=-0.2\)}
-	\end{minipage}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig53.eps}
+			\subcaption{\(\Delta \theta=0,\)\\\( \varepsilon_{2}=0.4,\,\varepsilon_{3}=-0.2\)}
+		\end{minipage}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig56.eps}
+			\subcaption{\(\Delta \theta=\frac{\pi}{2},\)\\\( \varepsilon_{2}=0.4,\,\varepsilon_{3}=-0.2\)}
+		\end{minipage}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig59.eps}
+			\subcaption{\(\Delta \theta=\pi,\)\\\( \varepsilon_{2}=0.4,\,\varepsilon_{3}=-0.2\)}
+		\end{minipage}
 
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig54.eps}
-	\subcaption{\(\Delta \theta=0,\)\\\( \varepsilon_{2}=0.6,\,\varepsilon_{3}=-0.3\)}
-	\end{minipage}
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig57.eps}
-	\subcaption{\(\Delta \theta=\frac{\pi}{2},\)\\\( \varepsilon_{2}=0.6,\,\varepsilon_{3}=-0.3\)}
-	\end{minipage}
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig60.eps}
-	\subcaption{\(\Delta \theta=\pi,\)\\\( \varepsilon_{2}=0.6,\,\varepsilon_{3}=-0.3\)}
-	\end{minipage}
-	\caption{The modulus of numerical solution for soliton collisions at \(k_{1}=-k_{2}=0.7,\,\omega_{1}=\omega_{2}=0\).}
-	\label{fig50}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig54.eps}
+			\subcaption{\(\Delta \theta=0,\)\\\( \varepsilon_{2}=0.6,\,\varepsilon_{3}=-0.3\)}
+		\end{minipage}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig57.eps}
+			\subcaption{\(\Delta \theta=\frac{\pi}{2},\)\\\( \varepsilon_{2}=0.6,\,\varepsilon_{3}=-0.3\)}
+		\end{minipage}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig60.eps}
+			\subcaption{\(\Delta \theta=\pi,\)\\\( \varepsilon_{2}=0.6,\,\varepsilon_{3}=-0.3\)}
+		\end{minipage}
+		\caption{The modulus of numerical solution for soliton collisions at \(k_{1}=-k_{2}=0.7,\,\omega_{1}=\omega_{2}=0\).}
+		\label{fig50}
 	\end{figure}
 
 	\begin{figure}[H]
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig52g.eps}
-	\subcaption{\(\Delta \theta=0,\)\\\( \varepsilon_{2}=0.2,\,\varepsilon_{3}=-0.1\)}
-	\end{minipage}
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig55g.eps}
-	\subcaption{\(\Delta \theta=\frac{\pi}{2},\)\\\( \varepsilon_{2}=0.2,\,\varepsilon_{3}=-0.1\)}
-	\end{minipage}
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig58g.eps}
-	\subcaption{\(\Delta \theta=\pi,\)\\\( \varepsilon_{2}=0.2,\,\varepsilon_{3}=-0.1\)}
-	\end{minipage}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig52g.eps}
+			\subcaption{\(\Delta \theta=0,\)\\\( \varepsilon_{2}=0.2,\,\varepsilon_{3}=-0.1\)}
+		\end{minipage}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig55g.eps}
+			\subcaption{\(\Delta \theta=\frac{\pi}{2},\)\\\( \varepsilon_{2}=0.2,\,\varepsilon_{3}=-0.1\)}
+		\end{minipage}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig58g.eps}
+			\subcaption{\(\Delta \theta=\pi,\)\\\( \varepsilon_{2}=0.2,\,\varepsilon_{3}=-0.1\)}
+		\end{minipage}
 
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig53g.eps}
-	\subcaption{\(\Delta \theta=0,\)\\\( \varepsilon_{2}=0.4,\,\varepsilon_{3}=-0.2\)}
-	\end{minipage}
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig56g.eps}
-	\subcaption{\(\Delta \theta=\frac{\pi}{2},\)\\\( \varepsilon_{2}=0.4,\,\varepsilon_{3}=-0.2\)}
-	\end{minipage}
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig59g.eps}
-	\subcaption{\(\Delta \theta=\pi,\)\\\( \varepsilon_{2}=0.4,\,\varepsilon_{3}=-0.2\)}
-	\end{minipage}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig53g.eps}
+			\subcaption{\(\Delta \theta=0,\)\\\( \varepsilon_{2}=0.4,\,\varepsilon_{3}=-0.2\)}
+		\end{minipage}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig56g.eps}
+			\subcaption{\(\Delta \theta=\frac{\pi}{2},\)\\\( \varepsilon_{2}=0.4,\,\varepsilon_{3}=-0.2\)}
+		\end{minipage}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig59g.eps}
+			\subcaption{\(\Delta \theta=\pi,\)\\\( \varepsilon_{2}=0.4,\,\varepsilon_{3}=-0.2\)}
+		\end{minipage}
 
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig54g.eps}
-	\subcaption{\(\Delta \theta=0,\)\\\( \varepsilon_{2}=0.6,\,\varepsilon_{3}=-0.3\)}
-	\end{minipage}
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig57g.eps}
-	\subcaption{\(\Delta \theta=\frac{\pi}{2},\)\\\( \varepsilon_{2}=0.6,\,\varepsilon_{3}=-0.3\)}
-	\end{minipage}
-	\begin{minipage}[h]{0.32\linewidth}
-	\includegraphics[width=1\linewidth]{fig60g.eps}
-	\subcaption{\(\Delta \theta=\pi,\)\\\( \varepsilon_{2}=0.6,\,\varepsilon_{3}=-0.3\)}
-	\end{minipage}
-	\caption{The real part of numerical solution for soliton collisions at \(k_{1}=-k_{2}=0.7,\,\omega_{1}=\omega_{2}=0\).}
-	\label{fig51}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig54g.eps}
+			\subcaption{\(\Delta \theta=0,\)\\\( \varepsilon_{2}=0.6,\,\varepsilon_{3}=-0.3\)}
+		\end{minipage}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig57g.eps}
+			\subcaption{\(\Delta \theta=\frac{\pi}{2},\)\\\( \varepsilon_{2}=0.6,\,\varepsilon_{3}=-0.3\)}
+		\end{minipage}
+		\begin{minipage}[h]{0.32\linewidth}
+			\includegraphics[width=1\linewidth]{fig60g.eps}
+			\subcaption{\(\Delta \theta=\pi,\)\\\( \varepsilon_{2}=0.6,\,\varepsilon_{3}=-0.3\)}
+		\end{minipage}
+		\caption{The real part of numerical solution for soliton collisions at \(k_{1}=-k_{2}=0.7,\,\omega_{1}=\omega_{2}=0\).}
+		\label{fig51}
 	\end{figure}
 
 	The simulation results allow us to conclude that collisions of solitons in the presence of higher nonlinearity terms can be essentially inelastic. In addition to the perturbation parameters, the certain type of interaction is affected by the difference in the initial phases of the solitons. Near \(\Delta \theta=\pi\), the solitons interact the least intensively. When the phase detuning is in the vicinity of zero, there is a significant energy emission. In this case, there exist a critical perturbation parameters at which two solitons merge into one stationary one. When the parameter \(\Delta \theta \in (0,\,\pi)\), the interaction of solitons occurs with the exchange of energy and momentum.
@@ -725,11 +725,10 @@
 	The following findings are observed from the simulation results:
 	\begin{enumerate}
 	\setlength\itemsep{1em}
-	\item The solitary waves of the cubic-quintic-septic nonlinear Schr\"{o}dinger equation propagate steadily.
-	\item The optical soliton of the cubic-quintic-septic nonlinear Schr\"{o}dinger equation is not destryed after interaction with disturbance. The pulse is stable when propagating in noisy conditions
-	\item Taking into account the higher degrees of nonlinearity, the solitons of the NLS equation transform into a stable soliton solutions of a generalized non-integrable model.
-	\item Under conditions of higher nonlinear terms, solitons interact inelastically upon collision. With the addition of the 7th nonlinearity power, the merging of two solitons is possible.
-
+		\item The solitary waves of the cubic-quintic-septic nonlinear Schr\"{o}dinger equation propagate steadily.
+		\item The optical soliton of the cubic-quintic-septic nonlinear Schr\"{o}dinger equation is not destryed after interaction with disturbance. The pulse is stable when propagating in noisy conditions
+		\item Taking into account the higher degrees of nonlinearity, the solitons of the NLS equation transform into a stable soliton solutions of a generalized non-integrable model.
+		\item Under conditions of higher nonlinear terms, solitons interact inelastically upon collision. With the addition of the 7th nonlinearity power, the merging of two solitons is possible.
 	\end{enumerate}
 \bibliographystyle{unsrt}
 \bibliography{export}
