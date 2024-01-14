@@ -339,7 +339,7 @@
 	\begin{equation}\label{eq24}
 		u'(x',t')=y(z)e^{i(kx'-\omega t'-\theta_{0})}, \quad z=x'-2kt',
 	\end{equation}
-	где \(k\) and \(\theta_{0}\) - произвольные постоянные. 
+	где \(k\) и \(\theta_{0}\) - произвольные постоянные. 
 
 	Принимая во внимание, что \(z\), \(\xi (z)\), \(y(\xi)\) \(\in \mathbb{R}\), из выражений (\ref{eq22}) и (\ref{eq23}) следуют дополнительные ограничения на параметры \(M_{0}\) и \(M_{1}\) для существования найденного решения:
 	\begin{equation} \label{eq25}
@@ -409,24 +409,24 @@
 		\boldsymbol{V}^m=e^{i\tau\mathscr{N}[\boldsymbol{U}^m]}\boldsymbol{U}^m.
 	\end{equation}
 
-	Applying the split-step Fourier method, it is proposed to use the discrete Fourier transform for the grid function \(\boldsymbol{V}^m\) to construct a solution on a next time layer:
+	Применяя метод Фурье, используем дискретное преобразование Фурье для сеточной функции \(\boldsymbol{V}^m\) для определения решения на следующем временном слое:
 	\begin{equation} 
 		\hat{\boldsymbol{V}}^m=\frac{h}{L}\exp\left(-i \boldsymbol{\mu} \boldsymbol{x}^{T}\right)\cdot \boldsymbol{V}^{m},
 	\end{equation}
-	where \(\hat{\boldsymbol{V}}^m\) is the vector of Fourier coefficients, \(\boldsymbol{\mu}=\left(\mu_{-N/2},\ldots,\mu_{N/2-1}\right)^{T}\) is the transform frequency vector \(\mu_{n}=\frac{2\pi n}{L}\), \(\boldsymbol{x}=\left(x_{-N/2},\ldots,x_{N/2-1}\right)^{T}\) are the grid point coordinates.
+	где \(\hat{\boldsymbol{V}}^m\) - вектор коэффициетов Фурье, \(\boldsymbol{\mu}=\left(\mu_{-N/2},\ldots,\mu_{N/2-1}\right)^{T}\) - вектор частот преобразования \(\mu_{n}=\frac{2\pi n}{L}\), \(\boldsymbol{x}=\left(x_{-N/2},\ldots,x_{N/2-1}\right)^{T}\) - координаты точек сетки.
 
-	There is a ratio between \(\hat{\boldsymbol{U}}^{m+1}\) and \(\hat{\boldsymbol{V}}^{m}\),
+	Далее воспользуемся соотношением между \(\hat{\boldsymbol{U}}^{m+1}\) и \(\hat{\boldsymbol{V}}^{m}\),
 	\begin{equation} \label{eq46}
 		\hat{\boldsymbol{U}}^{m+1}=\exp\left(-i \left(\boldsymbol{\mu}\circ \boldsymbol{\mu}\right) \tau\right)\circ \hat{\boldsymbol{V}}^{m},
 	\end{equation}
-	which is obtained by substituting a corresponding Fourier series for \(\boldsymbol{U}^{m+1}\) and \(\boldsymbol{V}^{m}\) in Eq. (\ref{eq34}). Here \(x\circ y\) refers to the Hadamard product.
+	которое вытекает из уравнения (\ref{eq34}) после подстановкив него вместо \(\boldsymbol{U}^{m+1}\) и \(\boldsymbol{V}^{m}\) соответствующих рядов Фурье. Под \(x\circ y\) понимается произведение по Адамару.
 
-	The solution on the next time layer is found by the inverse Fourier transform using Eq. (\ref{eq46}):
+	Решение на следующем временном слое восстанавливается с помощью обратного преобразования Фурье, используя (\ref{eq46}):
 	\begin{equation} 
 		\boldsymbol{U}^{m+1}=\exp\left(i \boldsymbol{\mu} \boldsymbol{x}^{T}\right)\cdot \hat{\boldsymbol{U}}^{m+1}.
 	\end{equation}
 
-	Modifying the method for the Eq. (\ref{eq200-4}), operators \(\mathscr{L} [u]\) and \(\mathscr{N}[u]\) take the form:
+	Модифицируя метод применительно к уравнению (\ref{eq200-4}), запишем операторы \(\mathscr{L} [u]\) и \(\mathscr{N}[u]\) в виде:
 	\begin{equation}
 		\begin{cases}
 		\mathscr{L} [u] \equiv u_{xx},  \\
@@ -434,7 +434,7 @@
 		\end{cases}
 	\end{equation}
 
-	A simplified flowchart for the numerical solution of the pulse propagation problem with periodic boundary conditions using the split-step Fourier method depicted on Fig. \ref{fig2}. 
+	Упрощённая блок-схема программного кода для численного решения проблемы распространения оптических импульсов при периодических граничных условиях представлена на Рис. \ref{fig2}. 
 	\begin{figure}[H]
 		\begin{center}
 			\begin{minipage}[h]{0.48\linewidth} %% color here
@@ -445,171 +445,170 @@
 				\includegraphics[width=0.75\linewidth]{fig3.png}
 			\end{minipage}
 		\end{center}
-		\caption{Flowchart for modeling the pulse propagation process using the Fourier method.}
+		\caption{Блок-схема программы, имоделирующей процессы распространения испульсов с помощью метода Фурье.}
 		\label{fig2}
 	\end{figure}
 \section{Численный анализ}\label{ch300}
 \subsection{Применение метода Фурье для моделирования процесса распространения уединённой волны, описываемой уравнением Шрёдингера с тремя нелинейностями}\label{ch310}
-	Let us consider Eq. (\ref{eq200-4}). To verify the analytical calculations, we numerically simulate the process of propagation of a solitary wave (\ref{eq24}). We perform a computation for certain parameters \(M_{0}\) and \(M_{1}\), fulfilling the constraints (\ref{eq27}). Parameters \(\varepsilon_{1}\),\,\(\varepsilon_{2}\),\,\(\omega\) and \(\mu\) are determined by formulas (\ref{eq19}). The result of the modeling are depicted on Fig.\ref{fig10}. Analytical and numerical profiles at the moment \(t=16\) are depicted in Fig. \ref{fig10a}.
+	Рассмотрим уравнение (\ref{eq200-4}). Для подтверждения корректности аналитических рассуждений и проверки полученного результата, смоделируем распространение уединённой волны (\ref{eq24}) при помощи описанной схемы. Произведём расчёт для определённых параметров \(M_{0}\) и \(M_{1}\), удовлетворяющих условиям (\ref{eq27}). Параметры \(\varepsilon_{1}\),\,\(\varepsilon_{2}\),\,\(\omega\) и \(\mu\) определяются формулами (\ref{eq19}). Результат моделирования представлен на Рис.\ref{fig10}. Аналитический и численно полученный профили в момент \(t=16\) изображены на Рис. \ref{fig10a}.
 
 	\begin{figure}[H]
 		\begin{center}
 			\begin{minipage}[h]{0.48\linewidth} %% color here
 				\includegraphics[width=1\linewidth]{fig11.eps}
-				\subcaption{Numerical solution surface plot} 
+				\subcaption{Модуль численного решения} 
 				\label{fig10a}
 			\end{minipage}
 			\hfill
 			\begin{minipage}[h]{0.48\linewidth}
 				\includegraphics[width=1\linewidth]{fig12.eps}
-				\subcaption{Solution module at t=16}
+				\subcaption{Модули решений при t=16}
 				\label{fig10b}
 			\end{minipage}
 		\end{center}
-		\caption{Propagation of a solitary wave (\ref{eq24}) \\
-		at the parameters
+		\caption{Распространение уединённой волны (\ref{eq24}) \\
+		при параметрах
 		\(L=120,\, T=16,\, h=0.2,\, \tau=0.04\), 
 		\(z_{0}=-20,\,k=1.6,\, M_{0}=-1.48,\, M_{1}=6.16\).}
 		\label{fig10}
 	\end{figure}
-	The relative error for calculation at the specified parameters does not exceed 0.08\%.  The dependence of a relative error over time is illustrated in Fig. \ref{fig11a}.
+	Относительная погрешность расчета при заданных параметрах не превышает 0.08.\%. Зависимость относительной погрешности от времени проиллюстрирована на Рис. \ref{fig11a}.
 
 	\begin{figure}[H]
 		\begin{center}
 			\begin{minipage}[h]{0.48\linewidth} %% color here
 				\includegraphics[width=1\linewidth]{fig13.eps}
-				\subcaption{Relative error over time at \(h=0.2,\, \tau=0.04\)} 
+				\subcaption{Относительная ошибка от времени при \(h=0.2,\, \tau=0.04\)} 
 				\label{fig11a}
 			\end{minipage}
 			\hfill
 			\begin{minipage}[h]{0.48\linewidth}
 				\includegraphics[width=1\linewidth]{fig45.eps}
-				\subcaption{Maximum relative error over grid space step \(h\)}
+				\subcaption{Максимальная относительная ошибка от шага сетки \(h\)}
 				\label{fig11b}
 			\end{minipage}
 		\end{center}
-		\caption{Numerical results at the parameters
+		\caption{Численные результаты при параметрах
 		\(L=120,\, T=16\), 
 		\(M_{0}=-1.48,\, M_{1}=6.16\).}
 		\label{fig11}
 	\end{figure}
-	Since grid convergence is achieved (see Fig. \ref{fig11b}), we claim that all analytical calculations are correct. Hence, we conclude that the analytical solution built in Section \ref{ch210} describe a stable soliton which can be used for signal transmission.
+	Поскольку сходимость сетки достигнута (Рис. \ref{fig11b}), мы утверждаем, что аналитические расчеты верны. Следовательно, аналитическое решение, построенное в разделе \ref{ch210}, описывает устойчивый солитон, который потенциально может быть использован для передачи сигналов.
 \subsection{Взаимодействие солитона с возмущением в начальных условиях}\label{ch320}
-	Let us consider a numerical modeling of the pulse propagation at initial perturbation. We disturb the initial condition, corresponding to solution (\ref{eq24}) of Eq. (\ref{eq200-4}) in the following way:
+	Проведём моделирование распространения импульса при возмущении в начальных условиях. Внесём в начальное условие, соотвествующее решению (\ref{eq24}) уравнения (\ref{eq200-4}) возмущение следующим образом:
 	\begin{equation} \label{eq52}
 		u(x,0)=y\left(\xi\left(x\right)\right)\cdot e^{i(kx-\theta_{0})}+Ae^{-\nu(x-x_{0})^{2}}.
 	\end{equation}
-	The corresponding numerical solutions are depicted in Fig. \ref{fig17}.
+	Соотвествующие численные результаты изображены на Рис. \ref{fig17}.
 	\begin{figure}[H] %% color here
 		\begin{center}
 			\begin{minipage}[h]{0.48\linewidth}
 				\includegraphics[width=1\linewidth]{fig18.eps}
-				\subcaption{Module of initial profile (\ref{eq52}) }
+				\subcaption{Модуль начального условия (\ref{eq52}) }
 			\end{minipage}
 			\hfill
 			\begin{minipage}[h]{0.48\linewidth}
 				\includegraphics[width=1\linewidth]{fig19.eps}
-				\subcaption{Module of numerical solution}
+				\subcaption{Модуль численного решения}
 			\end{minipage}
 		\end{center}
-		\caption{Plots of numerical results at the parameters \(M_{0}=-3,\,M_{1}=12.34,\, k=3,\, \xi_{0}=0,\,z_{0}=-80,\, \theta_{0}=0\), \\
+		\caption{Численные результаты при параметрах \(M_{0}=-3,\,M_{1}=12.34,\, k=3,\, \xi_{0}=0,\,z_{0}=-80,\, \theta_{0}=0\), \\
 		\(L=300,\, T=32,\, h=0.25,\, \tau=0.625,\,A=0.2,\,\nu=0.06,\, x_{0}=25\).}
 		\label{fig17}
 	\end{figure}
-	This simulation allows us to conclude that the soliton specified by the parameters \(M_{0}=-3,\,M_{1}=12.34\), interacts with the given perturbation and does not lose the ability to propagate. The pulse profile is restored after interaction.
+	Проведённое моделирование позволяет сделать вывод, что солитон, заданный рассмотренными параметрами \(M_{0}=-3,\,M_{1}=12,34\), взаимодействует с заданным возмущением, не распадаясь и не теряя способности к распространению. Профиль пульса восстанавливается после взаимодействия.
 
-	It is found that the soliton (\ref{eq200-4}) is stable when propagating in a medium with random noise of the following type:
+	Также установлено, что солитон (\ref{eq200-4}) устойчив при распространении в среде со случайным шумом следующего вида:
 	\begin{equation} \label{eq522}
 		u(x,0)=y\left(\xi\left(x\right)\right)\cdot e^{i(kx-\theta_{0})}+A\cdot rand(x).
 	\end{equation}
-	The corresponding illustrations are depicted in Fig. \ref{fig172}.	
+	Результаты моделирования проиллюстрированы на Рис. \ref{fig172}.	
 	\begin{figure}[H] %% color here
 		\begin{center}
 			\begin{minipage}[h]{0.48\linewidth}
 				\includegraphics[width=1\linewidth]{fig46.eps}
-				\subcaption{Module of numerical solution}
+				\subcaption{Модуль численного решения}
 			\end{minipage}
 			\hfill
 			\begin{minipage}[h]{0.48\linewidth}
 				\includegraphics[width=1\linewidth]{fig47.eps}
-				\subcaption{Wave profiles at t=32}
+				\subcaption{Профили решений при t=32}
 			\end{minipage}
 		\end{center}
-		\caption{Plots of numerical results at the parameters \(M_{0}=-3,\,M_{1}=12.34,\, k=3,\, \xi_{0}=0,\,z_{0}=-80,\, \theta_{0}=0\), \\
+		\caption{Численные результаты при параметрах \(M_{0}=-3,\,M_{1}=12.34,\, k=3,\, \xi_{0}=0,\,z_{0}=-80,\, \theta_{0}=0\), \\
 		\(L=300,\, T=32,\, h=0.25,\, \tau=0.0625,\,A=0.05\).}
 		\label{fig172}
 	\end{figure}
 
-	The simulations carried out in this section confirm the stability of the solitons obtained in Section \ref{ch210}.
+	Моделирования, представленные в данном разделе, подтверждают стабильность солитонов, полученных в разделе \ref{ch210}.
 \subsection{Анализ влияния высших степеней нелинейности на распространение уединённой волны}\label{ch330}
-	In many physical applications, some pertirbation terms are introduced into NLS equation. In a mathematical model, it is not always possible to take them into account in advance. In this section we investigate the impact of the additional nonlinear terms on the solutions of the NLS equation.
-
-	At \(\varepsilon_{2}=0,\,\varepsilon_{3}=0\), the Eq. (\ref{eq200-4}) takes the form:
+	Во многих физических приложениях НУШ обобщается путём введения некоторых возмущающих членов. Однако, поскольку реальные физические процессы могут протекать по более сложным законам, не всегда возможно заранее предугадать и учесть все необходимые уточняющие члены. В этом разделе мы исследуем влияние дополнительных нелинейных членов на решения НУШ.
+	При \(\varepsilon_{2}=0,\,\varepsilon_{3}=0\), уравнение (\ref{eq200-4}) записывается следующим образом:
 	\begin{equation}\label{e6}
 		iu_{t}+u_{xx}+|u|^2 u=0.
 	\end{equation}
-	This well-known NLS equation is completely integrable. The solution of Eq. (\ref{e6}) in the form of a solitary wave has been found in paper \cite{Rad3} and takes the following form:
+	Это хорошо известное уравнение НУШ интегрируемо. Его решение вида уединенной волны найдено в работе \cite{Rad3} и имеет вид:
 	\begin{equation} \label{eq48}
 		u(x,t)=\frac{4(k^{2}-\omega)}{2 (k^{2}-\omega) e^{-\left(x-c_{0}t-z_{0}\right)\sqrt{(k^{2}-\omega)}}+e^{\left(x-c_{0}t-z_{0}\right)\sqrt{(k^{2}-\omega)}}}\cdot e^{i(kx-\omega t-\theta_{0})},
 	\end{equation}
-	where \(c_{0}=2k\) and \( k,\, \omega,\, z_{0},\, \theta_{0}\) are arbitrary constants.
-	The initial condition corresponding to Eq. (\ref{eq48}) takes the form:
+	где \(c_{0}=2k\) и \( k,\, \omega,\, z_{0},\, \theta_{0}\) - произвольные константы.
+	Начальное условие, относящееся к решению (\ref{eq48}) представляется следующим образом:
 	\begin{equation}\label{eq55}
 		u(x,0)=\frac{4\,(k^{2}-\omega)}{2 (k^{2}-\omega) e^{-(x-z_{0})\sqrt{(k^{2}-\omega)}}+e^{(x-z_{0})\sqrt{(k^{2}-\omega)}}}\cdot e^{i(kx-\theta_{0})}
 	\end{equation}
 
-	At \(\varepsilon_{3}=0\), the solution of the Eq. (\ref{eq200-4}) was found and takes following the form:
+	При \(\varepsilon_{3}=0\), решение уравнения (\ref{eq200-4}) было также найдено в следующем виде:
 	\begin{equation}\label{e7}
 		u(x,t)=\left(\frac{4\,\mu\, e^{\sqrt{\mu}\,(x-2kt-z_{0})}}{1+4\, e^{\sqrt{\mu}\,(x-2kt-z_{0})}+(4+4\, \mu\, \nu) \,e^{2\sqrt{\mu}\,(x-2kt-z_{0})}}\right)^{\frac{1}{2}}\cdot e^{i(kx-\omega t-\theta_{0})},
 	\end{equation}
-	where \(\mu=4(\omega-k^{2})\), \(\nu=\cfrac{4 \varepsilon_{2}}{3}\) and \( k,\, \omega,\, z_{0},\, \theta_{0}\) are arbitrary constants. We note that at \(\varepsilon_{2}=0\) Eq. (\ref{e7}) coincides with Eq. (\ref{eq48}).
+	где \(\mu=4(\omega-k^{2})\), \(\nu=\cfrac{4 \varepsilon_{2}}{3}\) и \( k,\, \omega,\, z_{0},\, \theta_{0}\) - произвольные константы. Заметим, что при \(\varepsilon_{2}=0\) решение (\ref{e7}) совпадает с решением (\ref{eq48}).
 
-	Let us consider how the behavior of a solitary wave Eq. (\ref{eq55}) is affected by the presence of higher nonlinearity terms.
-	We consider the physical process described by the Eq. (\ref{eq200-4}) and assume that the parameters \(\varepsilon_{2}\) and \(\varepsilon_{3}\) are neglected when setting up the initial pulse.
+	Исследуем, как уединенная волна (\ref{eq55}) подвержена влиянию нелинейных членов высших порядков в уравнении модели.
+	Рассмотрим физический процесс, описываемый уравнением. (\ref{eq200-4}) и предположим, что параметры \(\varepsilon_{2}\) и \(\varepsilon_{3}\) приняты равными нулю при построении начального условия.
 
-	In the absence of the highest nonlinear powers at \(\varepsilon_{2}=0,\,\varepsilon_{3}=0\) the solitary wave (\ref{eq48}) is the exact solution of the Eq. (\ref{eq200-4}). The numerical solution for the initial pulse (\ref{eq55}) coincides with the analytical.
+	В отсутствие высших нелинейных членов при \(\varepsilon_{2}=0,\,\varepsilon_{3}=0\) уединенная волна (\ref{eq48}) является точным решением уравнения (\ref{eq200-4}). Численное решение для начального условия (\ref{eq55}) совпадает с аналитическим.
 
-	When the nonlinearity parameter \(\varepsilon_{2}\ne 0\) is taken into account, the decay of the initial pulse is observed. Decay is accompanied by soliton oscillations and energy emission. It is observed that the soliton (\ref{eq55}), when oscillating and emitting energy, transforms into a stable soliton solution coinciding with the Eq. (\ref{e7}). The simulation result is illustrated in Fig. \ref{fig21_1} and \ref{fig21_2}.
+	Когда в модель вмешивается нелинейный член при \(\varepsilon_{2}\ne 0\), начальный импульс начинает затухать и распадаться. Распад сопровождается солитонными колебаниями и излучением энергии. Обнаружено, что начальный импульс (\ref{eq55}), колеблясь и излучая энергию, переходит в устойчивый солитон, совпадающий с аналитическим решением (\ref{e7}) для обобщённой модели. Результат моделирования проиллюстрирован на Рис. \ref{fig21_1} и \ref{fig21_2}.
 	\begin{figure}[H] %% color here
 		\begin{center}
 			\begin{minipage}[h]{0.48\linewidth}
 				\includegraphics[width=1\linewidth]{fig33.eps}
-				\subcaption{Solution profile at t=25}
+				\subcaption{Профиль решения при t=25}
 			\end{minipage}
 			\hfill
 			\begin{minipage}[h]{0.48\linewidth}
 				\includegraphics[width=1\linewidth]{fig34.eps}
-				\subcaption{Solution profile at t=200}
+				\subcaption{Профиль решения при t=200}
 			\end{minipage}
 		\end{center}
-		\caption{Results for the initial pulse (\ref{eq55}) at
+		\caption{Численные результаты распространения импульса (\ref{eq55}) при
 		\(L=200,\, T=200,\, h=0.25,\, \tau=0.0625,\)
 		\(\varepsilon_{2}=-1,\,\varepsilon_{3}=0,\, \omega=0.2,\, k=0.707\).}
 		\label{fig21_1}
 	\end{figure}
 
-	Relative error between analytical solution (\ref{e7}) and numerical solution over time is illustrated in Fig. \ref{fig21_2a}. 
+	Относительная ошибка между аналитическим решением (\ref{e7}) и полученным численным решением от времени представлена на Рис. \ref{fig21_2a}.
 	\begin{figure}[H]
 		\begin{center}
 			\begin{minipage}[h]{0.48\linewidth}
 				\includegraphics[width=1\linewidth]{fig48.eps}
-				\subcaption{Relative error over time}
+				\subcaption{Относительная ошибка от времени}
 				\label{fig21_2a}
 			\end{minipage}
 			\hfill
 			\begin{minipage}[h]{0.48\linewidth}
 				\includegraphics[width=1\linewidth]{fig49.eps}
-				\subcaption{Solution profile at t=2500}
+				\subcaption{Профиль решения при t=2500}
 				\label{fig21_2b}
 			\end{minipage}
 		\end{center}
-		\caption{Results for the initial pulse (\ref{eq55}) at
+		\caption{Численные результаты распространения импульса (\ref{eq55}) при
 		\(L=200,\, T=200,\, h=0.25,\, \tau=0.0625,\)
 		\(\varepsilon_{2}=-1,\,\varepsilon_{3}=0,\, \omega=0.2,\, k=0.707\).}
 		\label{fig21_2}
 	\end{figure}
 
-	When the highest power is taken into account at \(\varepsilon_{3}\ne0\), oscillatory behavior persists. It is found that the sign of the \(\varepsilon_{3}\) affects the damping rate of oscillations. At \(\varepsilon _{3}<0\) the damping is more intense and the amplitude of the stable pulse is reduce. At \(\varepsilon _{3}>0\) the oscillations stop at longer times with increased stable pulse amplitude. The illustrations of the pulse amplitude behavior are depicted in Fig. \ref{fig48}. Here the parameter \(\delta\) is the relative size of the oscillations gap.
+	Рассмотрим добавление в модель нелинейного члена седьмой степени при \(\varepsilon_{3}\ne0\). При этом колебательное поведение импульса сохраняется. Установлено, что знак \(\varepsilon_{3}\) влияет на скорость затухания колебаний. При \(\varepsilon _{3}<0\) затухание более интенсивное и амплитуда стабильного импульса уменьшается. При \(\varepsilon _{3}>0\) колебания затухают более длительное время, а амплитуда полученного устойчивого импульса возрастает относительно исходного. Зависимости амплитуды импульса от времени в зависимости от параметров возмущений проиллюстрированы на Рис. \ref{fig48}. Параметр \(\delta\) — относительная амплитуда колебаний в конце временного промежутка моделирования.
 	\begin{figure}[H] %% color here
 		\begin{minipage}[h]{1\linewidth}
 			\includegraphics[width=1\linewidth]{fig35.eps}
@@ -619,18 +618,18 @@
 			\includegraphics[width=1\linewidth]{fig37.eps}
 			\subcaption{\(\varepsilon_{2}=-0.5,\,\varepsilon_{3}=0.25\)}
 		\end{minipage}
-		\caption{The behavior of the pulse (\ref{eq55}) amplitude in the presence of the highest nonlinearities.
+		\caption{Зависимость амплитуды импульса (\ref{eq55}) в присутствии дополнительных нелинейностей.
 		\(L=200,\, T=5000,\, h=0.25,\, \tau=0.0625,\, \omega=0.2,\, k=0.707\).}
 		\label{fig48}
 	\end{figure}
 
-	We conclude that the solitary waves of the NLS equation when propagating in a medium with higher nonlinear terms, are transformed into stable solitons of a generalized non-integrable model. This transition is accompanied by the energy emission and oscillations of the initial pulse. It is found that the addition of a 7th power nonlinear term affects the rate of transformation into a stable soliton. The sign of \(\varepsilon_{3}\) affects the duration of the oscillations and the amplitude of the stable impulse.
+	Мы заключаем, что уединенные волны НУШ при распространении в среде с высшими нелинейными членами при определённых параметрах преобразуются в устойчивые солитоны обобщенной неинтегрируемой модели. Этот переход сопровождается излучением энергии и солитонными колебаниями. Обнаружено, что добавление нелинейного члена 7-й степени влияет на скорость превращения в устойчивый солитон. Знак \(\varepsilon_{3}\) влияет на длительность колебаний и амплитуду устойчивого импульса.
 \subsection{Столкновения солитонов в присутствии высших степеней нелинейности}\label{ch340}
-	The solutions of a completely integrable nonlinear Schr\"{o}dinger equation interact elastically, i.e. without momentum and energy exchange. When the integrability of the system is violated by external perturbations, soliton collisions become inelastic. In this section we investigate the NLS equation soliton collisions in a medium, which is perturbed by nonlinear terms according to the Eq. (\ref{eq200-4}).
+	Известно, что решения интегрируемого нелинейного уравнения Шрёдингера взаимодействуют упруго, т.е. без обмена импульсом и энергией. При нарушении интегрируемости системы внешними возмущениями солитонные столкновения становятся неупругими. В этом разделе мы исследуем столкновения солитонов НУШ в среде, описываемой возмущённым уравнением (\ref{eq200-4}).
 
-	Let us consider the collision of two solitons of the form (\ref{eq55}) with the parameters \(k_{1},\,k_{2},\,\omega_{1},\,\omega_{2},\,z_{0,1},\,z_{0,2},\,\theta_{0,1},\,\theta_{0,2}\). The value of the parameters \(\varepsilon_{2}\) and \(\varepsilon_{3}\) affects the intensity of energy and momentum exchange. It is found that the type of interaction depends on the solitons initial phase detunnung \(\Delta \theta=\theta_{0,1}-\theta_{0,2}\).
+	Рассмотрим столкновения двух солитонов вида (\ref{eq55}) с заданными параметрами \(k_{1},\,k_{2},\,\omega_{1},\,\omega_{2},\,z_{0,1},\,z_{0,2},\,\theta_{0,1},\,\theta_{0,2}\). Значения параметров \(\varepsilon_{2}\) и \(\varepsilon_{3}\) влияют на интенсивность обмена импульсом и энергией. Обнаружено, что итоговый характер взаимодействия солитонов зависит от разности фаз в момент столкновения \(\Delta \theta=\theta_{0,1}-\theta_{0,2}\).
 
-	Simulation results at \(k_{1}=-k_{2},\,\omega_{1}=\omega_{2},\,z_{0,1}=-z_{0,2},\,\theta_{0,1}=\theta_{0,2}+Delta \theta\) are illustrated in Fig. \ref{fig50} and Fig. \ref{fig51}.
+	Результаты моделирования для \(k_{1}=-k_{2},\,\omega_{1}=\omega_{2},\,z_{0,1}=-z_{0,2},\,\theta_{0,1}=\theta_{0,2}+Delta \theta\) проиллюстрированы на Рис. \ref{fig50} и Рис. \ref{fig51}.
 
 	\begin{figure}[H]
 		\begin{minipage}[h]{0.32\linewidth}
@@ -671,7 +670,7 @@
 			\includegraphics[width=1\linewidth]{fig60.eps}
 			\subcaption{\(\Delta \theta=\pi,\)\\\( \varepsilon_{2}=0.6,\,\varepsilon_{3}=-0.3\)}
 		\end{minipage}
-		\caption{The modulus of numerical solution for soliton collisions at \(k_{1}=-k_{2}=0.7,\,\omega_{1}=\omega_{2}=0\).}
+		\caption{Модуль численного решения при моделировании солитонных столкновений для \(k_{1}=-k_{2}=0.7,\,\omega_{1}=\omega_{2}=0\).}
 		\label{fig50}
 	\end{figure}
 
@@ -714,21 +713,21 @@
 			\includegraphics[width=1\linewidth]{fig60g.eps}
 			\subcaption{\(\Delta \theta=\pi,\)\\\( \varepsilon_{2}=0.6,\,\varepsilon_{3}=-0.3\)}
 		\end{minipage}
-		\caption{The real part of numerical solution for soliton collisions at \(k_{1}=-k_{2}=0.7,\,\omega_{1}=\omega_{2}=0\).}
+		\caption{Действительная часть численного решения при моделировании солитонных столкновений для \(k_{1}=-k_{2}=0.7,\,\omega_{1}=\omega_{2}=0\).}
 		\label{fig51}
 	\end{figure}
 
-	The simulation results allow us to conclude that collisions of solitons in the presence of higher nonlinearity terms can be essentially inelastic. In addition to the perturbation parameters, the certain type of interaction is affected by the difference in the initial phases of the solitons. Near \(\Delta \theta=\pi\), the solitons interact the least intensively. When the phase detuning is in the vicinity of zero, there is a significant energy emission. In this case, there exist a critical perturbation parameters at which two solitons merge into one stationary one. When the parameter \(\Delta \theta \in (0,\,\pi)\), the interaction of solitons occurs with the exchange of energy and momentum.
+	Результаты моделирования позволяют заключить, что столкновения солитонов НУШ в рамках математической модели, включающей нелинейные члены высшего порядка в зависимости от разности фаз в момент столкновения быть существенно неупругими. Вблизи \(\Delta \theta=\pi\) солитоны взаимодействуют наименее интенсивно. Когда разность фаз находится в окрестности нуля, происходит значительное энерговыделение. В этом случае существуют критические параметры возмущения, при которых два солитона сливаются в один стационарный. При параметре \(\Delta\theta\in (0,\,\pi)\) взаимодействие солитонов происходит с обменом энергией и импульсом. Помимо разности фаз, на определенный тип взаимодействия влияют значения параметров возмущения \(\varepsilon_{2}\) и \(\varepsilon_{3}\). Чем больше модуль коэффициента при соответствующей степени нелинейности, тем более выражен неупругий характер взаимодействия.
 \section{Заключение}\label{ch400}
-	In this paper, we have considered the numerical modeling of the pulse propagation process in a nonlinear medium with periodic boundary conditions described by the cubic-quintic-septic nonlinear Schr\"{o}dinger equation (\ref{eq120-1}). We have obtained the analytical solution in the form of a solitary wave (\ref{eq24}) and the conditions of its existance. We have modified the split-step Fourier method for modeling pulse propagation processes. We have numerically studied the pulse propogation process and proved the correctness of analytical calculations. We have simulated the interaction of an optical soliton of Eq. (\ref{eq120-1}) with a perturbation in the initial condition. We have simulated the pulse propogation process in a medium with a random noise. We analyzed the influence of the higher nonlinearity powers to the NLS equation solitary waves propogation. We have simulated the soliton collisions with a presence of highest nonlinear terms.
+	В настоящей работе рассмотрено численное моделирование процессов распространения импульсов в нелинейной оптичееской среде с периодическими граничными условиями, описываемой обобщённым уравнением Шрёдингера (\ref{eq120-1}) с нелинейными членами третьего, пятого и седьмого порядков. Получено аналитическое решение в виде уединенной волны (\ref{eq24}) и условия ее существования. Представлена модификация метода Фурье для численного решения поставленной задачи. С численной точки зрения исследован процесс распространения аналитически полученного солитонного решения обобщённой модели. Доказана справедливость аналитических расчетов.Проведено моделирование взаимодействия оптического солитона уравнения (\ref{eq120-1}) с возмущением в начальных данных. Смоделировано распространение оптического импульса в среде со случайным шумом. Проанализировано влияние высших степеней нелинейности в математическрй модели на распространение уединенных волн нелинейного уравнения Шрёдингера. Смоделированы процессы столкновения солитонов в условиях наличия высших нелинейных членов.
 
-	The following findings are observed from the simulation results:
+	Следующие результаты получены в результате исследования:
 	\begin{enumerate}
 	\setlength\itemsep{1em}
-		\item The solitary waves of the cubic-quintic-septic nonlinear Schr\"{o}dinger equation propagate steadily.
-		\item The optical soliton of the cubic-quintic-septic nonlinear Schr\"{o}dinger equation is not destryed after interaction with disturbance. The pulse is stable when propagating in noisy conditions
-		\item Taking into account the higher degrees of nonlinearity, the solitons of the NLS equation transform into a stable soliton solutions of a generalized non-integrable model.
-		\item Under conditions of higher nonlinear terms, solitons interact inelastically upon collision. With the addition of the 7th nonlinearity power, the merging of two solitons is possible.
+		\item Уединённые волны уравнения Шрёдингера с нелинейными членами третьей, пятой и седьмой степеней распространяются устойчиво.
+		\item Оптические солитоны уравнения Шрёдингера с нелинейными членами третьей, пятой и седьмой степеней не распадаются после взаимодействия с возмущениями в начальных данных или в условиях случайного шума.
+		\item При распространении в оптической среде, описываемой математической моделью с нелинейными членами более высокого порядка солитоны НУШ преобразуются в солитоны, удовлетворяющие обобщённому уравнению. 
+		\item В условиях наличия нелинейных членов высшего порядка столкновения солитонов НУШ происходят значительно неупруго. При определённых параметрах возможно образование стоячей волны.
 	\end{enumerate}
 \bibliographystyle{unsrt}
 \bibliography{export}
