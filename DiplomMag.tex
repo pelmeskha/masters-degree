@@ -1,5 +1,5 @@
 \PassOptionsToPackage{usenames, dvipsnames}{color}
-\documentclass[14pt,a4paper]{extreport}
+\documentclass[12pt,a4paper]{article}
 
 \usepackage{float} % для [H] в картинках
 \usepackage{mathrsfs} % для \mathscr{L}
@@ -20,156 +20,68 @@
 \usepackage{indentfirst}
 \usepackage{mathtools}
 
-\DeclareMathOperator\arctanh{arctanh}
-\DeclareMathOperator{\sech}{sech}
-\DeclareMathOperator{\csch}{csch}
-\DeclareMathOperator{\sn}{sn}
-
-\geometry{left=3cm}
-\geometry{right=1.5cm}
-\geometry{top=2cm}
-\geometry{bottom=2cm}
+\hoffset=-1.5cm\voffset=-2cm \textwidth=17.1cm \textheight=23.0cm
 
 \parindent=1.20cm      % абзацный отступ (обычно 1.27cm)
 
 \righthyphenmin=2      % переносить последние 2 символа от слова
-\renewcommand*{\baselinestretch}{1.3} % межстрочное расстояние = 100%
+\renewcommand*{\baselinestretch}{1.05} % межстрочное расстояние = 100%
 \tolerance=1000         % мера разреженности (по умолчанию = 200)
-\renewcommand*\thesection{\arabic{section}}
+%\Russian
 
 \newtheorem{theorem}{Утверждение}
 \newtheorem{lemma}[theorem]{Утверждение}
-\addto\captionsrussian{\def\refname{Список использованных источников}}
+
+\DeclareMathOperator\arctanh{arctanh}
 
 \begin{document}
 
-\small 
-	\centerline{Министерство образования и науки Российской Федерации}
-	\centerline{НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ ЯДЕРНЫЙ УНИВЕРСИТЕТ <<МИФИ>>}
-	\centerline{\bf }
-	\centerline{ИНСТИТУТ ИНТЕЛЛЕКТУАЛЬНЫХ КИБЕРНЕТИЧЕСКИХ СИСТЕМ}
-	\centerline{\bf }
-	\centerline{КАФЕДРА №31 ПРИКЛАДНАЯ МАТЕМАТИКА}
-	\bigskip\bigskip\bigskip
+\large % увеличение шрифта
+\noindent
+\noindent УДК 517.9
+\bigskip
 
-	\begin{flushright}
-		На правах рукописи\\
-		УДК \underline{\hspace{2.5cm}}
-	\end{flushright}
+\centerline{\bf Численное исследование солитонных решений}
+\centerline{\bf }
+\centerline{\bf нелинейного уравнения Шрёдингера с тремя нелинейностями}
+\centerline{\bf }
+\centerline{\bf  }
+\bigskip
 
-	\bigskip\bigskip\bigskip\bigskip
-	\centerline{МЕДВЕДЕВ ВИКТОР АЛЕКСАНДРОВИЧ}
-	\bigskip
-	\centerline{ЧИСЛЕННОЕ ИССЛЕДОВАНИЕ СОЛИТОННЫХ РЕШЕНИЙ}
-	\centerline{НЕЛИНЕЙНОГО УРАВНЕНИЯ ШРЁДИНГЕРА С ТРЕМЯ НЕЛИНЕЙНОСТЯМИ}
-	\bigskip\bigskip\bigskip\bigskip\bigskip
-	\centerline{Выпускная квалификационная работа магистра}
-	\bigskip\bigskip\bigskip\bigskip\bigskip
-	\centerline{Направление подготовки 01.04.02 <<Прикладная математика и информатика>>}
-	\bigskip\bigskip\bigskip
+\centerline{\bf  © 2024 г. \ \ В.А. Медведев, Н.А. Кудряшов}
 
-	\begin{flushright}
-		\begin{minipage}{.32\textwidth}
-			Выпускная квалификационная\\
-			работа защищена\\
-			<<\underline{\hspace{0.5cm}}>>\underline{\hspace{3cm}}20\hspace{0.3cm} г.\\
-			Оценка\underline{\hspace{4cm}}\\
-			Секретарь ГЭК\underline{\hspace{2.5cm}}
-		\end{minipage}
-	\end{flushright}
-	\bigskip\bigskip\bigskip\bigskip\bigskip
-	\centerline{г.Москва 2024}
+\bigskip
+\centerline{Национальный исследовательский ядерный университет <<МИФИ>>, Москва}
 
-	\pagestyle{empty}
-\newpage
+\centerline{\it viktormedvedev12115551@gmail.com, nakudr@gmail.com}
 
-\large 
-\centerline{\bf ПОЯСНИТЕЛЬНАЯ ЗАПИСКА}
-	\normalsize \centerline{к выпускной квалификационной работе на тему:} \small
-	\bigskip\bigskip\bigskip
-	\centerline{ЧИСЛЕННОЕ ИССЛЕДОВАНИЕ СОЛИТОННЫХ РЕШЕНИЙ}
-	\centerline{НЕЛИНЕЙНОГО УРАВНЕНИЯ ШРЁДИНГЕРА С ТРЕМЯ НЕЛИНЕЙНОСТЬЮ}
-	\bigskip\bigskip
-	\centerline{\underline{\hspace{16cm}}}
-	\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
-	\noindent Студент-дипломник:\quad\quad   \(\underset{\left(подпись\right)}{\underline{\hspace{4cm}}}\) \quad  /Медведев В.А./\\\\
-	Руководитель проекта:\quad  \(\underset{\left(подпись\right)}{\underline{\hspace{4cm}}}\) \quad  /д.ф.-м.н., профессор Кудряшов Н.А./\\\\
-	Рецензент:\quad\qquad\qquad\qquad  \(\underset{\left(подпись\right)}{\underline{\hspace{4cm}}}\) \quad  /ассистент Кутуков А.А./\\\\
-	Зав. кафедрой №31:\quad\qquad  \(\underset{\left(подпись\right)}{\underline{\hspace{4cm}}}\) \quad  /д.ф.-м.н., профессор Кудряшов Н.А./\\\\
-\newpage 
-\normalsize
+\centerline{Поступила в редакцию 00.00.2024 г.}
+\bigskip
 
-\section*{Реферат}
-	\pagestyle{plain}
-	\noindent Отчет 34 страниц, 1 часть., 13 рисунков, 0 таблиц, 40 источников, 0 приложений.\\
-	\noindent Ключевые слова: обобщённое нелинейное уравнение Шрёдингера, псевдоспектральный метод Фурье, оптический солитон, численное моделирование, нелинейная оптика, нелинейные уравнения в частных производных\\
-	\noindent Объектом исследования является уравнение в частных производных, описывающее распространение импульсов в оптоволокне.\\
-	\noindent Цель работы - построить оптические солитоны исследуемого уравнения, смоделировать процессы их распространения, взаимодействия с возмущениями и друг с другом, установить факт устойчивости найденных решений в численном смысле, исследовать влияние старших степеней нелинейности на решения классического нелинейного уравнения Шрёдингера.\\
-	\noindent Метод проведения работы: последовательное применение приёмов поиска частных решений уравнений в частных производных, численное исследование аналитических решений при помощи псевдоспектрального метода Фурье, математическое моделирование.\\
-	\noindent Результаты работы: найдены оптические солитоны исследуемого уравнения, определена область допустимых параметров математической модели для их существования. Представлена модификация псевдоспектрального метода Фурье для численного исследования найденных решений. Проанализировано влияние возмущений в начальных условиях на процесс распространения оптического импульса. Смоделирован процесс передачи импульса в условиях случайного шума. Установлен факт численной устойчивости найденных аналитически решений. Исследовано влияние старших степеней нелинейности на оптические солитоны нелинейного уравнения Шрёдингера: при определённых параметрах математической модели начальный импульс распадается в устойчивый, совпадающий с аналитическим решением обобщённой модели. Проанализированы процессы столкновения солитонов в присутствии высших нелинейных членов в математической модели.\\
-	\noindent Область применения: проектирование оптоволоконных линий.\\
-	\noindent Экономическая эффективность или значимость работы: позволяет при определённой выбранной математической модели, описывающей физический процесс распространения импульсов в оптоволокне, подобрать параметры для построения устойчивых импульсов, пригодных для передачи сигналов.
+\bigskip
+Рассматривается задача распространения импульсов, описываемая уравнением Шрёдингера с нелинейными членами третьего, пятого и седьмого порядков. С использованием методов неявных функций и простейших уравнений получено аналитическое решение вида уединенной волны, и определены условия его существования. Представлена модификация метода Фурье для численного решения задачи распространения оптических импульсов при периодических граничных условиях. Численно исследован процесс распространения построенного оптического солитона. Доказана справедливость аналитических расчетов. Проведено моделирование взаимодействия оптического солитона исследуемого уравнения с возмущением в начальных данных. Смоделировано распространение импульса в среде со случайным шумом. Показано, что построенный солитон устойчив. Проанализировано влияние высших степеней нелинейности в математической модели на распространение уединенных волн нелинейного уравнения Шрёдингера. Смоделированы процессы столкновения солитонов нелинейного уравнения Шрёдингера в условиях наличия высших нелинейных членов. Показано, что столкновения носят неупругий характер.
 
-\newpage
-	\tableofcontents
-\newpage
+\textit{Ключевые слова:} обобщённое нелинейное уравнение Шрёдингера, псевдоспектральный метод Фурье, оптический солитон, численное моделирование, нелинейная оптика, нелинейные уравнения в частных производных.
+\medskip
 
-\section{Введение}\label{Introduction}\label{ch100}
-\subsection{Роль солитонов в передаче сигналов}\label{ch110}
-	За последние пару десятилетий область телекоммуникаций претерпела существенную эволюцию благодаря впечатляющему прогрессу в разработке оптических волокон, оптических усилителей, передатчиков и приемников. В современной оптической системе связи линия передачи состоит из оптических волокон и усилителей, составляющих волновод \cite{Rad1}. Основная идея волновода состоит в том, чтобы направлять луч света, используя изменение показателя преломления в поперечном направлении, чтобы заставить свет проходить по четко определенному каналу. Зависимость показателя преломления от поперечного направления, направления, перпендикулярного тому, в котором распространяется волна, может быть непрерывной или дискретной. Но в любом из случаев показатель преломления максимален в канале, по которому требуется направлять свет. \\
-
-	\begin{figure}[h!]
-		\center
-		\includegraphics[width=7cm,trim={0 0 0 0},clip]{pic1.png}
-		\caption{Зависимость показателя преломления от радиуса поперёк оптического кабеля\cite{Rad2}}
-	\end{figure}
-
-	В 1973 году, Акира Хасегава и Фредерик Тапперт сформулировали условия существования световых оптических солитонов в одномодовых оптических волокнах и предположили возможность их использования при передаче сигналов.\cite{Rad19,Hasegawa1973}. В 1980 году возможность использования световых солитонов в одномодовых оптических волокнах была экспериментально подтверждена Молленауэром, Столеном и Гордоном \cite{Rad01,Rad02}, что дало мощный толчок развитию нелинейной оптики \cite{Rad14,Rad15,Rad16,Rad03}.
-
-	Хорошо известно, что нелинейное уравнение Шрёдингера (НУШ), которое включает дисперсию групповой скорости и самомодуляцию фазы, является основным нелинейным уравнением, используемым для описания динамики импульсов. Классическое НУШ имеет следующий вид:
+\section{Введение}\label{ch120}
+	В нелинейной оптике на сегодняшний день известно множество подходов к описанию процессов распространения импульсов в оптических средах, некоторые из которых основаны на обобщениях классического интегрируемого нелинейного уравнения Шрёдингера\cite{Rad04,Rad05}:
 	\begin{equation}\label{eq1}
 		iu_{t}+a u_{xx}+b_{1}|u|^2 u=0,
 	\end{equation}
-	где \(u(x,t)\) - комплексная функция, \(i^{2}=-1\) и \(a\) - параметры модели. Это уравнение является параболическим, что обуславливает особенности применения численных и аналитических методов для его исследования. Солитоны НУШ имеют форму огибающей группы волн, что позволяет использовать их для описания групповых свойств волнового пакета.
-
-	В целях увеличения пропускной способности оптических волокон желательно использовать более короткие импульсы. Но при использовании коротковолновых импульсов возрастает влияние на процесс некоторых физических эффектов, таких как дисперсия высокого порядка \cite{Rad5,Rad8,Rad020,Rad014,Rad016}, самофокусировка \cite{UZUNOV2022170137}, и вынужденное комбинационное рассеяние \cite{WANG2022120667,GROMOV201488}. Для корректного описания поведения оптических импульсов в рамках данных эффектов следует использовать обобщённые нелинейные уравнения Шрёдингера высших порядков. Более того, для описания коротковолновых импульсов необходимо учитывать высшие некерровские нелинейности в математической модели \cite{Rad9,Rad015,Rad017,Rad018,Rad019}. Как следствие, различные обобщения НУШ обширно исследуются математиками по всему миру. В качестве примера стоит упомянуть работы \cite{Rad10,Rad11,Rad17,Rad18}. 
-
-	Учет всех перечисленных физических факторов существенно усложняет аналитическое исследование процессов, описываемых предлагаемыми математическими моделями. Поэтому с развитием вычислительных возможностей для исследований все чаще используются численные методы.
-
-	К примеру, НУШ, как классическое уравнение нелинейной оптики, было исследовано в работах \cite{Rad04,Rad05}. Эти работы подтвердили неустойчивость постоянных решений и показали, что неустойчивость не растет неограниченно, как ожидалось в линейной теории.Также в этих работах выявлен тот факт, что решение периодически возвращается к исходным условиям. Это явление, известное как повторяемость, наблюдалось также в работах Ферми, Пасты и Улама. \cite{Rad06}. В дополнение к нелинейной оптике, НУШ находит применение в физике плазмы и теории невязкой жидкости.
-
-	Среди первых схем, использованных для численного анализа НУШ, упомянем конечно-разностный и псевдоспектральные методы \cite{Rad04,Rad07}. Среди более продвинутых работ, стоит упомянуть работы \cite{Rad08,Rad09,Rad010,Rad011,Rad012,Rad013,QIN2022126580}, где дискретизация пространства осуществляется в основном с помощью методов конечных разностей или конечных элементов, а дискретизация времени осуществляется с использованием явных методов с переменным шагом \cite{Rad08,Rad09}, метода расщепления \cite{Rad010}, модифицированной схемы Кранка-Николсона \cite{Rad011} и прочих способов. Из-за хорошо изученных свойств, НУШ подходит для валидации новых разрабатываемых численных методов.
-
-\subsection{Текущая работа, её цели и задачи}\label{ch120}
-	Несмотря на разнообразие предложенных математических моделей, вопрос о том, какая из них наиболее подходит для описания процессов распространения импульсов, остается открытым.
-	В текущей работе исследовано одно из обобщённых уравнений - нелинейное уравнение Шрёдингера с нелинейностями третьего, пятого и седьмого порядков, впервые представленное в работе \cite{Rad3}:
+	где \(u(x,t)\) - комплексная функция, \(i^{2}=-1\) и \(a\) - параметры модели.
+	Но несмотря на разнообразие предложенных математических моделей \cite{Rad9,Rad015,Rad017,Rad018,Rad019}, вопрос о наиболее подходящей остается открытым.
+	В работе исследовано одно из обобщённых уравнений - нелинейное уравнение Шрёдингера с нелинейностями третьего, пятого и седьмого порядков, впервые представленное в работе \cite{Rad3}:
 	\begin{equation}\label{eq120-1}
 		iu_{t}+au_{xx}+b_{1}|u|^2 u+b_{2}|u|^4 u+b_{3}|u|^6 u=0,
 	\end{equation}
 	где \(u(x,t)\) - комплекснозначная функция, \(a\), \(b_{1}\), \(b_{2}\) и \(b_{3}\) - параметры модели. Для случая \(b_{3}=0\) исследование уравнения (\ref{eq120-1}) представлено в книге \cite{Rad02}.\\\\
-	Целями данной работы являются:
+	Целями настоящей работы являются:
 	\begin{enumerate}
 		\item аналитическое нахождение точного решения представленного уравнения,
-		\item численное моделирование процессов распространения построенного импульса с целью установления факта его устойчивости, 
-		\item анализ влияния высших степеней нелинейности в математической модели. 
+		\item установление факта устойчивости построенного решения с помощью численного моделирования процессов распространения, 
+		\item анализ влияния нелинейных членов высших степеней в математической модели. 
 	\end{enumerate}
-	В работе решаются следующие задачи: 
-	\begin{enumerate}
-		\item Построение аналитического решения исходного уравнения в виде уединённой волны с использованием метода прямых вычислений. 
-		\item Определение области параметров модели, при которых построенное решение существует.
-		\item Модификация метода Фурье для численного решения задачи распространения оптических импульсов, описываемых математической моделью. 
-		\item С целью установления факта устойчивости построенных решений - численное моделирование процессов:
-		\begin{enumerate}
-			\item распространения построенной уединённой волны,  
-			\item распространения построенных солитонов при наличии возмущений в начальных условиях,  
-			\item распространения построенных солитонов при наличии возмущений в уравнении,
-			\item взаимодействия построенных солитонов друг с другом в присутствии возмущений в математической модели.
-		\end{enumerate}
-	\end{enumerate}
-
-	Результаты работы представлены в следующем порядке. В разделе \ref{ch210} построено аналитическое решение для уравнения (\ref{eq120-1}) в форме уединённой волны с использованием метода неявных функций и метода простейших уравнений \cite{Rad4}. Проиллюстрирована область значений параметров модели, при которых построенное решение существует. В разделе \ref{ch220} описан модифицированный метод Фурье для моделирования процессов распространения оптических импульсов, описываемых уравнением (\ref{eq120-1}). Представлена блок-схема соответствующего программного кода для численного анализа. В разделе \ref{ch310} представлено применение метода Фурье для моделирования процесса распространения уединенной волны, описываемого уравнением (\ref{eq120-1}). В разделе \ref{ch320} смоделировано взаимодействие солитонного импульса с возмущением в начальном условии. В разделе также исследован процесс распространения импульса в условиях случайного шума в начальном условии и обсуждён факт устойчивости построенного оптического солитона. В разделе \ref{ch330} исследовано влияние более высоких степеней нелинейности на процесс распространения уединенной волны описываемой НУШ. В разделе \ref{ch340} смоделированы процессы столкновения солитонов уравнения НУШ при наличии членов с более высокой нелинейностью при различных параметрах модели.
-
-	Метод исследования - аналитический анализ, численный анализ.
 \newpage
 
 \section{Аналитический анализ}\label{ch200}
@@ -439,11 +351,11 @@
 	Упрощённая блок-схема программного кода для численного решения проблемы распространения оптических импульсов при периодических граничных условиях представлена на Рис. \ref{fig2}. 
 	\begin{figure}[H]
 		\begin{center}
-			\begin{minipage}[h]{0.48\linewidth} %% color here
+			\begin{minipage}[h]{0.49\linewidth} %% color here
 				\includegraphics[width=1\linewidth]{fig2.png}
 			\end{minipage}
 			\hfill
-			\begin{minipage}[h]{0.48\linewidth}
+			\begin{minipage}[h]{0.49\linewidth}
 				\includegraphics[width=0.75\linewidth]{fig3.png}
 			\end{minipage}
 		\end{center}
@@ -631,7 +543,7 @@
 
 	Рассмотрим столкновения двух солитонов вида (\ref{eq55}) с заданными параметрами \(k_{1},\,k_{2},\,\omega_{1},\,\omega_{2},\,z_{0,1},\,z_{0,2},\,\theta_{0,1},\,\theta_{0,2}\). Значения параметров \(\varepsilon_{2}\) и \(\varepsilon_{3}\) влияют на интенсивность обмена импульсом и энергией. Обнаружено, что итоговый характер взаимодействия солитонов зависит от разности фаз в момент столкновения \(\Delta \theta=\theta_{0,1}-\theta_{0,2}\).
 
-	Результаты моделирования для \(k_{1}=-k_{2},\,\omega_{1}=\omega_{2},\,z_{0,1}=-z_{0,2},\,\theta_{0,1}=\theta_{0,2}+Delta \theta\) проиллюстрированы на Рис. \ref{fig50} и Рис. \ref{fig51}.
+	Результаты моделирования для \(k_{1}=-k_{2},\,\omega_{1}=\omega_{2},\,z_{0,1}=-z_{0,2},\,\theta_{0,1}=\theta_{0,2}+\Delta \theta\) проиллюстрированы на Рис. \ref{fig50} и Рис. \ref{fig51}.
 
 	\begin{figure}[H]
 		\begin{minipage}[h]{0.32\linewidth}
@@ -731,7 +643,50 @@
 		\item При распространении в оптической среде, описываемой математической моделью с нелинейными членами более высокого порядка солитоны НУШ преобразуются в солитоны, удовлетворяющие обобщённому уравнению. 
 		\item В условиях наличия нелинейных членов высшего порядка столкновения солитонов НУШ происходят значительно неупруго. При определённых параметрах возможно образование стоячей волны.
 	\end{enumerate}
-\bibliographystyle{unsrt}
-\bibliography{export}
+\renewcommand\refname{Список литературы}
+\begin{thebibliography}{9}
+	\bibitem{Rad04} Bruce M Lake and Henry C Yuen and Harald Rungaldier and Warren E Ferguson, Nonlinear deep-water waves: theory and experiment. {P}art 2. {E}volution of a continuous wave train, \textit{Journal of Fluid Mechanics, Cambridge University Press, 1977. V. 83. No. 1 P. 49-74}.
+	\bibitem{Rad05} Henry C. Yuen and Warren E. Ferguson, Relationship between {B}enjamin-{F}eir instability and recurrence in the nonlinear {S}chr\"{o}dinger equation, \textit{Physics of Fluids, 1978. V. 21. No. 8 P. 1275}.
+	\bibitem{Rad9} Nikolay A. Kudryashov, On traveling wave solutions of the {K}undu-{E}ckhaus equation, \textit{Optik, 2020, V. 224. 165500.}.
+	\bibitem{Rad015} Russell W. Kohl and Anjan Biswas and Mehmet Ekici and Qin Zhou and Salam Khan and Ali S. Alshomrani and Milivoj R.  Belic, Highly dispersive optical soliton perturbation with cubic-quintic-septic refractive index by semi-inverse variational principle, \textit{Optik, 2019, V. 199. 163322}.
+	\bibitem{Rad017} Nikolay A. Kudryashov, Construction of nonlinear differential equations for description of propagation pulses in optical fiber, \textit{Optik, 2019, V. 192. 162964.}.
+	\bibitem{Rad018} Nikolay A. Kudryashov, Solitary and periodic waves of the hierarchy for propagation pulse in optical fiber, \textit{Optik, 2019, V. 194. 163060.}.
+	\bibitem{Rad019} Anjan Biswas and Mehmet Ekici and Abdullah Sonmezoglu and Milivoj R. Belic, Highly dispersive optical solitons with non-local nonlinearity by exp-function, \textit{Optik, 2019, V. 186. P. 288-292.}.
+	\bibitem{Rad3} Nikolay A. Kudryashov, Method for finding optical solitons of generalized nonlinear {S}chr\"{o}dinger equations, \textit{Optik, 2022, V. 261. 169163.}.
+	\bibitem{Rad02} Yuri Kivshar and Govind Agrawal, Optical Solitons: From Fibers to Photonic Crystals, \textit{Academic Press, 2003. P. 108.}.
+	\bibitem{Rad4} Nikolai A. Kudryashov, Simplest equation method to look for exact solutions of nonlinear differential equations, \textit{Chaos, Solitons \& Fractals, 2005, V. 24. No. 5. P. 1217-1231.}.
+	\bibitem{Rad1} J. A. C. Weideman and B. M. Herbst, Split-Step Methods for the Solution of the Nonlinear {S}chr\"{o}dinger Equation, \textit{SIAM Journal on Numerical Analysis, 1986, V. 23. No. 3. P. 485-507}.
+\end{thebibliography}
+
+\vskip 1.5em
+\begin{center}
+	{\textbf{Numerical study of soliton solutions of the cubic-quintic-septic nonlinear Schr\"{o}dinger equation} \par}\vskip 1em
+	\textbf{V .A. Medvedev, N. A. Kudryashov}\\
+	\emph{National Research Nuclear University MEPhI(Moscow Engineering Physics Institute), Moscow, 115409 Russia}\\
+	\emph{email:  viktormedvedev12115551@gmail.com, nakudr@gmail.com}\\
+\end{center}
+\par
+
+\bigskip
+\textbf{Abstract} --
+{The problem of pulse propagation described by the nonlinear Schr\"{o}dinger equation with non-Kerr nonlinearity of the third, fifth and seventh powers is considered. Optical solitons of the considered equation are found using simplest equations method and implicit functions method. The area of acceptable model parameters is illustrated. A modification of the split-step Fourier method is presented. Optical soliton propagation process is studied numerically. The validity of analytical calculations has been proven. The process of the interaction of a soliton pulse with a disturbance in the initial condition is analyzed. The process of the soliton pulse propogation in a medium with a random noise simulated. The stability of optical solitons of the cubic-quintic-septic nonlinear Schr\"{o}dinger equation is proved. The influence of higher nonlinearity terms on the nonlinear Schr\"{o}dinger equation solitary waves is studied. The soliton collisions in the presence of higher nonlinear terms are simulated. It is shown that in the presence of higher nonlinear terms, the solitons interact inelastically upon collision.}\\
+
+\textit{Keywords:} Cubic-quintic-septic nonlinear Schr\"{o}dinger equation, Split-step Fourier scheme, Optical soliton, Numerical modeling, Nonlinear optics, Nonlinear differential equations.
+
+\renewcommand\refname{References}
+\begin{thebibliography}{9}
+	\bibitem{Rad04} Bruce M Lake and Henry C Yuen and Harald Rungaldier and Warren E Ferguson, Nonlinear deep-water waves: theory and experiment. {P}art 2. {E}volution of a continuous wave train, \textit{Journal of Fluid Mechanics, Cambridge University Press, 1977. V. 83. No. 1 P. 49-74}.
+	\bibitem{Rad05} Henry C. Yuen and Warren E. Ferguson, Relationship between {B}enjamin-{F}eir instability and recurrence in the nonlinear {S}chr\"{o}dinger equation, \textit{Physics of Fluids, 1978. V. 21. No. 8 P. 1275}.
+	\bibitem{Rad9} Nikolay A. Kudryashov, On traveling wave solutions of the {K}undu-{E}ckhaus equation, \textit{Optik, 2020, V. 224. 165500.}.
+	\bibitem{Rad015} Russell W. Kohl and Anjan Biswas and Mehmet Ekici and Qin Zhou and Salam Khan and Ali S. Alshomrani and Milivoj R.  Belic, Highly dispersive optical soliton perturbation with cubic-quintic-septic refractive index by semi-inverse variational principle, \textit{Optik, 2019, V. 199. 163322}.
+	\bibitem{Rad017} Nikolay A. Kudryashov, Construction of nonlinear differential equations for description of propagation pulses in optical fiber, \textit{Optik, 2019, V. 192. 162964.}.
+	\bibitem{Rad018} Nikolay A. Kudryashov, Solitary and periodic waves of the hierarchy for propagation pulse in optical fiber, \textit{Optik, 2019, V. 194. 163060.}.
+	\bibitem{Rad019} Anjan Biswas and Mehmet Ekici and Abdullah Sonmezoglu and Milivoj R. Belic, Highly dispersive optical solitons with non-local nonlinearity by exp-function, \textit{Optik, 2019, V. 186. P. 288-292.}.
+	\bibitem{Rad3} Nikolay A. Kudryashov, Method for finding optical solitons of generalized nonlinear {S}chr\"{o}dinger equations, \textit{Optik, 2022, V. 261. 169163.}.
+	\bibitem{Rad02} Yuri Kivshar and Govind Agrawal, Optical Solitons: From Fibers to Photonic Crystals, \textit{Academic Press, 2003. P. 108.}.
+	\bibitem{Rad4} Nikolai A. Kudryashov, Simplest equation method to look for exact solutions of nonlinear differential equations, \textit{Chaos, Solitons \& Fractals, 2005, V. 24. No. 5. P. 1217-1231.}.
+	\bibitem{Rad1} J. A. C. Weideman and B. M. Herbst, Split-Step Methods for the Solution of the Nonlinear {S}chr\"{o}dinger Equation, \textit{SIAM Journal on Numerical Analysis, 1986, V. 23. No. 3. P. 485-507}.
+\end{thebibliography}
 
 \end{document} 
+
