@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.12)  15 JAN 2024 03:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.12)  15 JAN 2024 03:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -968,7 +968,7 @@ Package epstopdf Info: Source file: <fig12.eps>
 (epstopdf)                    date: 2024-01-14 22:49:44
 (epstopdf)                    size: 1318998 bytes
 (epstopdf)             Output file: <fig12-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:18:32
+(epstopdf)                    date: 2024-01-15 03:35:32
 (epstopdf)                    size: 27196 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig12-eps-converted-
 to.pdf fig12.eps>
@@ -988,7 +988,7 @@ Package epstopdf Info: Source file: <fig13.eps>
 (epstopdf)                    date: 2024-01-14 22:53:21
 (epstopdf)                    size: 1301318 bytes
 (epstopdf)             Output file: <fig13-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:18:33
+(epstopdf)                    date: 2024-01-15 03:35:32
 (epstopdf)                    size: 24479 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig13-eps-converted-
 to.pdf fig13.eps>
@@ -1011,7 +1011,7 @@ Package epstopdf Info: Source file: <fig45.eps>
 (epstopdf)                    date: 2024-01-14 22:56:05
 (epstopdf)                    size: 1276182 bytes
 (epstopdf)             Output file: <fig45-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:18:34
+(epstopdf)                    date: 2024-01-15 03:35:32
 (epstopdf)                    size: 18988 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig45-eps-converted-
 to.pdf fig45.eps>
@@ -1089,7 +1089,7 @@ Package epstopdf Info: Source file: <fig47.eps>
 (epstopdf)                    date: 2024-01-14 23:00:24
 (epstopdf)                    size: 1353162 bytes
 (epstopdf)             Output file: <fig47-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:18:36
+(epstopdf)                    date: 2024-01-15 03:35:32
 (epstopdf)                    size: 34774 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig47-eps-converted-
 to.pdf fig47.eps>
@@ -1110,7 +1110,7 @@ Package epstopdf Info: Source file: <fig33.eps>
 (epstopdf)                    date: 2024-01-14 23:17:51
 (epstopdf)                    size: 1496770 bytes
 (epstopdf)             Output file: <fig33-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:18:37
+(epstopdf)                    date: 2024-01-15 03:35:32
 (epstopdf)                    size: 24074 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig33-eps-converted-
 to.pdf fig33.eps>
@@ -1129,7 +1129,7 @@ Package epstopdf Info: Source file: <fig34.eps>
 (epstopdf)                    date: 2024-01-14 23:19:35
 (epstopdf)                    size: 1495210 bytes
 (epstopdf)             Output file: <fig34-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:18:38
+(epstopdf)                    date: 2024-01-15 03:35:32
 (epstopdf)                    size: 23444 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig34-eps-converted-
 to.pdf fig34.eps>
@@ -1149,7 +1149,7 @@ Package epstopdf Info: Source file: <fig48.eps>
 (epstopdf)                    date: 2024-01-14 23:22:06
 (epstopdf)                    size: 1416654 bytes
 (epstopdf)             Output file: <fig48-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:18:39
+(epstopdf)                    date: 2024-01-15 03:35:32
 (epstopdf)                    size: 42455 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig48-eps-converted-
 to.pdf fig48.eps>
@@ -1168,7 +1168,7 @@ Package epstopdf Info: Source file: <fig49.eps>
 (epstopdf)                    date: 2024-01-14 23:26:08
 (epstopdf)                    size: 1304318 bytes
 (epstopdf)             Output file: <fig49-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:18:40
+(epstopdf)                    date: 2024-01-15 03:35:32
 (epstopdf)                    size: 22508 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig49-eps-converted-
 to.pdf fig49.eps>
@@ -1187,7 +1187,7 @@ Package epstopdf Info: Source file: <fig35.eps>
 (epstopdf)                    date: 2024-01-14 23:32:14
 (epstopdf)                    size: 1641650 bytes
 (epstopdf)             Output file: <fig35-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:18:41
+(epstopdf)                    date: 2024-01-15 03:35:32
 (epstopdf)                    size: 85572 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig35-eps-converted-
 to.pdf fig35.eps>
@@ -1206,7 +1206,7 @@ Package epstopdf Info: Source file: <fig36.eps>
 (epstopdf)                    date: 2024-01-14 23:33:24
 (epstopdf)                    size: 2569506 bytes
 (epstopdf)             Output file: <fig36-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:18:43
+(epstopdf)                    date: 2024-01-15 03:35:32
 (epstopdf)                    size: 123366 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig36-eps-converted-
 to.pdf fig36.eps>
@@ -1225,7 +1225,7 @@ Package epstopdf Info: Source file: <fig37.eps>
 (epstopdf)                    date: 2024-01-14 23:49:20
 (epstopdf)                    size: 1704218 bytes
 (epstopdf)             Output file: <fig37-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:18:44
+(epstopdf)                    date: 2024-01-15 03:35:32
 (epstopdf)                    size: 91131 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig37-eps-converted-
 to.pdf fig37.eps>
@@ -1643,9 +1643,9 @@ eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vikto/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/vikto/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/vi
 kto/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on DiplomMag.pdf (24 pages, 2859154 bytes).
+Output written on DiplomMag.pdf (24 pages, 2859437 bytes).
 PDF statistics:
- 889 PDF objects out of 1000 (max. 8388607)
+ 890 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  192 words of extra memory for PDF output out of 10000 (max. 10000000)
 
