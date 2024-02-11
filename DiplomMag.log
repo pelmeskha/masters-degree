@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.12)  15 JAN 2024 03:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.12)  11 FEB 2024 20:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1241,14 +1241,13 @@ File: fig37-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: fig37-eps-converted-to.pdf  used on input line 532.
 (pdftex.def)             Requested size: 486.5423pt x 106.91705pt.
 [15 <./fig33-eps-converted-to.pdf> <./fig34-eps-converted-to.pdf> <./fig48-eps-
-converted-to.pdf> <./fig49-eps-converted-to.pdf>]
+converted-to.pdf> <./fig49-eps-converted-to.pdf>] [16 <./fig35-eps-converted-to
+.pdf> <./fig36-eps-converted-to.pdf> <./fig37-eps-converted-to.pdf>]
 Overfull \hbox (0.64507pt too wide) in paragraph at lines 541--541
 []\T2A/cmr/bx/n/14.4 Столкновения со-ли-то-нов в при-сут-ствии выс-ших сте-пе-н
 ей нели-
  []
 
-[16 <./fig35-eps-converted-to.pdf> <./fig36-eps-converted-to.pdf> <./fig37-eps-
-converted-to.pdf>]
 Package epstopdf Info: Source file: <fig52.eps>
 (epstopdf)                    date: 2023-07-15 16:51:08
 (epstopdf)                    size: 141448 bytes
@@ -1615,7 +1614,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  10657 strings out of 475380
  179078 string characters out of 2776771
- 526747 words of memory out of 3000000
+ 525747 words of memory out of 3000000
  31824 multiletter control sequences out of 15000+600000
  491563 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1643,9 +1642,9 @@ eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vikto/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/vikto/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/vi
 kto/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on DiplomMag.pdf (24 pages, 2859437 bytes).
+Output written on DiplomMag.pdf (24 pages, 2860257 bytes).
 PDF statistics:
- 890 PDF objects out of 1000 (max. 8388607)
+ 892 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  192 words of extra memory for PDF output out of 10000 (max. 10000000)
 
