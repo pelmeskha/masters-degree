@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.12)  11 FEB 2024 20:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.12)  11 FEB 2024 21:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -893,10 +893,10 @@ Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 218.
 
 [5] [6]
-<fig1.png, id=35, 501.875pt x 501.875pt>
-File: fig1.png Graphic file (type png)
-<use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 278.
+<Medvedev_fig1.png, id=35, 501.875pt x 501.875pt>
+File: Medvedev_fig1.png Graphic file (type png)
+<use Medvedev_fig1.png>
+Package pdftex.def Info: Medvedev_fig1.png  used on input line 278.
 (pdftex.def)             Requested size: 170.71652pt x 170.71947pt.
 LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 279.
@@ -914,691 +914,730 @@ LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <14.4> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 283.
 LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <14.4> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 283.
-Package epstopdf Info: Source file: <fig10.eps>
+Package epstopdf Info: Source file: <Medvedev_fig4.eps>
 (epstopdf)                    date: 2023-07-06 20:24:44
 (epstopdf)                    size: 22411 bytes
-(epstopdf)             Output file: <fig10-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-06 20:24:48
+(epstopdf)             Output file: <Medvedev_fig4-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:10:49
 (epstopdf)                    size: 7256 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig10-eps-converted-
-to.pdf fig10.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig4-eps-co
+nverted-to.pdf Medvedev_fig4.eps>
 (epstopdf)             \includegraphics on input line 286.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig10-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig10-eps-converted-to.pdf, id=37, 421.575pt x 316.18124pt>
-File: fig10-eps-converted-to.pdf Graphic file (type pdf)
-<use fig10-eps-converted-to.pdf>
-Package pdftex.def Info: fig10-eps-converted-to.pdf  used on input line 286.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig4-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig4-eps-converted-to.pdf, id=37, 421.575pt x 316.18124pt>
+File: Medvedev_fig4-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig4-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig4-eps-converted-to.pdf  used on input line
+ 286.
 (pdftex.def)             Requested size: 243.27115pt x 182.4541pt.
-[7 <./fig1.png (PNG copy)>] [8 <./fig10-eps-converted-to.pdf>]
-<fig2.png, id=53, 1117.17375pt x 1309.89375pt>
-File: fig2.png Graphic file (type png)
-<use fig2.png>
-Package pdftex.def Info: fig2.png  used on input line 355.
+[7 <./Medvedev_fig1.png (PNG copy)>] [8 <./Medvedev_fig4-eps-converted-to.pdf>]
+<Medvedev_fig2.png, id=53, 1117.17375pt x 1309.89375pt>
+File: Medvedev_fig2.png Graphic file (type png)
+<use Medvedev_fig2.png>
+Package pdftex.def Info: Medvedev_fig2.png  used on input line 355.
 (pdftex.def)             Requested size: 238.40839pt x 279.523pt.
-<fig3.png, id=55, 673.01437pt x 1035.87pt>
-File: fig3.png Graphic file (type png)
-<use fig3.png>
-Package pdftex.def Info: fig3.png  used on input line 359.
+<Medvedev_fig3.png, id=55, 673.01437pt x 1035.87pt>
+File: Medvedev_fig3.png Graphic file (type png)
+<use Medvedev_fig3.png>
+Package pdftex.def Info: Medvedev_fig3.png  used on input line 359.
 (pdftex.def)             Requested size: 178.80629pt x 275.1997pt.
- [9]
-Package epstopdf Info: Source file: <fig11.eps>
+[9]
+Package epstopdf Info: Source file: <Medvedev_fig5.eps>
 (epstopdf)                    date: 2023-07-06 20:41:35
 (epstopdf)                    size: 154397 bytes
-(epstopdf)             Output file: <fig11-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-06 20:41:38
+(epstopdf)             Output file: <Medvedev_fig5-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:10:50
 (epstopdf)                    size: 92149 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig11-eps-converted-
-to.pdf fig11.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig5-eps-co
+nverted-to.pdf Medvedev_fig5.eps>
 (epstopdf)             \includegraphics on input line 372.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig11-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig11-eps-converted-to.pdf, id=61, 421.575pt x 316.18124pt>
-File: fig11-eps-converted-to.pdf Graphic file (type pdf)
-<use fig11-eps-converted-to.pdf>
-Package pdftex.def Info: fig11-eps-converted-to.pdf  used on input line 372.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig5-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig5-eps-converted-to.pdf, id=61, 421.575pt x 316.18124pt>
+File: Medvedev_fig5-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig5-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig5-eps-converted-to.pdf  used on input line
+ 372.
 (pdftex.def)             Requested size: 233.53822pt x 175.15459pt.
-Package epstopdf Info: Source file: <fig12.eps>
+Package epstopdf Info: Source file: <Medvedev_fig6.eps>
 (epstopdf)                    date: 2024-01-14 22:49:44
 (epstopdf)                    size: 1318998 bytes
-(epstopdf)             Output file: <fig12-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:35:32
+(epstopdf)             Output file: <Medvedev_fig6-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:10:51
 (epstopdf)                    size: 27196 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig12-eps-converted-
-to.pdf fig12.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig6-eps-co
+nverted-to.pdf Medvedev_fig6.eps>
 (epstopdf)             \includegraphics on input line 378.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig12-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig12-eps-converted-to.pdf, id=62, 421.575pt x 317.185pt>
-File: fig12-eps-converted-to.pdf Graphic file (type pdf)
-<use fig12-eps-converted-to.pdf>
-Package pdftex.def Info: fig12-eps-converted-to.pdf  used on input line 378.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig6-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig6-eps-converted-to.pdf, id=62, 421.575pt x 317.185pt>
+File: Medvedev_fig6-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig6-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig6-eps-converted-to.pdf  used on input line
+ 378.
 (pdftex.def)             Requested size: 233.53822pt x 175.71063pt.
-[10 <./fig2.png> <./fig3.png>]
-Package epstopdf Info: Source file: <fig13.eps>
+[10 <./Medvedev_fig2.png> <./Medvedev_fig3.png>]
+Package epstopdf Info: Source file: <Medvedev_fig7.eps>
 (epstopdf)                    date: 2024-01-14 22:53:21
 (epstopdf)                    size: 1301318 bytes
-(epstopdf)             Output file: <fig13-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:35:32
+(epstopdf)             Output file: <Medvedev_fig7-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:10:53
 (epstopdf)                    size: 24479 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig13-eps-converted-
-to.pdf fig13.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig7-eps-co
+nverted-to.pdf Medvedev_fig7.eps>
 (epstopdf)             \includegraphics on input line 394.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig13-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig13-eps-converted-to.pdf, id=68, 421.575pt x 317.185pt>
-File: fig13-eps-converted-to.pdf Graphic file (type pdf)
-<use fig13-eps-converted-to.pdf>
-Package pdftex.def Info: fig13-eps-converted-to.pdf  used on input line 394.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig7-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig7-eps-converted-to.pdf, id=68, 421.575pt x 317.185pt>
+File: Medvedev_fig7-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig7-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig7-eps-converted-to.pdf  used on input line
+ 394.
 (pdftex.def)             Requested size: 233.53822pt x 175.71063pt.
 LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <10.95> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 395.
 LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 395.
-Package epstopdf Info: Source file: <fig45.eps>
+Package epstopdf Info: Source file: <Medvedev_fig15.eps>
 (epstopdf)                    date: 2024-01-14 22:56:05
 (epstopdf)                    size: 1276182 bytes
-(epstopdf)             Output file: <fig45-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:35:32
+(epstopdf)             Output file: <Medvedev_fig15-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:10:54
 (epstopdf)                    size: 18988 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig45-eps-converted-
-to.pdf fig45.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig15-eps-c
+onverted-to.pdf Medvedev_fig15.eps>
 (epstopdf)             \includegraphics on input line 400.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig45-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig45-eps-converted-to.pdf, id=69, 421.575pt x 317.185pt>
-File: fig45-eps-converted-to.pdf Graphic file (type pdf)
-<use fig45-eps-converted-to.pdf>
-Package pdftex.def Info: fig45-eps-converted-to.pdf  used on input line 400.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig15-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig15-eps-converted-to.pdf, id=69, 421.575pt x 317.185pt>
+File: Medvedev_fig15-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig15-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig15-eps-converted-to.pdf  used on input lin
+e 400.
 (pdftex.def)             Requested size: 233.53822pt x 175.71063pt.
-[11 <./fig11-eps-converted-to.pdf> <./fig12-eps-converted-to.pdf> <./fig13-eps-
-converted-to.pdf> <./fig45-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <fig18.eps>
+[11 <./Medvedev_fig5-eps-converted-to.pdf> <./Medvedev_fig6-eps-converted-to.pd
+f> <./Medvedev_fig7-eps-converted-to.pdf> <./Medvedev_fig15-eps-converted-to.pd
+f>]
+Package epstopdf Info: Source file: <Medvedev_fig8.eps>
 (epstopdf)                    date: 2023-07-07 17:20:00
 (epstopdf)                    size: 34805 bytes
-(epstopdf)             Output file: <fig18-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-07 17:20:15
+(epstopdf)             Output file: <Medvedev_fig8-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:10:55
 (epstopdf)                    size: 12020 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig18-eps-converted-
-to.pdf fig18.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig8-eps-co
+nverted-to.pdf Medvedev_fig8.eps>
 (epstopdf)             \includegraphics on input line 420.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig18-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig18-eps-converted-to.pdf, id=110, 421.575pt x 316.18124pt>
-File: fig18-eps-converted-to.pdf Graphic file (type pdf)
-<use fig18-eps-converted-to.pdf>
-Package pdftex.def Info: fig18-eps-converted-to.pdf  used on input line 420.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig8-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig8-eps-converted-to.pdf, id=110, 421.575pt x 316.18124pt>
+File: Medvedev_fig8-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig8-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig8-eps-converted-to.pdf  used on input line
+ 420.
 (pdftex.def)             Requested size: 233.53822pt x 175.15459pt.
-Package epstopdf Info: Source file: <fig19.eps>
+Package epstopdf Info: Source file: <Medvedev_fig9.eps>
 (epstopdf)                    date: 2023-07-07 17:20:12
 (epstopdf)                    size: 162915 bytes
-(epstopdf)             Output file: <fig19-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-07 17:20:16
+(epstopdf)             Output file: <Medvedev_fig9-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:10:56
 (epstopdf)                    size: 86859 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig19-eps-converted-
-to.pdf fig19.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig9-eps-co
+nverted-to.pdf Medvedev_fig9.eps>
 (epstopdf)             \includegraphics on input line 425.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig19-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig19-eps-converted-to.pdf, id=111, 421.575pt x 316.18124pt>
-File: fig19-eps-converted-to.pdf Graphic file (type pdf)
-<use fig19-eps-converted-to.pdf>
-Package pdftex.def Info: fig19-eps-converted-to.pdf  used on input line 425.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig9-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig9-eps-converted-to.pdf, id=111, 421.575pt x 316.18124pt>
+File: Medvedev_fig9-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig9-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig9-eps-converted-to.pdf  used on input line
+ 425.
 (pdftex.def)             Requested size: 233.53822pt x 175.15459pt.
-Package epstopdf Info: Source file: <fig46.eps>
+Package epstopdf Info: Source file: <Medvedev_fig16.eps>
 (epstopdf)                    date: 2023-07-07 17:41:09
 (epstopdf)                    size: 368628 bytes
-(epstopdf)             Output file: <fig46-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-07 17:41:31
+(epstopdf)             Output file: <Medvedev_fig16-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:10:57
 (epstopdf)                    size: 156645 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig46-eps-converted-
-to.pdf fig46.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig16-eps-c
+onverted-to.pdf Medvedev_fig16.eps>
 (epstopdf)             \includegraphics on input line 443.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig46-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig46-eps-converted-to.pdf, id=112, 421.575pt x 316.18124pt>
-File: fig46-eps-converted-to.pdf Graphic file (type pdf)
-<use fig46-eps-converted-to.pdf>
-Package pdftex.def Info: fig46-eps-converted-to.pdf  used on input line 443.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig16-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig16-eps-converted-to.pdf, id=112, 421.575pt x 316.18124pt>
+File: Medvedev_fig16-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig16-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig16-eps-converted-to.pdf  used on input lin
+e 443.
 (pdftex.def)             Requested size: 233.53822pt x 175.15459pt.
-Package epstopdf Info: Source file: <fig47.eps>
+Package epstopdf Info: Source file: <Medvedev_fig17.eps>
 (epstopdf)                    date: 2024-01-14 23:00:24
 (epstopdf)                    size: 1353162 bytes
-(epstopdf)             Output file: <fig47-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:35:32
+(epstopdf)             Output file: <Medvedev_fig17-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:10:58
 (epstopdf)                    size: 34774 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig47-eps-converted-
-to.pdf fig47.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig17-eps-c
+onverted-to.pdf Medvedev_fig17.eps>
 (epstopdf)             \includegraphics on input line 448.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig47-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig47-eps-converted-to.pdf, id=113, 421.575pt x 317.185pt>
-File: fig47-eps-converted-to.pdf Graphic file (type pdf)
-<use fig47-eps-converted-to.pdf>
-Package pdftex.def Info: fig47-eps-converted-to.pdf  used on input line 448.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig17-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig17-eps-converted-to.pdf, id=113, 421.575pt x 317.185pt>
+File: Medvedev_fig17-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig17-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig17-eps-converted-to.pdf  used on input lin
+e 448.
 (pdftex.def)             Requested size: 233.53822pt x 175.71063pt.
-[12 <./fig18-eps-converted-to.pdf> <./fig19-eps-converted-to.pdf>] [13 <./fig46
--eps-converted-to.pdf> <./fig47-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <fig33.eps>
+[12 <./Medvedev_fig8-eps-converted-to.pdf> <./Medvedev_fig9-eps-converted-to.pd
+f>] [13 <./Medvedev_fig16-eps-converted-to.pdf> <./Medvedev_fig17-eps-converted
+-to.pdf>]
+Package epstopdf Info: Source file: <Medvedev_fig10.eps>
 (epstopdf)                    date: 2024-01-14 23:17:51
 (epstopdf)                    size: 1496770 bytes
-(epstopdf)             Output file: <fig33-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:35:32
+(epstopdf)             Output file: <Medvedev_fig10-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:10:59
 (epstopdf)                    size: 24074 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig33-eps-converted-
-to.pdf fig33.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig10-eps-c
+onverted-to.pdf Medvedev_fig10.eps>
 (epstopdf)             \includegraphics on input line 489.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig33-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig33-eps-converted-to.pdf, id=148, 602.25pt x 377.41pt>
-File: fig33-eps-converted-to.pdf Graphic file (type pdf)
-<use fig33-eps-converted-to.pdf>
-Package pdftex.def Info: fig33-eps-converted-to.pdf  used on input line 489.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig10-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig10-eps-converted-to.pdf, id=148, 602.25pt x 377.41pt>
+File: Medvedev_fig10-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig10-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig10-eps-converted-to.pdf  used on input lin
+e 489.
 (pdftex.def)             Requested size: 233.53822pt x 146.34851pt.
-Package epstopdf Info: Source file: <fig34.eps>
+Package epstopdf Info: Source file: <Medvedev_fig11.eps>
 (epstopdf)                    date: 2024-01-14 23:19:35
 (epstopdf)                    size: 1495210 bytes
-(epstopdf)             Output file: <fig34-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:35:32
+(epstopdf)             Output file: <Medvedev_fig11-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:00
 (epstopdf)                    size: 23444 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig34-eps-converted-
-to.pdf fig34.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig11-eps-c
+onverted-to.pdf Medvedev_fig11.eps>
 (epstopdf)             \includegraphics on input line 494.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig34-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig34-eps-converted-to.pdf, id=149, 602.25pt x 377.41pt>
-File: fig34-eps-converted-to.pdf Graphic file (type pdf)
-<use fig34-eps-converted-to.pdf>
-Package pdftex.def Info: fig34-eps-converted-to.pdf  used on input line 494.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig11-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig11-eps-converted-to.pdf, id=149, 602.25pt x 377.41pt>
+File: Medvedev_fig11-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig11-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig11-eps-converted-to.pdf  used on input lin
+e 494.
 (pdftex.def)             Requested size: 233.53822pt x 146.34851pt.
 [14]
-Package epstopdf Info: Source file: <fig48.eps>
+Package epstopdf Info: Source file: <Medvedev_fig18.eps>
 (epstopdf)                    date: 2024-01-14 23:22:06
 (epstopdf)                    size: 1416654 bytes
-(epstopdf)             Output file: <fig48-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:35:32
+(epstopdf)             Output file: <Medvedev_fig18-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:01
 (epstopdf)                    size: 42455 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig48-eps-converted-
-to.pdf fig48.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig18-eps-c
+onverted-to.pdf Medvedev_fig18.eps>
 (epstopdf)             \includegraphics on input line 508.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig48-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig48-eps-converted-to.pdf, id=153, 421.575pt x 317.185pt>
-File: fig48-eps-converted-to.pdf Graphic file (type pdf)
-<use fig48-eps-converted-to.pdf>
-Package pdftex.def Info: fig48-eps-converted-to.pdf  used on input line 508.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig18-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig18-eps-converted-to.pdf, id=153, 421.575pt x 317.185pt>
+File: Medvedev_fig18-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig18-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig18-eps-converted-to.pdf  used on input lin
+e 508.
 (pdftex.def)             Requested size: 233.53822pt x 175.71063pt.
-Package epstopdf Info: Source file: <fig49.eps>
+Package epstopdf Info: Source file: <Medvedev_fig19.eps>
 (epstopdf)                    date: 2024-01-14 23:26:08
 (epstopdf)                    size: 1304318 bytes
-(epstopdf)             Output file: <fig49-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:35:32
+(epstopdf)             Output file: <Medvedev_fig19-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:03
 (epstopdf)                    size: 22508 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig49-eps-converted-
-to.pdf fig49.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig19-eps-c
+onverted-to.pdf Medvedev_fig19.eps>
 (epstopdf)             \includegraphics on input line 514.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig49-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig49-eps-converted-to.pdf, id=154, 421.575pt x 317.185pt>
-File: fig49-eps-converted-to.pdf Graphic file (type pdf)
-<use fig49-eps-converted-to.pdf>
-Package pdftex.def Info: fig49-eps-converted-to.pdf  used on input line 514.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig19-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig19-eps-converted-to.pdf, id=154, 421.575pt x 317.185pt>
+File: Medvedev_fig19-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig19-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig19-eps-converted-to.pdf  used on input lin
+e 514.
 (pdftex.def)             Requested size: 233.53822pt x 175.71063pt.
-Package epstopdf Info: Source file: <fig35.eps>
+Package epstopdf Info: Source file: <Medvedev_fig12.eps>
 (epstopdf)                    date: 2024-01-14 23:32:14
 (epstopdf)                    size: 1641650 bytes
-(epstopdf)             Output file: <fig35-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:35:32
+(epstopdf)             Output file: <Medvedev_fig12-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:04
 (epstopdf)                    size: 85572 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig35-eps-converted-
-to.pdf fig35.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig12-eps-c
+onverted-to.pdf Medvedev_fig12.eps>
 (epstopdf)             \includegraphics on input line 528.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig35-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig35-eps-converted-to.pdf, id=155, 1441.385pt x 316.18124pt>
-File: fig35-eps-converted-to.pdf Graphic file (type pdf)
-<use fig35-eps-converted-to.pdf>
-Package pdftex.def Info: fig35-eps-converted-to.pdf  used on input line 528.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig12-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig12-eps-converted-to.pdf, id=155, 1441.385pt x 316.18124pt>
+File: Medvedev_fig12-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig12-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig12-eps-converted-to.pdf  used on input lin
+e 528.
 (pdftex.def)             Requested size: 486.5423pt x 106.72345pt.
-Package epstopdf Info: Source file: <fig36.eps>
+Package epstopdf Info: Source file: <Medvedev_fig13.eps>
 (epstopdf)                    date: 2024-01-14 23:33:24
 (epstopdf)                    size: 2569506 bytes
-(epstopdf)             Output file: <fig36-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:35:32
+(epstopdf)             Output file: <Medvedev_fig13-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:05
 (epstopdf)                    size: 123366 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig36-eps-converted-
-to.pdf fig36.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig13-eps-c
+onverted-to.pdf Medvedev_fig13.eps>
 (epstopdf)             \includegraphics on input line 530.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig36-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig36-eps-converted-to.pdf, id=156, 1440.38126pt x 317.185pt>
-File: fig36-eps-converted-to.pdf Graphic file (type pdf)
-<use fig36-eps-converted-to.pdf>
-Package pdftex.def Info: fig36-eps-converted-to.pdf  used on input line 530.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig13-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig13-eps-converted-to.pdf, id=156, 1440.38126pt x 317.185pt>
+File: Medvedev_fig13-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig13-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig13-eps-converted-to.pdf  used on input lin
+e 530.
 (pdftex.def)             Requested size: 486.5423pt x 107.13968pt.
-Package epstopdf Info: Source file: <fig37.eps>
+Package epstopdf Info: Source file: <Medvedev_fig14.eps>
 (epstopdf)                    date: 2024-01-14 23:49:20
 (epstopdf)                    size: 1704218 bytes
-(epstopdf)             Output file: <fig37-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-01-15 03:35:32
+(epstopdf)             Output file: <Medvedev_fig14-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:06
 (epstopdf)                    size: 91131 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig37-eps-converted-
-to.pdf fig37.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig14-eps-c
+onverted-to.pdf Medvedev_fig14.eps>
 (epstopdf)             \includegraphics on input line 532.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig37-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig37-eps-converted-to.pdf, id=157, 1443.3925pt x 317.185pt>
-File: fig37-eps-converted-to.pdf Graphic file (type pdf)
-<use fig37-eps-converted-to.pdf>
-Package pdftex.def Info: fig37-eps-converted-to.pdf  used on input line 532.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig14-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig14-eps-converted-to.pdf, id=157, 1443.3925pt x 317.185pt>
+File: Medvedev_fig14-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig14-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig14-eps-converted-to.pdf  used on input lin
+e 532.
 (pdftex.def)             Requested size: 486.5423pt x 106.91705pt.
-[15 <./fig33-eps-converted-to.pdf> <./fig34-eps-converted-to.pdf> <./fig48-eps-
-converted-to.pdf> <./fig49-eps-converted-to.pdf>] [16 <./fig35-eps-converted-to
-.pdf> <./fig36-eps-converted-to.pdf> <./fig37-eps-converted-to.pdf>]
+[15 <./Medvedev_fig10-eps-converted-to.pdf> <./Medvedev_fig11-eps-converted-to.
+pdf> <./Medvedev_fig18-eps-converted-to.pdf> <./Medvedev_fig19-eps-converted-to
+.pdf>] [16 <./Medvedev_fig12-eps-converted-to.pdf> <./Medvedev_fig13-eps-conver
+ted-to.pdf> <./Medvedev_fig14-eps-converted-to.pdf>]
 Overfull \hbox (0.64507pt too wide) in paragraph at lines 541--541
 []\T2A/cmr/bx/n/14.4 Столкновения со-ли-то-нов в при-сут-ствии выс-ших сте-пе-н
 ей нели-
  []
 
-Package epstopdf Info: Source file: <fig52.eps>
+Package epstopdf Info: Source file: <Medvedev_fig20.eps>
 (epstopdf)                    date: 2023-07-15 16:51:08
 (epstopdf)                    size: 141448 bytes
-(epstopdf)             Output file: <fig52-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 16:55:12
+(epstopdf)             Output file: <Medvedev_fig20-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:07
 (epstopdf)                    size: 73085 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig52-eps-converted-
-to.pdf fig52.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig20-eps-c
+onverted-to.pdf Medvedev_fig20.eps>
 (epstopdf)             \includegraphics on input line 550.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig52-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig52-eps-converted-to.pdf, id=255, 421.575pt x 316.18124pt>
-File: fig52-eps-converted-to.pdf Graphic file (type pdf)
-<use fig52-eps-converted-to.pdf>
-Package pdftex.def Info: fig52-eps-converted-to.pdf  used on input line 550.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig20-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig20-eps-converted-to.pdf, id=255, 421.575pt x 316.18124pt>
+File: Medvedev_fig20-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig20-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig20-eps-converted-to.pdf  used on input lin
+e 550.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-Package epstopdf Info: Source file: <fig55.eps>
+Package epstopdf Info: Source file: <Medvedev_fig26.eps>
 (epstopdf)                    date: 2023-07-15 16:56:29
 (epstopdf)                    size: 140156 bytes
-(epstopdf)             Output file: <fig55-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 16:59:03
+(epstopdf)             Output file: <Medvedev_fig26-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:08
 (epstopdf)                    size: 71852 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig55-eps-converted-
-to.pdf fig55.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig26-eps-c
+onverted-to.pdf Medvedev_fig26.eps>
 (epstopdf)             \includegraphics on input line 554.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig55-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig55-eps-converted-to.pdf, id=256, 421.575pt x 316.18124pt>
-File: fig55-eps-converted-to.pdf Graphic file (type pdf)
-<use fig55-eps-converted-to.pdf>
-Package pdftex.def Info: fig55-eps-converted-to.pdf  used on input line 554.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig26-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig26-eps-converted-to.pdf, id=256, 421.575pt x 316.18124pt>
+File: Medvedev_fig26-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig26-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig26-eps-converted-to.pdf  used on input lin
+e 554.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-Package epstopdf Info: Source file: <fig58.eps>
+Package epstopdf Info: Source file: <Medvedev_fig32.eps>
 (epstopdf)                    date: 2023-07-15 17:02:42
 (epstopdf)                    size: 138035 bytes
-(epstopdf)             Output file: <fig58-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 17:05:21
+(epstopdf)             Output file: <Medvedev_fig32-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:09
 (epstopdf)                    size: 73804 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig58-eps-converted-
-to.pdf fig58.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig32-eps-c
+onverted-to.pdf Medvedev_fig32.eps>
 (epstopdf)             \includegraphics on input line 558.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig58-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig58-eps-converted-to.pdf, id=257, 421.575pt x 316.18124pt>
-File: fig58-eps-converted-to.pdf Graphic file (type pdf)
-<use fig58-eps-converted-to.pdf>
-Package pdftex.def Info: fig58-eps-converted-to.pdf  used on input line 558.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig32-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig32-eps-converted-to.pdf, id=257, 421.575pt x 316.18124pt>
+File: Medvedev_fig32-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig32-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig32-eps-converted-to.pdf  used on input lin
+e 558.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-Package epstopdf Info: Source file: <fig53.eps>
+Package epstopdf Info: Source file: <Medvedev_fig22.eps>
 (epstopdf)                    date: 2023-07-15 16:53:36
 (epstopdf)                    size: 175276 bytes
-(epstopdf)             Output file: <fig53-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 16:55:13
+(epstopdf)             Output file: <Medvedev_fig22-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:10
 (epstopdf)                    size: 87338 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig53-eps-converted-
-to.pdf fig53.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig22-eps-c
+onverted-to.pdf Medvedev_fig22.eps>
 (epstopdf)             \includegraphics on input line 563.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig53-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig53-eps-converted-to.pdf, id=258, 421.575pt x 316.18124pt>
-File: fig53-eps-converted-to.pdf Graphic file (type pdf)
-<use fig53-eps-converted-to.pdf>
-Package pdftex.def Info: fig53-eps-converted-to.pdf  used on input line 563.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig22-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig22-eps-converted-to.pdf, id=258, 421.575pt x 316.18124pt>
+File: Medvedev_fig22-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig22-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig22-eps-converted-to.pdf  used on input lin
+e 563.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-Package epstopdf Info: Source file: <fig56.eps>
+Package epstopdf Info: Source file: <Medvedev_fig28.eps>
 (epstopdf)                    date: 2023-07-15 16:57:12
 (epstopdf)                    size: 173729 bytes
-(epstopdf)             Output file: <fig56-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 16:59:04
+(epstopdf)             Output file: <Medvedev_fig28-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:11
 (epstopdf)                    size: 86384 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig56-eps-converted-
-to.pdf fig56.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig28-eps-c
+onverted-to.pdf Medvedev_fig28.eps>
 (epstopdf)             \includegraphics on input line 567.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig56-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig56-eps-converted-to.pdf, id=259, 421.575pt x 316.18124pt>
-File: fig56-eps-converted-to.pdf Graphic file (type pdf)
-<use fig56-eps-converted-to.pdf>
-Package pdftex.def Info: fig56-eps-converted-to.pdf  used on input line 567.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig28-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig28-eps-converted-to.pdf, id=259, 421.575pt x 316.18124pt>
+File: Medvedev_fig28-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig28-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig28-eps-converted-to.pdf  used on input lin
+e 567.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-Package epstopdf Info: Source file: <fig59.eps>
+Package epstopdf Info: Source file: <Medvedev_fig34.eps>
 (epstopdf)                    date: 2023-07-15 17:03:34
 (epstopdf)                    size: 164618 bytes
-(epstopdf)             Output file: <fig59-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 17:05:21
+(epstopdf)             Output file: <Medvedev_fig34-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:12
 (epstopdf)                    size: 86563 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig59-eps-converted-
-to.pdf fig59.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig34-eps-c
+onverted-to.pdf Medvedev_fig34.eps>
 (epstopdf)             \includegraphics on input line 571.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig59-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig59-eps-converted-to.pdf, id=260, 421.575pt x 316.18124pt>
-File: fig59-eps-converted-to.pdf Graphic file (type pdf)
-<use fig59-eps-converted-to.pdf>
-Package pdftex.def Info: fig59-eps-converted-to.pdf  used on input line 571.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig34-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig34-eps-converted-to.pdf, id=260, 421.575pt x 316.18124pt>
+File: Medvedev_fig34-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig34-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig34-eps-converted-to.pdf  used on input lin
+e 571.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-Package epstopdf Info: Source file: <fig54.eps>
+Package epstopdf Info: Source file: <Medvedev_fig24.eps>
 (epstopdf)                    date: 2023-07-15 16:54:18
 (epstopdf)                    size: 195686 bytes
-(epstopdf)             Output file: <fig54-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 16:55:14
+(epstopdf)             Output file: <Medvedev_fig24-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:13
 (epstopdf)                    size: 79500 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig54-eps-converted-
-to.pdf fig54.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig24-eps-c
+onverted-to.pdf Medvedev_fig24.eps>
 (epstopdf)             \includegraphics on input line 576.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig54-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig54-eps-converted-to.pdf, id=261, 421.575pt x 316.18124pt>
-File: fig54-eps-converted-to.pdf Graphic file (type pdf)
-<use fig54-eps-converted-to.pdf>
-Package pdftex.def Info: fig54-eps-converted-to.pdf  used on input line 576.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig24-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig24-eps-converted-to.pdf, id=261, 421.575pt x 316.18124pt>
+File: Medvedev_fig24-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig24-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig24-eps-converted-to.pdf  used on input lin
+e 576.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-Package epstopdf Info: Source file: <fig57.eps>
+Package epstopdf Info: Source file: <Medvedev_fig30.eps>
 (epstopdf)                    date: 2023-07-15 16:58:08
 (epstopdf)                    size: 197997 bytes
-(epstopdf)             Output file: <fig57-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 16:59:05
+(epstopdf)             Output file: <Medvedev_fig30-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:14
 (epstopdf)                    size: 98685 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig57-eps-converted-
-to.pdf fig57.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig30-eps-c
+onverted-to.pdf Medvedev_fig30.eps>
 (epstopdf)             \includegraphics on input line 580.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig57-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig57-eps-converted-to.pdf, id=262, 421.575pt x 316.18124pt>
-File: fig57-eps-converted-to.pdf Graphic file (type pdf)
-<use fig57-eps-converted-to.pdf>
-Package pdftex.def Info: fig57-eps-converted-to.pdf  used on input line 580.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig30-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig30-eps-converted-to.pdf, id=262, 421.575pt x 316.18124pt>
+File: Medvedev_fig30-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig30-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig30-eps-converted-to.pdf  used on input lin
+e 580.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-Package epstopdf Info: Source file: <fig60.eps>
+Package epstopdf Info: Source file: <Medvedev_fig36.eps>
 (epstopdf)                    date: 2023-07-15 17:04:23
 (epstopdf)                    size: 184180 bytes
-(epstopdf)             Output file: <fig60-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 17:05:22
+(epstopdf)             Output file: <Medvedev_fig36-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:15
 (epstopdf)                    size: 96801 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig60-eps-converted-
-to.pdf fig60.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig36-eps-c
+onverted-to.pdf Medvedev_fig36.eps>
 (epstopdf)             \includegraphics on input line 584.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig60-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig60-eps-converted-to.pdf, id=263, 421.575pt x 316.18124pt>
-File: fig60-eps-converted-to.pdf Graphic file (type pdf)
-<use fig60-eps-converted-to.pdf>
-Package pdftex.def Info: fig60-eps-converted-to.pdf  used on input line 584.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig36-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig36-eps-converted-to.pdf, id=263, 421.575pt x 316.18124pt>
+File: Medvedev_fig36-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig36-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig36-eps-converted-to.pdf  used on input lin
+e 584.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
 [17]
-Package epstopdf Info: Source file: <fig52g.eps>
+Package epstopdf Info: Source file: <Medvedev_fig21.eps>
 (epstopdf)                    date: 2023-07-15 16:51:49
 (epstopdf)                    size: 159509 bytes
-(epstopdf)             Output file: <fig52g-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 17:19:31
+(epstopdf)             Output file: <Medvedev_fig21-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:16
 (epstopdf)                    size: 65632 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig52g-eps-converted
--to.pdf fig52g.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig21-eps-c
+onverted-to.pdf Medvedev_fig21.eps>
 (epstopdf)             \includegraphics on input line 593.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig52g-eps-converted-to.pdf): PDF inc
-lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig52g-eps-converted-to.pdf, id=267, 421.575pt x 316.18124pt>
-File: fig52g-eps-converted-to.pdf Graphic file (type pdf)
-<use fig52g-eps-converted-to.pdf>
-Package pdftex.def Info: fig52g-eps-converted-to.pdf  used on input line 593.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig21-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig21-eps-converted-to.pdf, id=267, 421.575pt x 316.18124pt>
+File: Medvedev_fig21-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig21-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig21-eps-converted-to.pdf  used on input lin
+e 593.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-Package epstopdf Info: Source file: <fig55g.eps>
+Package epstopdf Info: Source file: <Medvedev_fig27.eps>
 (epstopdf)                    date: 2023-07-15 16:56:36
 (epstopdf)                    size: 153585 bytes
-(epstopdf)             Output file: <fig55g-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 17:19:32
+(epstopdf)             Output file: <Medvedev_fig27-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:16
 (epstopdf)                    size: 60644 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig55g-eps-converted
--to.pdf fig55g.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig27-eps-c
+onverted-to.pdf Medvedev_fig27.eps>
 (epstopdf)             \includegraphics on input line 597.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig55g-eps-converted-to.pdf): PDF inc
-lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig55g-eps-converted-to.pdf, id=268, 421.575pt x 316.18124pt>
-File: fig55g-eps-converted-to.pdf Graphic file (type pdf)
-<use fig55g-eps-converted-to.pdf>
-Package pdftex.def Info: fig55g-eps-converted-to.pdf  used on input line 597.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig27-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig27-eps-converted-to.pdf, id=268, 421.575pt x 316.18124pt>
+File: Medvedev_fig27-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig27-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig27-eps-converted-to.pdf  used on input lin
+e 597.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-Package epstopdf Info: Source file: <fig58g.eps>
+Package epstopdf Info: Source file: <Medvedev_fig33.eps>
 (epstopdf)                    date: 2023-07-15 17:03:01
 (epstopdf)                    size: 102960 bytes
-(epstopdf)             Output file: <fig58g-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 17:19:33
+(epstopdf)             Output file: <Medvedev_fig33-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:17
 (epstopdf)                    size: 45998 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig58g-eps-converted
--to.pdf fig58g.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig33-eps-c
+onverted-to.pdf Medvedev_fig33.eps>
 (epstopdf)             \includegraphics on input line 601.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig58g-eps-converted-to.pdf): PDF inc
-lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig58g-eps-converted-to.pdf, id=269, 421.575pt x 316.18124pt>
-File: fig58g-eps-converted-to.pdf Graphic file (type pdf)
-<use fig58g-eps-converted-to.pdf>
-Package pdftex.def Info: fig58g-eps-converted-to.pdf  used on input line 601.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig33-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig33-eps-converted-to.pdf, id=269, 421.575pt x 316.18124pt>
+File: Medvedev_fig33-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig33-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig33-eps-converted-to.pdf  used on input lin
+e 601.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-Package epstopdf Info: Source file: <fig53g.eps>
+Package epstopdf Info: Source file: <Medvedev_fig23.eps>
 (epstopdf)                    date: 2023-07-15 16:53:49
 (epstopdf)                    size: 175961 bytes
-(epstopdf)             Output file: <fig53g-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 17:19:34
+(epstopdf)             Output file: <Medvedev_fig23-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:18
 (epstopdf)                    size: 71713 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig53g-eps-converted
--to.pdf fig53g.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig23-eps-c
+onverted-to.pdf Medvedev_fig23.eps>
 (epstopdf)             \includegraphics on input line 606.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig53g-eps-converted-to.pdf): PDF inc
-lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig53g-eps-converted-to.pdf, id=270, 421.575pt x 316.18124pt>
-File: fig53g-eps-converted-to.pdf Graphic file (type pdf)
-<use fig53g-eps-converted-to.pdf>
-Package pdftex.def Info: fig53g-eps-converted-to.pdf  used on input line 606.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig23-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig23-eps-converted-to.pdf, id=270, 421.575pt x 316.18124pt>
+File: Medvedev_fig23-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig23-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig23-eps-converted-to.pdf  used on input lin
+e 606.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-Package epstopdf Info: Source file: <fig56g.eps>
+Package epstopdf Info: Source file: <Medvedev_fig29.eps>
 (epstopdf)                    date: 2023-07-15 16:57:19
 (epstopdf)                    size: 174729 bytes
-(epstopdf)             Output file: <fig56g-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 17:19:34
-(epstopdf)                    size: 66210 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig56g-eps-converted
--to.pdf fig56g.eps>
+(epstopdf)             Output file: <Medvedev_fig29-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:19
+(epstopdf)                    size: 66202 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig29-eps-c
+onverted-to.pdf Medvedev_fig29.eps>
 (epstopdf)             \includegraphics on input line 610.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig56g-eps-converted-to.pdf): PDF inc
-lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig56g-eps-converted-to.pdf, id=271, 421.575pt x 316.18124pt>
-File: fig56g-eps-converted-to.pdf Graphic file (type pdf)
-<use fig56g-eps-converted-to.pdf>
-Package pdftex.def Info: fig56g-eps-converted-to.pdf  used on input line 610.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig29-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig29-eps-converted-to.pdf, id=271, 421.575pt x 316.18124pt>
+File: Medvedev_fig29-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig29-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig29-eps-converted-to.pdf  used on input lin
+e 610.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-Package epstopdf Info: Source file: <fig59g.eps>
+Package epstopdf Info: Source file: <Medvedev_fig35.eps>
 (epstopdf)                    date: 2023-07-15 17:03:42
 (epstopdf)                    size: 147478 bytes
-(epstopdf)             Output file: <fig59g-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 17:19:35
+(epstopdf)             Output file: <Medvedev_fig35-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:20
 (epstopdf)                    size: 57801 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig59g-eps-converted
--to.pdf fig59g.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig35-eps-c
+onverted-to.pdf Medvedev_fig35.eps>
 (epstopdf)             \includegraphics on input line 614.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig59g-eps-converted-to.pdf): PDF inc
-lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig59g-eps-converted-to.pdf, id=272, 421.575pt x 316.18124pt>
-File: fig59g-eps-converted-to.pdf Graphic file (type pdf)
-<use fig59g-eps-converted-to.pdf>
-Package pdftex.def Info: fig59g-eps-converted-to.pdf  used on input line 614.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig35-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig35-eps-converted-to.pdf, id=272, 421.575pt x 316.18124pt>
+File: Medvedev_fig35-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig35-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig35-eps-converted-to.pdf  used on input lin
+e 614.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-Package epstopdf Info: Source file: <fig54g.eps>
+Package epstopdf Info: Source file: <Medvedev_fig25.eps>
 (epstopdf)                    date: 2023-07-15 16:54:29
 (epstopdf)                    size: 200540 bytes
-(epstopdf)             Output file: <fig54g-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 17:19:36
+(epstopdf)             Output file: <Medvedev_fig25-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:21
 (epstopdf)                    size: 59933 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig54g-eps-converted
--to.pdf fig54g.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig25-eps-c
+onverted-to.pdf Medvedev_fig25.eps>
 (epstopdf)             \includegraphics on input line 619.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig54g-eps-converted-to.pdf): PDF inc
-lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig54g-eps-converted-to.pdf, id=273, 421.575pt x 316.18124pt>
-File: fig54g-eps-converted-to.pdf Graphic file (type pdf)
-<use fig54g-eps-converted-to.pdf>
-Package pdftex.def Info: fig54g-eps-converted-to.pdf  used on input line 619.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig25-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig25-eps-converted-to.pdf, id=273, 421.575pt x 316.18124pt>
+File: Medvedev_fig25-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig25-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig25-eps-converted-to.pdf  used on input lin
+e 619.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-Package epstopdf Info: Source file: <fig57g.eps>
+Package epstopdf Info: Source file: <Medvedev_fig31.eps>
 (epstopdf)                    date: 2023-07-15 16:58:16
 (epstopdf)                    size: 173649 bytes
-(epstopdf)             Output file: <fig57g-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 17:19:37
+(epstopdf)             Output file: <Medvedev_fig31-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:11:22
 (epstopdf)                    size: 66924 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig57g-eps-converted
--to.pdf fig57g.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig31-eps-c
+onverted-to.pdf Medvedev_fig31.eps>
 (epstopdf)             \includegraphics on input line 623.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig57g-eps-converted-to.pdf): PDF inc
-lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig57g-eps-converted-to.pdf, id=274, 421.575pt x 316.18124pt>
-File: fig57g-eps-converted-to.pdf Graphic file (type pdf)
-<use fig57g-eps-converted-to.pdf>
-Package pdftex.def Info: fig57g-eps-converted-to.pdf  used on input line 623.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig31-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig31-eps-converted-to.pdf, id=274, 421.575pt x 316.18124pt>
+File: Medvedev_fig31-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig31-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig31-eps-converted-to.pdf  used on input lin
+e 623.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-Package epstopdf Info: Source file: <fig60g.eps>
+Package epstopdf Info: Source file: <Medvedev_fig37.eps>
 (epstopdf)                    date: 2023-07-15 17:04:30
 (epstopdf)                    size: 158758 bytes
-(epstopdf)             Output file: <fig60g-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-07-15 17:19:38
+(epstopdf)             Output file: <Medvedev_fig37-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-02-11 21:12:31
 (epstopdf)                    size: 62319 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=fig60g-eps-converted
--to.pdf fig60g.eps>
+(epstopdf)             Command: <miktex-epstopdf --outfile=Medvedev_fig37-eps-c
+onverted-to.pdf Medvedev_fig37.eps>
 (epstopdf)             \includegraphics on input line 627.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./fig60g-eps-converted-to.pdf): PDF inc
-lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig60g-eps-converted-to.pdf, id=275, 421.575pt x 316.18124pt>
-File: fig60g-eps-converted-to.pdf Graphic file (type pdf)
-<use fig60g-eps-converted-to.pdf>
-Package pdftex.def Info: fig60g-eps-converted-to.pdf  used on input line 627.
+pdfTeX warning: miktex-pdftex.exe (file ./Medvedev_fig37-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Medvedev_fig37-eps-converted-to.pdf, id=275, 421.575pt x 316.18124pt>
+File: Medvedev_fig37-eps-converted-to.pdf Graphic file (type pdf)
+<use Medvedev_fig37-eps-converted-to.pdf>
+Package pdftex.def Info: Medvedev_fig37-eps-converted-to.pdf  used on input lin
+e 627.
 (pdftex.def)             Requested size: 155.6971pt x 116.77293pt.
-[18 <./fig52-eps-converted-to.pdf> <./fig55-eps-converted-to.pdf> <./fig58-eps-
-converted-to.pdf> <./fig53-eps-converted-to.pdf> <./fig56-eps-converted-to.pdf>
- <./fig59-eps-converted-to.pdf> <./fig54-eps-converted-to.pdf> <./fig57-eps-con
-verted-to.pdf> <./fig60-eps-converted-to.pdf>] [19 <./fig52g-eps-converted-to.p
-df> <./fig55g-eps-converted-to.pdf> <./fig58g-eps-converted-to.pdf> <./fig53g-e
-ps-converted-to.pdf> <./fig56g-eps-converted-to.pdf> <./fig59g-eps-converted-to
-.pdf> <./fig54g-eps-converted-to.pdf> <./fig57g-eps-converted-to.pdf> <./fig60g
--eps-converted-to.pdf>] [20] [21]
+[18 <./Medvedev_fig20-eps-converted-to.pdf> <./Medvedev_fig26-eps-converted-to.
+pdf> <./Medvedev_fig32-eps-converted-to.pdf> <./Medvedev_fig22-eps-converted-to
+.pdf> <./Medvedev_fig28-eps-converted-to.pdf> <./Medvedev_fig34-eps-converted-t
+o.pdf> <./Medvedev_fig24-eps-converted-to.pdf> <./Medvedev_fig30-eps-converted-
+to.pdf> <./Medvedev_fig36-eps-converted-to.pdf>] [19 <./Medvedev_fig21-eps-conv
+erted-to.pdf> <./Medvedev_fig27-eps-converted-to.pdf> <./Medvedev_fig33-eps-con
+verted-to.pdf> <./Medvedev_fig23-eps-converted-to.pdf> <./Medvedev_fig29-eps-co
+nverted-to.pdf> <./Medvedev_fig35-eps-converted-to.pdf> <./Medvedev_fig25-eps-c
+onverted-to.pdf> <./Medvedev_fig31-eps-converted-to.pdf> <./Medvedev_fig37-eps-
+converted-to.pdf>] [20] [21]
 Underfull \hbox (badness 10000) in paragraph at lines 671--673
 
  []
@@ -1613,7 +1652,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  10657 strings out of 475380
- 179078 string characters out of 2776771
+ 181304 string characters out of 2776771
  525747 words of memory out of 3000000
  31824 multiletter control sequences out of 15000+600000
  491563 words of font info for 92 fonts, out of 8000000 for 9000
@@ -1642,7 +1681,7 @@ eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vikto/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/vikto/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/vi
 kto/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on DiplomMag.pdf (24 pages, 2860257 bytes).
+Output written on DiplomMag.pdf (24 pages, 2860548 bytes).
 PDF statistics:
  892 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
