@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.12)  9 MAY 2024 19:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.12)  11 MAY 2024 14:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -303,18 +303,310 @@ Package babel Info: Default for \cyrdash is provided on input line 163.
 Package babel Info: Importing font and identification data for russian
 (babel)             from babel-ru.ini. Reported on input line 11.
 )
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks20
-\symAMSa=\mathgroup6
-\symAMSb=\mathgroup7
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/nicematrix\nicematrix.s
+ty
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+\stockwidth=\dimen141
+\stockheight=\dimen142
+))
+\Gin@req@height=\dimen143
+\Gin@req@width=\dimen144
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex
+\pgfutil@everybye=\toks21
+\pgfutil@tempdima=\dimen145
+\pgfutil@tempdimb=\dimen146
+
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common-lists.tex))
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def
+\pgfutil@abb=\box53
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+\pgfkeys@pathtoks=\toks22
+\pgfkeys@temptoks=\toks23
+
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+filtered.code.tex
+\pgfkeys@tmptoks=\toks24
+))
+\pgf@x=\dimen147
+\pgf@y=\dimen148
+\pgf@xa=\dimen149
+\pgf@ya=\dimen150
+\pgf@xb=\dimen151
+\pgf@yb=\dimen152
+\pgf@xc=\dimen153
+\pgf@yc=\dimen154
+\pgf@xd=\dimen155
+\pgf@yd=\dimen156
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count197
+\c@pgf@countb=\count198
+\c@pgf@countc=\count199
+\c@pgf@countd=\count266
+\t@pgf@toka=\toks25
+\t@pgf@tokb=\toks26
+\t@pgf@tokc=\toks27
+\pgf@sys@id@count=\count267
+
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count268
+\pgfsyssoftpath@bigbuffer@items=\count269
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex
+\pgfmath@dimen=\dimen157
+\pgfmath@count=\count270
+\pgfmath@box=\box54
+\pgfmath@toks=\toks28
+\pgfmath@stack@operand=\toks29
+\pgfmath@stack@operation=\toks30
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)))
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex
+\c@pgfmathroundto@lastzeros=\count271
+))
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen158
+\pgf@picmaxx=\dimen159
+\pgf@picminy=\dimen160
+\pgf@picmaxy=\dimen161
+\pgf@pathminx=\dimen162
+\pgf@pathmaxx=\dimen163
+\pgf@pathminy=\dimen164
+\pgf@pathmaxy=\dimen165
+\pgf@xx=\dimen166
+\pgf@xy=\dimen167
+\pgf@yx=\dimen168
+\pgf@yy=\dimen169
+\pgf@zx=\dimen170
+\pgf@zy=\dimen171
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen172
+\pgf@path@lasty=\dimen173
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen174
+\pgf@shorten@start@additional=\dimen175
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box55
+\pgf@hbox=\box56
+\pgf@layerbox@main=\box57
+\pgf@picture@serial@count=\count272
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen176
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen177
+\pgf@pt@y=\dimen178
+\pgf@pt@temp=\dimen179
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen180
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen181
+\pgf@sys@shading@range@num=\count273
+\pgf@shadingcount=\count274
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box58
+))
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box59
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
+eys2e.sty
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2022-10-26 L3 programming layer (loader) 
+
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count275
+\l__pdf_internal_box=\box60
+))
+Package: l3keys2e 2022-06-22 LaTeX2e option processing using LaTeX3 keys
+)
+Package: nicematrix 2022/10/06 v6.13b Enhanced arrays with the help of PGF/TikZ
+
+
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen182
+\ar@mcellbox=\box61
+\extrarowheight=\dimen183
+\NC@list=\toks31
+\extratabsurround=\skip49
+\backup@length=\skip50
+\ar@cellbox=\box62
 )
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2022/04/08 v2.17n AMS math features
-\@mathmargin=\skip49
+\@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
@@ -322,124 +614,183 @@ Package: amstext 2021/08/26 v2.01 AMS text
 
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks21
-\ex@=\dimen141
+\@emptytoks=\toks32
+\ex@=\dimen184
 ))
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen142
+\pmbraise@=\dimen185
 )
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count197
+\inf@bad=\count276
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count198
-\leftroot@=\count199
+\uproot@=\count277
+\leftroot@=\count278
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count266
-\DOTSCASE@=\count267
+\classnum@=\count279
+\DOTSCASE@=\count280
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box53
-\strutbox@=\box54
+\Mathstrutbox@=\box63
+\strutbox@=\box64
 LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
 LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen143
+\big@size=\dimen186
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
-\symOMLletters=\mathgroup8
+\symOMLletters=\mathgroup6
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\symOMSletters=\mathgroup9
-\macc@depth=\count268
+\symOMSletters=\mathgroup7
+\macc@depth=\count281
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count269
+\c@MaxMatrixCols=\count282
 \dotsspace@=\muskip16
-\c@parentequation=\count270
-\dspbrk@lvl=\count271
-\tag@help=\toks22
-\row@=\count272
-\column@=\count273
-\maxfields@=\count274
-\andhelp@=\toks23
-\eqnshift@=\dimen144
-\alignsep@=\dimen145
-\tagshift@=\dimen146
-\tagwidth@=\dimen147
-\totwidth@=\dimen148
-\lineht@=\dimen149
-\@envbody=\toks24
-\multlinegap=\skip50
-\multlinetaggap=\skip51
-\mathdisplay@stack=\toks25
+\c@parentequation=\count283
+\dspbrk@lvl=\count284
+\tag@help=\toks33
+\row@=\count285
+\column@=\count286
+\maxfields@=\count287
+\andhelp@=\toks34
+\eqnshift@=\dimen187
+\alignsep@=\dimen188
+\tagshift@=\dimen189
+\tagwidth@=\dimen190
+\totwidth@=\dimen191
+\lineht@=\dimen192
+\@envbody=\toks35
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks36
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
+)
+\g__nicematrix_env_int=\count288
+\g__nicematrix_NiceMatrixBlock_int=\count289
+\l__nicematrix_note_in_caption_int=\count290
+\l__nicematrix_columns_width_dim=\dimen193
+\l__nicematrix_col_width_dim=\dimen194
+\g__nicematrix_row_total_int=\count291
+\g__nicematrix_col_total_int=\count292
+\g__nicematrix_last_row_node_int=\count293
+\l__nicematrix_key_nb_rows_int=\count294
+\g__nicematrix_blocks_wd_dim=\dimen195
+\g__nicematrix_blocks_ht_dim=\dimen196
+\g__nicematrix_blocks_dp_dim=\dimen197
+\l__nicematrix_width_dim=\dimen198
+\l__nicematrix_tabular_width_dim=\dimen199
+\l__nicematrix_rule_width_dim=\dimen256
+\l__nicematrix_old_iRow_int=\count295
+\l__nicematrix_old_jCol_int=\count296
+\g__nicematrix_total_X_weight_int=\count297
+\l__nicematrix_X_columns_dim=\dimen257
+\l__nicematrix_x_initial_dim=\dimen258
+\l__nicematrix_y_initial_dim=\dimen259
+\l__nicematrix_x_final_dim=\dimen260
+\l__nicematrix_y_final_dim=\dimen261
+\l__nicematrix_tmpc_dim=\dimen262
+\l__nicematrix_tmpd_dim=\dimen263
+\g__nicematrix_width_last_col_dim=\dimen264
+\g__nicematrix_width_first_col_dim=\dimen265
+\l__nicematrix_row_min_int=\count298
+\l__nicematrix_row_max_int=\count299
+\l__nicematrix_col_min_int=\count300
+\l__nicematrix_col_max_int=\count301
+\g__nicematrix_static_num_of_col_int=\count302
+\l__nicematrix_rounded_corners_dim=\dimen266
+\l__nicematrix_line_width_dim=\dimen267
+\g__nicematrix_block_box_int=\count303
+\l__nicematrix_submatrix_extra_height_dim=\dimen268
+\l__nicematrix_submatrix_left_xshift_dim=\dimen269
+\l__nicematrix_submatrix_right_xshift_dim=\dimen270
+\l__nicematrix_first_row_int=\count304
+\l__nicematrix_first_col_int=\count305
+\l__nicematrix_last_row_int=\count306
+\l__nicematrix_last_col_int=\count307
+\c@tabularnote=\count308
+\c@nicematrix_draft=\count309
+\l__nicematrix_cell_space_top_limit_dim=\dimen271
+\l__nicematrix_cell_space_bottom_limit_dim=\dimen272
+\l__nicematrix_xdots_inter_dim=\dimen273
+\l__nicematrix_xdots_shorten_start_dim=\dimen274
+\l__nicematrix_xdots_shorten_end_dim=\dimen275
+\l__nicematrix_xdots_radius_dim=\dimen276
+\l__nicematrix_notes_above_space_dim=\dimen277
+\l__nicematrix_left_margin_dim=\dimen278
+\l__nicematrix_right_margin_dim=\dimen279
+\l__nicematrix_extra_left_margin_dim=\dimen280
+\l__nicematrix_extra_right_margin_dim=\dimen281
+\c__nicematrix_max_l_dim=\dimen282
+\l__nicematrix_position_int=\count310
+\l__nicematrix_start_int=\count311
+\l__nicematrix_multiplicity_int=\count312
+\l__nicematrix_brace_yshift_dim=\dimen283
+)
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup8
+\symAMSb=\mathgroup9
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
-\LTleft=\skip52
-\LTright=\skip53
-\LTpre=\skip54
-\LTpost=\skip55
-\LTchunksize=\count275
-\LTcapwidth=\dimen150
-\LT@head=\box55
-\LT@firsthead=\box56
-\LT@foot=\box57
-\LT@lastfoot=\box58
-\LT@gbox=\box59
-\LT@cols=\count276
-\LT@rows=\count277
-\c@LT@tables=\count278
-\c@LT@chunks=\count279
-\LT@p@ftn=\toks26
+\LTleft=\skip54
+\LTright=\skip55
+\LTpre=\skip56
+\LTpost=\skip57
+\LTchunksize=\count313
+\LTcapwidth=\dimen284
+\LT@head=\box65
+\LT@firsthead=\box66
+\LT@foot=\box67
+\LT@lastfoot=\box68
+\LT@gbox=\box69
+\LT@cols=\count314
+\LT@rows=\count315
+\c@LT@tables=\count316
+\c@LT@chunks=\count317
+\LT@p@ftn=\toks37
 )
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/tools\hhline.sty
 Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
 )
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
-\c@tracingmulticols=\count280
-\mult@box=\box60
-\multicol@leftmargin=\dimen151
-\c@unbalance=\count281
-\c@collectmore=\count282
-\doublecol@number=\count283
-\multicoltolerance=\count284
-\multicolpretolerance=\count285
-\full@width=\dimen152
-\page@free=\dimen153
-\premulticols=\dimen154
-\postmulticols=\dimen155
-\multicolsep=\skip56
-\multicolbaselineskip=\skip57
-\partial@page=\box61
-\last@line=\box62
-\maxbalancingoverflow=\dimen156
-\mult@rightbox=\box63
-\mult@grightbox=\box64
-\mult@firstbox=\box65
-\mult@gfirstbox=\box66
-\@tempa=\box67
-\@tempa=\box68
-\@tempa=\box69
-\@tempa=\box70
-\@tempa=\box71
-\@tempa=\box72
-\@tempa=\box73
-\@tempa=\box74
-\@tempa=\box75
-\@tempa=\box76
+\c@tracingmulticols=\count318
+\mult@box=\box70
+\multicol@leftmargin=\dimen285
+\c@unbalance=\count319
+\c@collectmore=\count320
+\doublecol@number=\count321
+\multicoltolerance=\count322
+\multicolpretolerance=\count323
+\full@width=\dimen286
+\page@free=\dimen287
+\premulticols=\dimen288
+\postmulticols=\dimen289
+\multicolsep=\skip58
+\multicolbaselineskip=\skip59
+\partial@page=\box71
+\last@line=\box72
+\maxbalancingoverflow=\dimen290
+\mult@rightbox=\box73
+\mult@grightbox=\box74
+\mult@firstbox=\box75
+\mult@gfirstbox=\box76
 \@tempa=\box77
 \@tempa=\box78
 \@tempa=\box79
@@ -466,65 +817,37 @@ Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \@tempa=\box100
 \@tempa=\box101
 \@tempa=\box102
-\c@minrows=\count286
-\c@columnbadness=\count287
-\c@finalcolumnbadness=\count288
-\last@try=\dimen157
-\multicolovershoot=\dimen158
-\multicolundershoot=\dimen159
-\mult@nat@firstbox=\box103
-\colbreak@box=\box104
-\mc@col@check@num=\count289
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\c@minrows=\count324
+\c@columnbadness=\count325
+\c@finalcolumnbadness=\count326
+\last@try=\dimen291
+\multicolovershoot=\dimen292
+\multicolundershoot=\dimen293
+\mult@nat@firstbox=\box113
+\colbreak@box=\box114
+\mc@col@check@num=\count327
 )
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
-Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
-
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 149.
-
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
-\stockwidth=\dimen160
-\stockheight=\dimen161
-) (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvipsnam.def
-File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-)
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
-) (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.sty
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
-\SOUL@word=\toks27
-\SOUL@lasttoken=\toks28
-\SOUL@cmds=\toks29
-\SOUL@buffer=\toks30
-\SOUL@token=\toks31
-\SOUL@spaceskip=\skip58
-\SOUL@ttwidth=\dimen162
-\SOUL@uldp=\dimen163
-\SOUL@ulht=\dimen164
-)
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks32
-)
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
-Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-)
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 107.
-)
-\Gin@req@height=\dimen165
-\Gin@req@width=\dimen166
+\SOUL@word=\toks38
+\SOUL@lasttoken=\toks39
+\SOUL@cmds=\toks40
+\SOUL@buffer=\toks41
+\SOUL@token=\toks42
+\SOUL@spaceskip=\skip60
+\SOUL@ttwidth=\dimen294
+\SOUL@uldp=\dimen295
+\SOUL@ulht=\dimen296
 )
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/diagbox\diagbox.sty
 Package: diagbox 2020/02/09 v2.3 Making table heads with diagonal lines
@@ -541,47 +864,37 @@ Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 114.
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/pict2e\p2e-pdftex.def
 File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 )
-\pIIe@GRAPH=\toks33
-\@arclen=\dimen167
-\@arcrad=\dimen168
-\pIIe@tempdima=\dimen169
-\pIIe@tempdimb=\dimen170
-\pIIe@tempdimc=\dimen171
-\pIIe@tempdimd=\dimen172
-\pIIe@tempdime=\dimen173
-\pIIe@tempdimf=\dimen174
+\pIIe@GRAPH=\toks43
+\@arclen=\dimen297
+\@arcrad=\dimen298
+\pIIe@tempdima=\dimen299
+\pIIe@tempdimb=\dimen300
+\pIIe@tempdimc=\dimen301
+\pIIe@tempdimd=\dimen302
+\pIIe@tempdime=\dimen303
+\pIIe@tempdimf=\dimen304
 ) (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count290
-\calc@Bcount=\count291
-\calc@Adimen=\dimen175
-\calc@Bdimen=\dimen176
-\calc@Askip=\skip59
-\calc@Bskip=\skip60
+\calc@Acount=\count328
+\calc@Bcount=\count329
+\calc@Adimen=\dimen305
+\calc@Bdimen=\dimen306
+\calc@Askip=\skip61
+\calc@Bskip=\skip62
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count292
-\calc@Cskip=\skip61
+\calc@Ccount=\count330
+\calc@Cskip=\skip63
 )
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
-Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
-\col@sep=\dimen177
-\ar@mcellbox=\box105
-\extrarowheight=\dimen178
-\NC@list=\toks34
-\extratabsurround=\skip62
-\backup@length=\skip63
-\ar@cellbox=\box106
-)
-\diagbox@boxa=\box107
-\diagbox@boxb=\box108
-\diagbox@boxm=\box109
-\diagbox@wd=\dimen179
-\diagbox@ht=\dimen180
-\diagbox@insepl=\dimen181
-\diagbox@insepr=\dimen182
-\diagbox@outsepl=\dimen183
-\diagbox@outsepr=\dimen184
+\diagbox@boxa=\box115
+\diagbox@boxb=\box116
+\diagbox@boxm=\box117
+\diagbox@wd=\dimen307
+\diagbox@ht=\dimen308
+\diagbox@insepl=\dimen309
+\diagbox@insepr=\dimen310
+\diagbox@outsepl=\dimen311
+\diagbox@outsepr=\dimen312
 )
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/babel\mcode.sty
 -- Package: `mcode' 2.7 <2015/11/11> --
@@ -589,24 +902,24 @@ Package: mcode 2015/11/11 2.7
  - settings optimized for display (colour formating)
  - line numbering enabled
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count293
-\lst@gtempboxa=\box110
-\lst@token=\toks35
-\lst@length=\count294
-\lst@currlwidth=\dimen185
-\lst@column=\count295
-\lst@pos=\count296
-\lst@lostspace=\dimen186
-\lst@width=\dimen187
-\lst@newlines=\count297
-\lst@lineno=\count298
-\lst@maxwidth=\dimen188
+\lst@mode=\count331
+\lst@gtempboxa=\box118
+\lst@token=\toks44
+\lst@length=\count332
+\lst@currlwidth=\dimen313
+\lst@column=\count333
+\lst@pos=\count334
+\lst@lostspace=\dimen314
+\lst@width=\dimen315
+\lst@newlines=\count335
+\lst@lineno=\count336
+\lst@maxwidth=\dimen316
 
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count299
-\lst@skipnumbers=\count300
-\lst@framebox=\box111
+\c@lstnumber=\count337
+\lst@skipnumbers=\count338
+\lst@framebox=\box119
 )
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -621,18 +934,18 @@ Package: caption 2022/03/01 v3.6b Customizing captions (AR)
 
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
-\caption@tempdima=\dimen189
-\captionmargin=\dimen190
-\caption@leftmargin=\dimen191
-\caption@rightmargin=\dimen192
-\caption@width=\dimen193
-\caption@indent=\dimen194
-\caption@parindent=\dimen195
-\caption@hangindent=\dimen196
+\caption@tempdima=\dimen317
+\captionmargin=\dimen318
+\caption@leftmargin=\dimen319
+\caption@rightmargin=\dimen320
+\caption@width=\dimen321
+\caption@indent=\dimen322
+\caption@parindent=\dimen323
+\caption@hangindent=\dimen324
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count301
-\c@continuedfloat=\count302
+\c@caption@flags=\count339
+\c@continuedfloat=\count340
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
@@ -640,8 +953,8 @@ Package caption Info: longtable package is loaded.
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 ))
-\c@subfigure=\count303
-\c@subtable=\count304
+\c@subfigure=\count341
+\c@subtable=\count342
 ) (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\extsizes.sty
 Package: extsizes 1996/10/08 v1.0 Non Standard LaTeX Package
 
@@ -669,18 +982,18 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count305
-\Gm@cntv=\count306
-\c@Gm@tempcnt=\count307
-\Gm@bindingoffset=\dimen197
-\Gm@wd@mp=\dimen198
-\Gm@odd@mp=\dimen199
-\Gm@even@mp=\dimen256
-\Gm@layoutwidth=\dimen257
-\Gm@layoutheight=\dimen258
-\Gm@layouthoffset=\dimen259
-\Gm@layoutvoffset=\dimen260
-\Gm@dimlist=\toks36
+\Gm@cnth=\count343
+\Gm@cntv=\count344
+\c@Gm@tempcnt=\count345
+\Gm@bindingoffset=\dimen325
+\Gm@wd@mp=\dimen326
+\Gm@odd@mp=\dimen327
+\Gm@even@mp=\dimen328
+\Gm@layoutwidth=\dimen329
+\Gm@layoutheight=\dimen330
+\Gm@layouthoffset=\dimen331
+\Gm@layoutvoffset=\dimen332
+\Gm@dimlist=\toks45
 
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
@@ -691,60 +1004,54 @@ Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count308
-\l_MT_multwidth_dim=\dimen261
+\g_MT_multlinerow_int=\count346
+\l_MT_multwidth_dim=\dimen333
 \origjot=\skip64
-\l_MT_shortvdotswithinadjustabove_dim=\dimen262
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen263
-\l_MT_above_intertext_sep=\dimen264
-\l_MT_below_intertext_sep=\dimen265
-\l_MT_above_shortintertext_sep=\dimen266
-\l_MT_below_shortintertext_sep=\dimen267
-\xmathstrut@box=\box112
-\xmathstrut@dim=\dimen268
+\l_MT_shortvdotswithinadjustabove_dim=\dimen334
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen335
+\l_MT_above_intertext_sep=\dimen336
+\l_MT_below_intertext_sep=\dimen337
+\l_MT_above_shortintertext_sep=\dimen338
+\l_MT_below_shortintertext_sep=\dimen339
+\xmathstrut@box=\box120
+\xmathstrut@dim=\dimen340
 )
-\c@theorem=\count309
-
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count310
-\l__pdf_internal_box=\box113
-) (DiplomMag.aux)
+\c@theorem=\count347
+(DiplomMag.aux)
 \openout1 = `DiplomMag.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Info: Redefining \th on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Info: Redefining \th on input line 46.
 
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count311
-\scratchdimen=\dimen269
-\scratchbox=\box114
-\nofMPsegments=\count312
-\nofMParguments=\count313
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count314
-\MPscratchDim=\dimen270
-\MPnumerator=\count315
-\makeMPintoPDFobject=\count316
-\everyMPtoPDFconversion=\toks38
+\scratchcounter=\count348
+\scratchdimen=\dimen341
+\scratchbox=\box121
+\nofMPsegments=\count349
+\nofMParguments=\count350
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count351
+\MPscratchDim=\dimen342
+\MPnumerator=\count352
+\makeMPintoPDFobject=\count353
+\everyMPtoPDFconversion=\toks47
 )
 (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -756,7 +1063,57 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count317
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 46
+.
+ (C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+
+LaTeX Font Warning: Font shape `T2A/cmr/m/up' undefined
+(Font)              using `T2A/cmr/m/n' instead on input line 46.
+
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 4
+6.
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+
+LaTeX Font Warning: Font shape `OML/cmr/m/up' undefined
+(Font)              using `OML/cmr/m/it' instead on input line 46.
+
+LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 46.
+LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <8> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 46.
+LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <6> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 46.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
+6.
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+
+LaTeX Font Warning: Font shape `OMS/cmr/m/up' undefined
+(Font)              using `OMS/cmr/m/n' instead on input line 46.
+
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
+LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
+LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <6> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
+
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
+
+
+(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+\c@lstlisting=\count354
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
@@ -794,250 +1151,195 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 62
-.
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-
-LaTeX Font Warning: Font shape `T2A/cmr/m/up' undefined
-(Font)              using `T2A/cmr/m/n' instead on input line 62.
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
-
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 62.
-
-
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 6
-2.
-
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
-File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-
-LaTeX Font Warning: Font shape `OML/cmr/m/up' undefined
-(Font)              using `OML/cmr/m/it' instead on input line 62.
-
-LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 62.
-LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 62.
-LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <6> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 62.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 6
-2.
-(C:\Users\vikto\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
-File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-
-LaTeX Font Warning: Font shape `OMS/cmr/m/up' undefined
-(Font)              using `OMS/cmr/m/n' instead on input line 62.
-
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
-LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
-LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
 [1
 
-{C:/Users/vikto/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Overfull \hbox (17.10648pt too wide) in alignment at lines 126--136
- [] [] [] 
- []
-
-[1] [2] (DiplomMag.toc)
-\tf@toc=\write3
-\openout3 = `DiplomMag.toc'.
+{C:/Users/vikto/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [1]
+[2] (DiplomMag.toc)
+\tf@toc=\write4
+\openout4 = `DiplomMag.toc'.
 
  [3
 
 ]
 
-LaTeX Warning: Citation `Rad1' on page 4 undefined on input line 157.
+LaTeX Warning: Citation `Rad1' on page 4 undefined on input line 158.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
-<pic1.png, id=18, 566.86781pt x 584.1825pt>
+<pic1.png, id=21, 566.86781pt x 584.1825pt>
 File: pic1.png Graphic file (type png)
 <use pic1.png>
-Package pdftex.def Info: pic1.png  used on input line 161.
+Package pdftex.def Info: pic1.png  used on input line 162.
 (pdftex.def)             Requested size: 199.16928pt x 205.25136pt.
 
-LaTeX Warning: Citation `Rad2' on page 4 undefined on input line 162.
+LaTeX Warning: Citation `Rad2' on page 4 undefined on input line 163.
 
 
-LaTeX Warning: Citation `Rad2' on page 4 undefined on input line 162.
+LaTeX Warning: Citation `Rad2' on page 4 undefined on input line 163.
 
 
-LaTeX Warning: Citation `Rad19' on page 4 undefined on input line 165.
+LaTeX Warning: Citation `Rad19' on page 4 undefined on input line 166.
 
 
-LaTeX Warning: Citation `Hasegawa1973' on page 4 undefined on input line 165.
+LaTeX Warning: Citation `Hasegawa1973' on page 4 undefined on input line 166.
 
 
-LaTeX Warning: Citation `Rad01' on page 4 undefined on input line 165.
+LaTeX Warning: Citation `Rad01' on page 4 undefined on input line 166.
 
 
-LaTeX Warning: Citation `Rad02' on page 4 undefined on input line 165.
+LaTeX Warning: Citation `Rad02' on page 4 undefined on input line 166.
 
 
-LaTeX Warning: Citation `Rad14' on page 4 undefined on input line 165.
+LaTeX Warning: Citation `Rad14' on page 4 undefined on input line 166.
 
 
-LaTeX Warning: Citation `Rad15' on page 4 undefined on input line 165.
+LaTeX Warning: Citation `Rad15' on page 4 undefined on input line 166.
 
 
-LaTeX Warning: Citation `Rad16' on page 4 undefined on input line 165.
+LaTeX Warning: Citation `Rad16' on page 4 undefined on input line 166.
 
 
-LaTeX Warning: Citation `Rad03' on page 4 undefined on input line 165.
+LaTeX Warning: Citation `Rad03' on page 4 undefined on input line 166.
 
 [4 <./pic1.png>]
 
-LaTeX Warning: Citation `Rad5' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `Rad5' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation `Rad8' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `Rad8' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation `Rad020' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `Rad020' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation `Rad014' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `Rad014' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation `Rad016' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `Rad016' on page 5 undefined on input line 174.
 
 
 LaTeX Warning: Citation `UZUNOV2022170137' on page 5 undefined on input line 17
-3.
+4.
 
 
-LaTeX Warning: Citation `WANG2022120667' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `WANG2022120667' on page 5 undefined on input line 174.
 
 
 
-LaTeX Warning: Citation `GROMOV201488' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `GROMOV201488' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation `Rad9' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `Rad9' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation `Rad015' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `Rad015' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation `Rad017' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `Rad017' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation `Rad018' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `Rad018' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation `Rad019' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `Rad019' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation `Rad10' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `Rad10' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation `Rad11' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `Rad11' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation `Rad17' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `Rad17' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation `Rad18' on page 5 undefined on input line 173.
+LaTeX Warning: Citation `Rad18' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation `Rad04' on page 5 undefined on input line 177.
+LaTeX Warning: Citation `Rad04' on page 5 undefined on input line 178.
 
 
-LaTeX Warning: Citation `Rad05' on page 5 undefined on input line 177.
+LaTeX Warning: Citation `Rad05' on page 5 undefined on input line 178.
 
 
-LaTeX Warning: Citation `Rad06' on page 5 undefined on input line 177.
+LaTeX Warning: Citation `Rad06' on page 5 undefined on input line 178.
 
 
-LaTeX Warning: Citation `Rad04' on page 5 undefined on input line 179.
+LaTeX Warning: Citation `Rad04' on page 5 undefined on input line 180.
 
 
-LaTeX Warning: Citation `Rad07' on page 5 undefined on input line 179.
+LaTeX Warning: Citation `Rad07' on page 5 undefined on input line 180.
 
 
-LaTeX Warning: Citation `Rad08' on page 5 undefined on input line 179.
+LaTeX Warning: Citation `Rad08' on page 5 undefined on input line 180.
 
 
-LaTeX Warning: Citation `Rad09' on page 5 undefined on input line 179.
+LaTeX Warning: Citation `Rad09' on page 5 undefined on input line 180.
 
 
-LaTeX Warning: Citation `Rad010' on page 5 undefined on input line 179.
+LaTeX Warning: Citation `Rad010' on page 5 undefined on input line 180.
 
 
-LaTeX Warning: Citation `Rad011' on page 5 undefined on input line 179.
+LaTeX Warning: Citation `Rad011' on page 5 undefined on input line 180.
 
 
-LaTeX Warning: Citation `Rad012' on page 5 undefined on input line 179.
+LaTeX Warning: Citation `Rad012' on page 5 undefined on input line 180.
 
 
-LaTeX Warning: Citation `Rad013' on page 5 undefined on input line 179.
+LaTeX Warning: Citation `Rad013' on page 5 undefined on input line 180.
 
 
-LaTeX Warning: Citation `QIN2022126580' on page 5 undefined on input line 179.
+LaTeX Warning: Citation `QIN2022126580' on page 5 undefined on input line 180.
 
 
-LaTeX Warning: Citation `Rad08' on page 5 undefined on input line 179.
+LaTeX Warning: Citation `Rad08' on page 5 undefined on input line 180.
 
 
-LaTeX Warning: Citation `Rad09' on page 5 undefined on input line 179.
+LaTeX Warning: Citation `Rad09' on page 5 undefined on input line 180.
 
 
-LaTeX Warning: Citation `Rad010' on page 5 undefined on input line 179.
+LaTeX Warning: Citation `Rad010' on page 5 undefined on input line 180.
 
 
-LaTeX Warning: Citation `Rad011' on page 5 undefined on input line 179.
+LaTeX Warning: Citation `Rad011' on page 5 undefined on input line 180.
 
 
-LaTeX Warning: Citation `Rad3' on page 5 undefined on input line 183.
+LaTeX Warning: Citation `Rad3' on page 5 undefined on input line 184.
 
 [5]
 
-LaTeX Warning: Citation `Rad02' on page 6 undefined on input line 187.
+LaTeX Warning: Citation `Rad02' on page 6 undefined on input line 188.
 
 
-LaTeX Warning: Citation `Rad4' on page 6 undefined on input line 210.
+LaTeX Warning: Citation `Rad4' on page 6 undefined on input line 211.
 
 
-LaTeX Warning: Reference `ch310' on page 6 undefined on input line 212.
+LaTeX Warning: Reference `ch310' on page 6 undefined on input line 213.
 
 [6] [7] [8]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 294.
+(amsmath)                trying to recover with `aligned' on input line 295.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 308.
+(amsmath)                trying to recover with `aligned' on input line 309.
 
 
-LaTeX Warning: Citation `Rad4' on page 9 undefined on input line 328.
+LaTeX Warning: Citation `Rad4' on page 9 undefined on input line 329.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 352.
+(amsmath)                trying to recover with `aligned' on input line 353.
 
 [9] [10]
-<fig1.png, id=55, 501.875pt x 501.875pt>
+<fig1.png, id=58, 501.875pt x 501.875pt>
 File: fig1.png Graphic file (type png)
 <use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 412.
+Package pdftex.def Info: fig1.png  used on input line 413.
 (pdftex.def)             Requested size: 170.71652pt x 170.71947pt.
 Package epstopdf Info: Source file: <fig10.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1047,38 +1349,62 @@ Package epstopdf Info: Source file: <fig10.eps>
 (epstopdf)                    size: 7256 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig10-eps-converted-
 to.pdf fig10.eps>
-(epstopdf)             \includegraphics on input line 420.
+(epstopdf)             \includegraphics on input line 421.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig10-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig10-eps-converted-to.pdf, id=57, 421.575pt x 316.18124pt>
+<fig10-eps-converted-to.pdf, id=60, 421.575pt x 316.18124pt>
 File: fig10-eps-converted-to.pdf Graphic file (type pdf)
 <use fig10-eps-converted-to.pdf>
-Package pdftex.def Info: fig10-eps-converted-to.pdf  used on input line 420.
+Package pdftex.def Info: fig10-eps-converted-to.pdf  used on input line 421.
 (pdftex.def)             Requested size: 234.73524pt x 176.05196pt.
 [11 <./fig1.png (PNG copy)>]
 LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 451.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 453.
 LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 451.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 453.
 
 
-LaTeX Warning: Citation `Rad1' on page 12 undefined on input line 451.
+LaTeX Warning: Citation `Rad1' on page 12 undefined on input line 453.
 
 [12 <./fig10-eps-converted-to.pdf>]
-<fig2.png, id=75, 1117.17375pt x 1309.89375pt>
+\g__nicematrix_max_cell_width_dim=\dimen343
+\c@iRow=\count355
+\c@jCol=\count356
+\l__nicematrix_cell_box=\box122
+\l__nicematrix_the_array_box=\box123
+\l__nicematrix_left_delim_dim=\dimen344
+\l__nicematrix_right_delim_dim=\dimen345
+\g__nicematrix_dp_row_zero_dim=\dimen346
+\g__nicematrix_ht_row_zero_dim=\dimen347
+\g__nicematrix_ht_row_one_dim=\dimen348
+\g__nicematrix_dp_ante_last_row_dim=\dimen349
+\g__nicematrix_ht_last_row_dim=\dimen350
+\g__nicematrix_dp_last_row_dim=\dimen351
+\g__nicematrix_ddots_int=\count357
+\g__nicematrix_iddots_int=\count358
+\g__nicematrix_delta_x_one_dim=\dimen352
+\g__nicematrix_delta_y_one_dim=\dimen353
+\g__nicematrix_delta_x_two_dim=\dimen354
+\g__nicematrix_delta_y_two_dim=\dimen355
+\l__nicematrix_initial_i_int=\count359
+\l__nicematrix_initial_j_int=\count360
+\l__nicematrix_final_i_int=\count361
+\l__nicematrix_final_j_int=\count362
+ [13]
+<fig2.png, id=81, 1117.17375pt x 1309.89375pt>
 File: fig2.png Graphic file (type png)
 <use fig2.png>
-Package pdftex.def Info: fig2.png  used on input line 489.
+Package pdftex.def Info: fig2.png  used on input line 526.
 (pdftex.def)             Requested size: 225.34383pt x 264.21269pt.
-<fig3.png, id=77, 673.01437pt x 1035.87pt>
+<fig3.png, id=83, 673.01437pt x 1035.87pt>
 File: fig3.png Graphic file (type png)
 <use fig3.png>
-Package pdftex.def Info: fig3.png  used on input line 493.
+Package pdftex.def Info: fig3.png  used on input line 530.
 (pdftex.def)             Requested size: 169.00786pt x 260.1207pt.
- [13 <./fig2.png> <./fig3.png>]
+ [14 <./fig2.png> <./fig3.png>]
 Package epstopdf Info: Source file: <fig11.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
 (epstopdf)                    size: 156271 bytes
@@ -1087,16 +1413,16 @@ Package epstopdf Info: Source file: <fig11.eps>
 (epstopdf)                    size: 92149 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig11-eps-converted-
 to.pdf fig11.eps>
-(epstopdf)             \includegraphics on input line 506.
+(epstopdf)             \includegraphics on input line 544.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig11-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig11-eps-converted-to.pdf, id=83, 421.575pt x 316.18124pt>
+<fig11-eps-converted-to.pdf, id=89, 421.575pt x 316.18124pt>
 File: fig11-eps-converted-to.pdf Graphic file (type pdf)
 <use fig11-eps-converted-to.pdf>
-Package pdftex.def Info: fig11-eps-converted-to.pdf  used on input line 506.
+Package pdftex.def Info: fig11-eps-converted-to.pdf  used on input line 544.
 (pdftex.def)             Requested size: 225.34383pt x 169.00813pt.
 Package epstopdf Info: Source file: <fig12.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1106,16 +1432,16 @@ Package epstopdf Info: Source file: <fig12.eps>
 (epstopdf)                    size: 13694 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig12-eps-converted-
 to.pdf fig12.eps>
-(epstopdf)             \includegraphics on input line 512.
+(epstopdf)             \includegraphics on input line 550.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig12-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig12-eps-converted-to.pdf, id=84, 421.575pt x 316.18124pt>
+<fig12-eps-converted-to.pdf, id=90, 421.575pt x 316.18124pt>
 File: fig12-eps-converted-to.pdf Graphic file (type pdf)
 <use fig12-eps-converted-to.pdf>
-Package pdftex.def Info: fig12-eps-converted-to.pdf  used on input line 512.
+Package pdftex.def Info: fig12-eps-converted-to.pdf  used on input line 550.
 (pdftex.def)             Requested size: 225.34383pt x 169.00813pt.
 Package epstopdf Info: Source file: <fig13.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1125,21 +1451,21 @@ Package epstopdf Info: Source file: <fig13.eps>
 (epstopdf)                    size: 9040 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig13-eps-converted-
 to.pdf fig13.eps>
-(epstopdf)             \includegraphics on input line 528.
+(epstopdf)             \includegraphics on input line 566.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig13-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig13-eps-converted-to.pdf, id=85, 421.575pt x 316.18124pt>
+<fig13-eps-converted-to.pdf, id=91, 421.575pt x 316.18124pt>
 File: fig13-eps-converted-to.pdf Graphic file (type pdf)
 <use fig13-eps-converted-to.pdf>
-Package pdftex.def Info: fig13-eps-converted-to.pdf  used on input line 528.
+Package pdftex.def Info: fig13-eps-converted-to.pdf  used on input line 566.
 (pdftex.def)             Requested size: 225.34383pt x 169.00813pt.
 LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 529.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 567.
 LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 529.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 567.
 Package epstopdf Info: Source file: <fig45.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
 (epstopdf)                    size: 1276182 bytes
@@ -1148,18 +1474,18 @@ Package epstopdf Info: Source file: <fig45.eps>
 (epstopdf)                    size: 6467 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig45-eps-converted-
 to.pdf fig45.eps>
-(epstopdf)             \includegraphics on input line 534.
+(epstopdf)             \includegraphics on input line 572.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig45-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig45-eps-converted-to.pdf, id=86, 421.575pt x 316.18124pt>
+<fig45-eps-converted-to.pdf, id=92, 421.575pt x 316.18124pt>
 File: fig45-eps-converted-to.pdf Graphic file (type pdf)
 <use fig45-eps-converted-to.pdf>
-Package pdftex.def Info: fig45-eps-converted-to.pdf  used on input line 534.
+Package pdftex.def Info: fig45-eps-converted-to.pdf  used on input line 572.
 (pdftex.def)             Requested size: 225.34383pt x 169.00813pt.
-[14 <./fig11-eps-converted-to.pdf> <./fig12-eps-converted-to.pdf>]
+[15 <./fig11-eps-converted-to.pdf> <./fig12-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <fig18.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
 (epstopdf)                    size: 36090 bytes
@@ -1168,16 +1494,16 @@ Package epstopdf Info: Source file: <fig18.eps>
 (epstopdf)                    size: 12020 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig18-eps-converted-
 to.pdf fig18.eps>
-(epstopdf)             \includegraphics on input line 554.
+(epstopdf)             \includegraphics on input line 592.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig18-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig18-eps-converted-to.pdf, id=102, 421.575pt x 316.18124pt>
+<fig18-eps-converted-to.pdf, id=108, 421.575pt x 316.18124pt>
 File: fig18-eps-converted-to.pdf Graphic file (type pdf)
 <use fig18-eps-converted-to.pdf>
-Package pdftex.def Info: fig18-eps-converted-to.pdf  used on input line 554.
+Package pdftex.def Info: fig18-eps-converted-to.pdf  used on input line 592.
 (pdftex.def)             Requested size: 225.34383pt x 169.00813pt.
 Package epstopdf Info: Source file: <fig19.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1187,18 +1513,18 @@ Package epstopdf Info: Source file: <fig19.eps>
 (epstopdf)                    size: 86859 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig19-eps-converted-
 to.pdf fig19.eps>
-(epstopdf)             \includegraphics on input line 559.
+(epstopdf)             \includegraphics on input line 597.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig19-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig19-eps-converted-to.pdf, id=103, 421.575pt x 316.18124pt>
+<fig19-eps-converted-to.pdf, id=109, 421.575pt x 316.18124pt>
 File: fig19-eps-converted-to.pdf Graphic file (type pdf)
 <use fig19-eps-converted-to.pdf>
-Package pdftex.def Info: fig19-eps-converted-to.pdf  used on input line 559.
+Package pdftex.def Info: fig19-eps-converted-to.pdf  used on input line 597.
 (pdftex.def)             Requested size: 225.34383pt x 169.00813pt.
-[15 <./fig13-eps-converted-to.pdf> <./fig45-eps-converted-to.pdf>]
+[16 <./fig13-eps-converted-to.pdf> <./fig45-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <fig46.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
 (epstopdf)                    size: 373147 bytes
@@ -1207,16 +1533,16 @@ Package epstopdf Info: Source file: <fig46.eps>
 (epstopdf)                    size: 156645 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig46-eps-converted-
 to.pdf fig46.eps>
-(epstopdf)             \includegraphics on input line 577.
+(epstopdf)             \includegraphics on input line 615.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig46-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig46-eps-converted-to.pdf, id=119, 421.575pt x 316.18124pt>
+<fig46-eps-converted-to.pdf, id=125, 421.575pt x 316.18124pt>
 File: fig46-eps-converted-to.pdf Graphic file (type pdf)
 <use fig46-eps-converted-to.pdf>
-Package pdftex.def Info: fig46-eps-converted-to.pdf  used on input line 577.
+Package pdftex.def Info: fig46-eps-converted-to.pdf  used on input line 615.
 (pdftex.def)             Requested size: 225.34383pt x 169.00813pt.
 Package epstopdf Info: Source file: <fig47.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1226,21 +1552,21 @@ Package epstopdf Info: Source file: <fig47.eps>
 (epstopdf)                    size: 21256 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig47-eps-converted-
 to.pdf fig47.eps>
-(epstopdf)             \includegraphics on input line 582.
+(epstopdf)             \includegraphics on input line 620.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig47-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig47-eps-converted-to.pdf, id=120, 421.575pt x 316.18124pt>
+<fig47-eps-converted-to.pdf, id=126, 421.575pt x 316.18124pt>
 File: fig47-eps-converted-to.pdf Graphic file (type pdf)
 <use fig47-eps-converted-to.pdf>
-Package pdftex.def Info: fig47-eps-converted-to.pdf  used on input line 582.
+Package pdftex.def Info: fig47-eps-converted-to.pdf  used on input line 620.
 (pdftex.def)             Requested size: 225.34383pt x 169.00813pt.
-[16 <./fig18-eps-converted-to.pdf> <./fig19-eps-converted-to.pdf> <./fig46-eps-
+[17 <./fig18-eps-converted-to.pdf> <./fig19-eps-converted-to.pdf> <./fig46-eps-
 converted-to.pdf> <./fig47-eps-converted-to.pdf>]
 
-LaTeX Warning: Citation `Rad3' on page 17 undefined on input line 598.
+LaTeX Warning: Citation `Rad3' on page 18 undefined on input line 636.
 
 Package epstopdf Info: Source file: <fig33.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1250,16 +1576,16 @@ Package epstopdf Info: Source file: <fig33.eps>
 (epstopdf)                    size: 14098 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig33-eps-converted-
 to.pdf fig33.eps>
-(epstopdf)             \includegraphics on input line 623.
+(epstopdf)             \includegraphics on input line 661.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig33-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig33-eps-converted-to.pdf, id=146, 602.25pt x 376.40625pt>
+<fig33-eps-converted-to.pdf, id=152, 602.25pt x 376.40625pt>
 File: fig33-eps-converted-to.pdf Graphic file (type pdf)
 <use fig33-eps-converted-to.pdf>
-Package pdftex.def Info: fig33-eps-converted-to.pdf  used on input line 623.
+Package pdftex.def Info: fig33-eps-converted-to.pdf  used on input line 661.
 (pdftex.def)             Requested size: 225.34383pt x 140.84184pt.
 Package epstopdf Info: Source file: <fig34.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1269,18 +1595,18 @@ Package epstopdf Info: Source file: <fig34.eps>
 (epstopdf)                    size: 13978 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig34-eps-converted-
 to.pdf fig34.eps>
-(epstopdf)             \includegraphics on input line 628.
+(epstopdf)             \includegraphics on input line 666.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig34-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig34-eps-converted-to.pdf, id=147, 602.25pt x 376.40625pt>
+<fig34-eps-converted-to.pdf, id=153, 602.25pt x 376.40625pt>
 File: fig34-eps-converted-to.pdf Graphic file (type pdf)
 <use fig34-eps-converted-to.pdf>
-Package pdftex.def Info: fig34-eps-converted-to.pdf  used on input line 628.
+Package pdftex.def Info: fig34-eps-converted-to.pdf  used on input line 666.
 (pdftex.def)             Requested size: 225.34383pt x 140.84184pt.
-[17]
+[18]
 Package epstopdf Info: Source file: <fig48.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
 (epstopdf)                    size: 1416654 bytes
@@ -1289,16 +1615,16 @@ Package epstopdf Info: Source file: <fig48.eps>
 (epstopdf)                    size: 32840 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig48-eps-converted-
 to.pdf fig48.eps>
-(epstopdf)             \includegraphics on input line 642.
+(epstopdf)             \includegraphics on input line 680.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig48-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig48-eps-converted-to.pdf, id=151, 421.575pt x 316.18124pt>
+<fig48-eps-converted-to.pdf, id=158, 421.575pt x 316.18124pt>
 File: fig48-eps-converted-to.pdf Graphic file (type pdf)
 <use fig48-eps-converted-to.pdf>
-Package pdftex.def Info: fig48-eps-converted-to.pdf  used on input line 642.
+Package pdftex.def Info: fig48-eps-converted-to.pdf  used on input line 680.
 (pdftex.def)             Requested size: 225.34383pt x 169.00813pt.
 Package epstopdf Info: Source file: <fig49.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1308,16 +1634,16 @@ Package epstopdf Info: Source file: <fig49.eps>
 (epstopdf)                    size: 12185 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig49-eps-converted-
 to.pdf fig49.eps>
-(epstopdf)             \includegraphics on input line 648.
+(epstopdf)             \includegraphics on input line 686.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig49-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig49-eps-converted-to.pdf, id=152, 421.575pt x 316.18124pt>
+<fig49-eps-converted-to.pdf, id=159, 421.575pt x 316.18124pt>
 File: fig49-eps-converted-to.pdf Graphic file (type pdf)
 <use fig49-eps-converted-to.pdf>
-Package pdftex.def Info: fig49-eps-converted-to.pdf  used on input line 648.
+Package pdftex.def Info: fig49-eps-converted-to.pdf  used on input line 686.
 (pdftex.def)             Requested size: 225.34383pt x 169.00813pt.
 Package epstopdf Info: Source file: <fig35.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1327,16 +1653,16 @@ Package epstopdf Info: Source file: <fig35.eps>
 (epstopdf)                    size: 67838 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig35-eps-converted-
 to.pdf fig35.eps>
-(epstopdf)             \includegraphics on input line 662.
+(epstopdf)             \includegraphics on input line 700.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig35-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig35-eps-converted-to.pdf, id=153, 1441.385pt x 316.18124pt>
+<fig35-eps-converted-to.pdf, id=160, 1441.385pt x 316.18124pt>
 File: fig35-eps-converted-to.pdf Graphic file (type pdf)
 <use fig35-eps-converted-to.pdf>
-Package pdftex.def Info: fig35-eps-converted-to.pdf  used on input line 662.
+Package pdftex.def Info: fig35-eps-converted-to.pdf  used on input line 700.
 (pdftex.def)             Requested size: 469.47049pt x 102.97961pt.
 Package epstopdf Info: Source file: <fig36.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1346,16 +1672,16 @@ Package epstopdf Info: Source file: <fig36.eps>
 (epstopdf)                    size: 117161 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig36-eps-converted-
 to.pdf fig36.eps>
-(epstopdf)             \includegraphics on input line 664.
+(epstopdf)             \includegraphics on input line 702.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig36-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig36-eps-converted-to.pdf, id=154, 1440.38126pt x 316.18124pt>
+<fig36-eps-converted-to.pdf, id=161, 1440.38126pt x 316.18124pt>
 File: fig36-eps-converted-to.pdf Graphic file (type pdf)
 <use fig36-eps-converted-to.pdf>
-Package pdftex.def Info: fig36-eps-converted-to.pdf  used on input line 664.
+Package pdftex.def Info: fig36-eps-converted-to.pdf  used on input line 702.
 (pdftex.def)             Requested size: 469.47049pt x 103.05197pt.
 Package epstopdf Info: Source file: <fig37.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1365,19 +1691,19 @@ Package epstopdf Info: Source file: <fig37.eps>
 (epstopdf)                    size: 74094 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig37-eps-converted-
 to.pdf fig37.eps>
-(epstopdf)             \includegraphics on input line 666.
+(epstopdf)             \includegraphics on input line 704.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig37-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig37-eps-converted-to.pdf, id=155, 1442.38875pt x 316.18124pt>
+<fig37-eps-converted-to.pdf, id=162, 1442.38875pt x 316.18124pt>
 File: fig37-eps-converted-to.pdf Graphic file (type pdf)
 <use fig37-eps-converted-to.pdf>
-Package pdftex.def Info: fig37-eps-converted-to.pdf  used on input line 666.
+Package pdftex.def Info: fig37-eps-converted-to.pdf  used on input line 704.
 (pdftex.def)             Requested size: 469.47049pt x 102.90724pt.
-[18 <./fig33-eps-converted-to.pdf> <./fig34-eps-converted-to.pdf> <./fig48-eps-
-converted-to.pdf> <./fig49-eps-converted-to.pdf>] [19 <./fig35-eps-converted-to
+[19 <./fig33-eps-converted-to.pdf> <./fig34-eps-converted-to.pdf> <./fig48-eps-
+converted-to.pdf> <./fig49-eps-converted-to.pdf>] [20 <./fig35-eps-converted-to
 .pdf> <./fig36-eps-converted-to.pdf> <./fig37-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <fig52.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1387,16 +1713,16 @@ Package epstopdf Info: Source file: <fig52.eps>
 (epstopdf)                    size: 73085 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig52-eps-converted-
 to.pdf fig52.eps>
-(epstopdf)             \includegraphics on input line 684.
+(epstopdf)             \includegraphics on input line 722.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig52-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig52-eps-converted-to.pdf, id=200, 421.575pt x 316.18124pt>
+<fig52-eps-converted-to.pdf, id=206, 421.575pt x 316.18124pt>
 File: fig52-eps-converted-to.pdf Graphic file (type pdf)
 <use fig52-eps-converted-to.pdf>
-Package pdftex.def Info: fig52-eps-converted-to.pdf  used on input line 684.
+Package pdftex.def Info: fig52-eps-converted-to.pdf  used on input line 722.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
 Package epstopdf Info: Source file: <fig55.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1406,16 +1732,16 @@ Package epstopdf Info: Source file: <fig55.eps>
 (epstopdf)                    size: 71852 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig55-eps-converted-
 to.pdf fig55.eps>
-(epstopdf)             \includegraphics on input line 688.
+(epstopdf)             \includegraphics on input line 726.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig55-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig55-eps-converted-to.pdf, id=201, 421.575pt x 316.18124pt>
+<fig55-eps-converted-to.pdf, id=207, 421.575pt x 316.18124pt>
 File: fig55-eps-converted-to.pdf Graphic file (type pdf)
 <use fig55-eps-converted-to.pdf>
-Package pdftex.def Info: fig55-eps-converted-to.pdf  used on input line 688.
+Package pdftex.def Info: fig55-eps-converted-to.pdf  used on input line 726.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
 Package epstopdf Info: Source file: <fig58.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1425,16 +1751,16 @@ Package epstopdf Info: Source file: <fig58.eps>
 (epstopdf)                    size: 73804 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig58-eps-converted-
 to.pdf fig58.eps>
-(epstopdf)             \includegraphics on input line 692.
+(epstopdf)             \includegraphics on input line 730.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig58-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig58-eps-converted-to.pdf, id=202, 421.575pt x 316.18124pt>
+<fig58-eps-converted-to.pdf, id=208, 421.575pt x 316.18124pt>
 File: fig58-eps-converted-to.pdf Graphic file (type pdf)
 <use fig58-eps-converted-to.pdf>
-Package pdftex.def Info: fig58-eps-converted-to.pdf  used on input line 692.
+Package pdftex.def Info: fig58-eps-converted-to.pdf  used on input line 730.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
 Package epstopdf Info: Source file: <fig53.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1444,16 +1770,16 @@ Package epstopdf Info: Source file: <fig53.eps>
 (epstopdf)                    size: 87338 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig53-eps-converted-
 to.pdf fig53.eps>
-(epstopdf)             \includegraphics on input line 697.
+(epstopdf)             \includegraphics on input line 735.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig53-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig53-eps-converted-to.pdf, id=203, 421.575pt x 316.18124pt>
+<fig53-eps-converted-to.pdf, id=209, 421.575pt x 316.18124pt>
 File: fig53-eps-converted-to.pdf Graphic file (type pdf)
 <use fig53-eps-converted-to.pdf>
-Package pdftex.def Info: fig53-eps-converted-to.pdf  used on input line 697.
+Package pdftex.def Info: fig53-eps-converted-to.pdf  used on input line 735.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
 Package epstopdf Info: Source file: <fig56.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1463,16 +1789,16 @@ Package epstopdf Info: Source file: <fig56.eps>
 (epstopdf)                    size: 86384 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig56-eps-converted-
 to.pdf fig56.eps>
-(epstopdf)             \includegraphics on input line 701.
+(epstopdf)             \includegraphics on input line 739.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig56-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig56-eps-converted-to.pdf, id=204, 421.575pt x 316.18124pt>
+<fig56-eps-converted-to.pdf, id=210, 421.575pt x 316.18124pt>
 File: fig56-eps-converted-to.pdf Graphic file (type pdf)
 <use fig56-eps-converted-to.pdf>
-Package pdftex.def Info: fig56-eps-converted-to.pdf  used on input line 701.
+Package pdftex.def Info: fig56-eps-converted-to.pdf  used on input line 739.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
 Package epstopdf Info: Source file: <fig59.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1482,16 +1808,16 @@ Package epstopdf Info: Source file: <fig59.eps>
 (epstopdf)                    size: 86563 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig59-eps-converted-
 to.pdf fig59.eps>
-(epstopdf)             \includegraphics on input line 705.
+(epstopdf)             \includegraphics on input line 743.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig59-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig59-eps-converted-to.pdf, id=205, 421.575pt x 316.18124pt>
+<fig59-eps-converted-to.pdf, id=211, 421.575pt x 316.18124pt>
 File: fig59-eps-converted-to.pdf Graphic file (type pdf)
 <use fig59-eps-converted-to.pdf>
-Package pdftex.def Info: fig59-eps-converted-to.pdf  used on input line 705.
+Package pdftex.def Info: fig59-eps-converted-to.pdf  used on input line 743.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
 Package epstopdf Info: Source file: <fig54.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1501,16 +1827,16 @@ Package epstopdf Info: Source file: <fig54.eps>
 (epstopdf)                    size: 79500 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig54-eps-converted-
 to.pdf fig54.eps>
-(epstopdf)             \includegraphics on input line 710.
+(epstopdf)             \includegraphics on input line 748.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig54-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig54-eps-converted-to.pdf, id=206, 421.575pt x 316.18124pt>
+<fig54-eps-converted-to.pdf, id=212, 421.575pt x 316.18124pt>
 File: fig54-eps-converted-to.pdf Graphic file (type pdf)
 <use fig54-eps-converted-to.pdf>
-Package pdftex.def Info: fig54-eps-converted-to.pdf  used on input line 710.
+Package pdftex.def Info: fig54-eps-converted-to.pdf  used on input line 748.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
 Package epstopdf Info: Source file: <fig57.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1520,16 +1846,16 @@ Package epstopdf Info: Source file: <fig57.eps>
 (epstopdf)                    size: 98685 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig57-eps-converted-
 to.pdf fig57.eps>
-(epstopdf)             \includegraphics on input line 714.
+(epstopdf)             \includegraphics on input line 752.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig57-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig57-eps-converted-to.pdf, id=207, 421.575pt x 316.18124pt>
+<fig57-eps-converted-to.pdf, id=213, 421.575pt x 316.18124pt>
 File: fig57-eps-converted-to.pdf Graphic file (type pdf)
 <use fig57-eps-converted-to.pdf>
-Package pdftex.def Info: fig57-eps-converted-to.pdf  used on input line 714.
+Package pdftex.def Info: fig57-eps-converted-to.pdf  used on input line 752.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
 Package epstopdf Info: Source file: <fig60.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1539,18 +1865,18 @@ Package epstopdf Info: Source file: <fig60.eps>
 (epstopdf)                    size: 96801 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig60-eps-converted-
 to.pdf fig60.eps>
-(epstopdf)             \includegraphics on input line 718.
+(epstopdf)             \includegraphics on input line 756.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig60-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig60-eps-converted-to.pdf, id=208, 421.575pt x 316.18124pt>
+<fig60-eps-converted-to.pdf, id=214, 421.575pt x 316.18124pt>
 File: fig60-eps-converted-to.pdf Graphic file (type pdf)
 <use fig60-eps-converted-to.pdf>
-Package pdftex.def Info: fig60-eps-converted-to.pdf  used on input line 718.
+Package pdftex.def Info: fig60-eps-converted-to.pdf  used on input line 756.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
-[20]
+[21]
 Package epstopdf Info: Source file: <fig52g.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
 (epstopdf)                    size: 161445 bytes
@@ -1559,16 +1885,16 @@ Package epstopdf Info: Source file: <fig52g.eps>
 (epstopdf)                    size: 65632 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig52g-eps-converted
 -to.pdf fig52g.eps>
-(epstopdf)             \includegraphics on input line 727.
+(epstopdf)             \includegraphics on input line 765.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig52g-eps-converted-to.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig52g-eps-converted-to.pdf, id=212, 421.575pt x 316.18124pt>
+<fig52g-eps-converted-to.pdf, id=218, 421.575pt x 316.18124pt>
 File: fig52g-eps-converted-to.pdf Graphic file (type pdf)
 <use fig52g-eps-converted-to.pdf>
-Package pdftex.def Info: fig52g-eps-converted-to.pdf  used on input line 727.
+Package pdftex.def Info: fig52g-eps-converted-to.pdf  used on input line 765.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
 Package epstopdf Info: Source file: <fig55g.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1578,16 +1904,16 @@ Package epstopdf Info: Source file: <fig55g.eps>
 (epstopdf)                    size: 60644 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig55g-eps-converted
 -to.pdf fig55g.eps>
-(epstopdf)             \includegraphics on input line 731.
+(epstopdf)             \includegraphics on input line 769.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig55g-eps-converted-to.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig55g-eps-converted-to.pdf, id=213, 421.575pt x 316.18124pt>
+<fig55g-eps-converted-to.pdf, id=219, 421.575pt x 316.18124pt>
 File: fig55g-eps-converted-to.pdf Graphic file (type pdf)
 <use fig55g-eps-converted-to.pdf>
-Package pdftex.def Info: fig55g-eps-converted-to.pdf  used on input line 731.
+Package pdftex.def Info: fig55g-eps-converted-to.pdf  used on input line 769.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
 Package epstopdf Info: Source file: <fig58g.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1597,16 +1923,16 @@ Package epstopdf Info: Source file: <fig58g.eps>
 (epstopdf)                    size: 45998 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig58g-eps-converted
 -to.pdf fig58g.eps>
-(epstopdf)             \includegraphics on input line 735.
+(epstopdf)             \includegraphics on input line 773.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig58g-eps-converted-to.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig58g-eps-converted-to.pdf, id=214, 421.575pt x 316.18124pt>
+<fig58g-eps-converted-to.pdf, id=220, 421.575pt x 316.18124pt>
 File: fig58g-eps-converted-to.pdf Graphic file (type pdf)
 <use fig58g-eps-converted-to.pdf>
-Package pdftex.def Info: fig58g-eps-converted-to.pdf  used on input line 735.
+Package pdftex.def Info: fig58g-eps-converted-to.pdf  used on input line 773.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
 Package epstopdf Info: Source file: <fig53g.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1616,16 +1942,16 @@ Package epstopdf Info: Source file: <fig53g.eps>
 (epstopdf)                    size: 71713 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig53g-eps-converted
 -to.pdf fig53g.eps>
-(epstopdf)             \includegraphics on input line 740.
+(epstopdf)             \includegraphics on input line 778.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig53g-eps-converted-to.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig53g-eps-converted-to.pdf, id=215, 421.575pt x 316.18124pt>
+<fig53g-eps-converted-to.pdf, id=221, 421.575pt x 316.18124pt>
 File: fig53g-eps-converted-to.pdf Graphic file (type pdf)
 <use fig53g-eps-converted-to.pdf>
-Package pdftex.def Info: fig53g-eps-converted-to.pdf  used on input line 740.
+Package pdftex.def Info: fig53g-eps-converted-to.pdf  used on input line 778.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
 Package epstopdf Info: Source file: <fig56g.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1635,16 +1961,16 @@ Package epstopdf Info: Source file: <fig56g.eps>
 (epstopdf)                    size: 66210 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig56g-eps-converted
 -to.pdf fig56g.eps>
-(epstopdf)             \includegraphics on input line 744.
+(epstopdf)             \includegraphics on input line 782.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig56g-eps-converted-to.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig56g-eps-converted-to.pdf, id=216, 421.575pt x 316.18124pt>
+<fig56g-eps-converted-to.pdf, id=222, 421.575pt x 316.18124pt>
 File: fig56g-eps-converted-to.pdf Graphic file (type pdf)
 <use fig56g-eps-converted-to.pdf>
-Package pdftex.def Info: fig56g-eps-converted-to.pdf  used on input line 744.
+Package pdftex.def Info: fig56g-eps-converted-to.pdf  used on input line 782.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
 Package epstopdf Info: Source file: <fig59g.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1654,16 +1980,16 @@ Package epstopdf Info: Source file: <fig59g.eps>
 (epstopdf)                    size: 57801 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig59g-eps-converted
 -to.pdf fig59g.eps>
-(epstopdf)             \includegraphics on input line 748.
+(epstopdf)             \includegraphics on input line 786.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig59g-eps-converted-to.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig59g-eps-converted-to.pdf, id=217, 421.575pt x 316.18124pt>
+<fig59g-eps-converted-to.pdf, id=223, 421.575pt x 316.18124pt>
 File: fig59g-eps-converted-to.pdf Graphic file (type pdf)
 <use fig59g-eps-converted-to.pdf>
-Package pdftex.def Info: fig59g-eps-converted-to.pdf  used on input line 748.
+Package pdftex.def Info: fig59g-eps-converted-to.pdf  used on input line 786.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
 Package epstopdf Info: Source file: <fig54g.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1673,16 +1999,16 @@ Package epstopdf Info: Source file: <fig54g.eps>
 (epstopdf)                    size: 59933 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig54g-eps-converted
 -to.pdf fig54g.eps>
-(epstopdf)             \includegraphics on input line 753.
+(epstopdf)             \includegraphics on input line 791.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig54g-eps-converted-to.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig54g-eps-converted-to.pdf, id=218, 421.575pt x 316.18124pt>
+<fig54g-eps-converted-to.pdf, id=224, 421.575pt x 316.18124pt>
 File: fig54g-eps-converted-to.pdf Graphic file (type pdf)
 <use fig54g-eps-converted-to.pdf>
-Package pdftex.def Info: fig54g-eps-converted-to.pdf  used on input line 753.
+Package pdftex.def Info: fig54g-eps-converted-to.pdf  used on input line 791.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
 Package epstopdf Info: Source file: <fig57g.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1692,16 +2018,16 @@ Package epstopdf Info: Source file: <fig57g.eps>
 (epstopdf)                    size: 66924 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig57g-eps-converted
 -to.pdf fig57g.eps>
-(epstopdf)             \includegraphics on input line 757.
+(epstopdf)             \includegraphics on input line 795.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig57g-eps-converted-to.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig57g-eps-converted-to.pdf, id=219, 421.575pt x 316.18124pt>
+<fig57g-eps-converted-to.pdf, id=225, 421.575pt x 316.18124pt>
 File: fig57g-eps-converted-to.pdf Graphic file (type pdf)
 <use fig57g-eps-converted-to.pdf>
-Package pdftex.def Info: fig57g-eps-converted-to.pdf  used on input line 757.
+Package pdftex.def Info: fig57g-eps-converted-to.pdf  used on input line 795.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
 Package epstopdf Info: Source file: <fig60g.eps>
 (epstopdf)                    date: 2024-04-14 19:50:56
@@ -1711,27 +2037,27 @@ Package epstopdf Info: Source file: <fig60g.eps>
 (epstopdf)                    size: 62319 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=fig60g-eps-converted
 -to.pdf fig60g.eps>
-(epstopdf)             \includegraphics on input line 761.
+(epstopdf)             \includegraphics on input line 799.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: miktex-pdftex.exe (file ./fig60g-eps-converted-to.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig60g-eps-converted-to.pdf, id=220, 421.575pt x 316.18124pt>
+<fig60g-eps-converted-to.pdf, id=226, 421.575pt x 316.18124pt>
 File: fig60g-eps-converted-to.pdf Graphic file (type pdf)
 <use fig60g-eps-converted-to.pdf>
-Package pdftex.def Info: fig60g-eps-converted-to.pdf  used on input line 761.
+Package pdftex.def Info: fig60g-eps-converted-to.pdf  used on input line 799.
 (pdftex.def)             Requested size: 150.234pt x 112.67691pt.
-[21 <./fig52-eps-converted-to.pdf> <./fig55-eps-converted-to.pdf> <./fig58-eps-
+[22 <./fig52-eps-converted-to.pdf> <./fig55-eps-converted-to.pdf> <./fig58-eps-
 converted-to.pdf> <./fig53-eps-converted-to.pdf> <./fig56-eps-converted-to.pdf>
  <./fig59-eps-converted-to.pdf> <./fig54-eps-converted-to.pdf> <./fig57-eps-con
-verted-to.pdf> <./fig60-eps-converted-to.pdf>] [22 <./fig52g-eps-converted-to.p
+verted-to.pdf> <./fig60-eps-converted-to.pdf>] [23 <./fig52g-eps-converted-to.p
 df> <./fig55g-eps-converted-to.pdf> <./fig58g-eps-converted-to.pdf> <./fig53g-e
 ps-converted-to.pdf> <./fig56g-eps-converted-to.pdf> <./fig59g-eps-converted-to
 .pdf> <./fig54g-eps-converted-to.pdf> <./fig57g-eps-converted-to.pdf> <./fig60g
 -eps-converted-to.pdf>]
 No file DiplomMag.bbl.
-[23] (DiplomMag.aux)
+[24] (DiplomMag.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1740,13 +2066,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 10689 strings out of 475380
- 180086 string characters out of 2776771
- 530380 words of memory out of 3000000
- 31848 multiletter control sequences out of 15000+600000
+ 20635 strings out of 475380
+ 418753 string characters out of 2776771
+ 735971 words of memory out of 3000000
+ 41629 multiletter control sequences out of 15000+600000
  488103 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,16n,77p,1814b,612s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 85i,16n,90p,1814b,609s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\vikto\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm10
 95.pk> <C:\Users\vikto\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\la
 bx1200.pk> <C:\Users\vikto\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi60
@@ -1773,9 +2099,9 @@ o/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Us
 ers/vikto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msb
 m10.pfb><C:/Users/vikto/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/r
 sfs10.pfb>
-Output written on DiplomMag.pdf (24 pages, 2718286 bytes).
+Output written on DiplomMag.pdf (25 pages, 2733698 bytes).
 PDF statistics:
- 694 PDF objects out of 1000 (max. 8388607)
+ 725 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 203 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 215 words of extra memory for PDF output out of 10000 (max. 10000000)
 
