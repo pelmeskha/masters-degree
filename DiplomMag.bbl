@@ -1,0 +1,242 @@
+\begin{thebibliography}{10}
+
+\bibitem{Rad1}
+J.~A.~C. Weideman and B.~M. Herbst.
+\newblock Split-step methods for the solution of the nonlinear
+  {S}chr\"{o}dinger equation.
+\newblock {\em SIAM Journal on Numerical Analysis}, 23:485--507, 6 1986.
+
+\bibitem{Rad2}
+N.A. Kudryashov.
+\newblock Highly dispersive solitary wave solutions of perturbed nonlinear
+  {S}chr\"{o}dinger equations.
+\newblock {\em Applied Mathematics and Computation}, 371, 4 2020.
+
+\bibitem{Rad19}
+Akira Hasegawa and Frederick Tappert.
+\newblock Transmission of stationary nonlinear optical pulses in dispersive
+  dielectric fibers. {I}. {A}nomalous dispersion.
+\newblock {\em Applied Physics Letters}, 23:142--144, 8 1973.
+
+\bibitem{Hasegawa1973}
+Akira Hasegawa and Frederick Tappert.
+\newblock Transmission of stationary nonlinear optical pulses in dispersive
+  dielectric fibers. {II}. {N}ormal dispersion.
+\newblock {\em Applied Physics Letters}, 23:171--172, 8 1973.
+
+\bibitem{Rad01}
+Govind~P. Agrawal.
+\newblock {\em Nonlinear Fiber Optics}.
+\newblock Springer Berlin Heidelberg, 2000.
+
+\bibitem{Rad02}
+Yuri Kivshar and Govind Agrawal.
+\newblock {\em Optical Solitons: From Fibers to Photonic Crystals}.
+\newblock Academic Press, 2 2003.
+
+\bibitem{Rad14}
+A.C. Newell.
+\newblock {\em Solitons in Mathematics and Physics}.
+\newblock CBMS-NSF Regional Conference Series in Applied Mathematics. Society
+  for Industrial and Applied Mathematics, 1985.
+
+\bibitem{Rad15}
+Igor~S. Aranson and Lorenz Kramer.
+\newblock The world of the complex ginzburg-landau equation.
+\newblock {\em Rev. Mod. Phys.}, 74:99--143, Feb 2002.
+
+\bibitem{Rad16}
+M~Ablowitz and H~Sigur.
+\newblock {\em Solitary Waves and the Inverse Problem Method [Russian
+  translation]}.
+\newblock Mir, Moscow, 1982.
+
+\bibitem{Rad03}
+Yuri Kivshar.
+\newblock Dynamics of solitons in nearly integrable systems.
+\newblock {\em Reviews of Modern Physics - REV MOD PHYS}, 61:763--915, 2 1989.
+
+\bibitem{Rad5}
+Anjan Biswas, Mehmet Ekici, Abdullah Sonmezoglu, and Ali~Saleh Alshomrani.
+\newblock Highly dispersive optical solitons in absence of self-phase
+  modulation by {F}-expansion.
+\newblock {\em Optik}, 187:258--271, 6 2019.
+
+\bibitem{Rad8}
+Nikolay~A. Kudryashov.
+\newblock General solution of the traveling wave reduction for the perturbed
+  {C}hen-{L}ee-{L}iu equation.
+\newblock {\em Optik}, 186:339--349, 6 2019.
+
+\bibitem{Rad020}
+Hamood~Ur Rehman, Naeem Ullah, and M.A. Imran.
+\newblock Highly dispersive optical solitons using {K}udryashov's method.
+\newblock {\em Optik}, 199:163349, 12 2019.
+
+\bibitem{Rad014}
+Russell~W. Kohl, Anjan Biswas, Mehmet Ekici, Qin Zhou, Salam Khan, Ali~S.
+  Alshomrani, and Milivoj~R. Belic.
+\newblock Highly dispersive optical soliton perturbation with {K}err law by
+  semi-inverse variational principle.
+\newblock {\em Optik}, 199:163226, 12 2019.
+
+\bibitem{Rad016}
+Anjan Biswas, Mehmet Ekici, Abdullah Sonmezoglu, and Milivoj~R. Belic.
+\newblock Highly dispersive optical solitons in absence of self-phase
+  modulation by {J}acobi's elliptic function expansion.
+\newblock {\em Optik}, 189:109--120, 7 2019.
+
+\bibitem{UZUNOV2022170137}
+Ivan~M. Uzunov, Todor~N. Arabadzhiev, and Svetoslav~G. Nikolov.
+\newblock Self-steepening and intrapulse {R}aman scattering in the presence of
+  nonlinear gain and its saturation.
+\newblock {\em Optik}, 271:170137, 2022.
+
+\bibitem{WANG2022120667}
+Chong Wang, Ying Wang, Shenghan Wang, Chenglin Sun, and Zhiwei Men.
+\newblock Cascaded amplification via three-beam double stimulated {R}aman
+  scattering in benzene.
+\newblock {\em Journal of Molecular Liquids}, 368:120667, 2022.
+
+\bibitem{GROMOV201488}
+E.M. Gromov and B.A. Malomed.
+\newblock Damped solitons in an extended nonlinear {S}chr\"{o}dinger equation
+  with a spatial stimulated {R}aman scattering and decreasing dispersion.
+\newblock {\em Optics Communications}, 320:88--93, 2014.
+
+\bibitem{Rad9}
+Nikolay~A. Kudryashov.
+\newblock On traveling wave solutions of the {K}undu-{E}ckhaus equation.
+\newblock {\em Optik}, 224:165500, 12 2020.
+
+\bibitem{Rad015}
+Russell~W. Kohl, Anjan Biswas, Mehmet Ekici, Qin Zhou, Salam Khan, Ali~S.
+  Alshomrani, and Milivoj~R. Belic.
+\newblock Highly dispersive optical soliton perturbation with
+  cubic-quintic-septic refractive index by semi-inverse variational principle.
+\newblock {\em Optik}, 199:163322, 12 2019.
+
+\bibitem{Rad017}
+Nikolay~A. Kudryashov.
+\newblock Construction of nonlinear differential equations for description of
+  propagation pulses in optical fiber.
+\newblock {\em Optik}, 192:162964, 9 2019.
+
+\bibitem{Rad018}
+Nikolay~A. Kudryashov.
+\newblock Solitary and periodic waves of the hierarchy for propagation pulse in
+  optical fiber.
+\newblock {\em Optik}, 194:163060, 10 2019.
+
+\bibitem{Rad019}
+Anjan Biswas, Mehmet Ekici, Abdullah Sonmezoglu, and Milivoj~R. Belic.
+\newblock Highly dispersive optical solitons with non-local nonlinearity by
+  exp-function.
+\newblock {\em Optik}, 186:288--292, 6 2019.
+
+\bibitem{Rad10}
+Nikolay~A. Kudryashov and Dariya~V. Safonova.
+\newblock Painleve analysis and traveling wave solutions of the sixth order
+  differential equation with non-local nonlinearity.
+\newblock {\em Optik}, 244:167586, 10 2021.
+
+\bibitem{Rad11}
+Nikolay~A. Kudryashov.
+\newblock General solution of traveling wave reduction for the
+  {K}undu-{M}ukherjee-{N}askar model.
+\newblock {\em Optik}, 186:22--27, 6 2019.
+
+\bibitem{Rad17}
+AI~Maimistov, AM~Basharov, AI~Maimistov, and AM~Basharov.
+\newblock Optical solitons in fibers.
+\newblock {\em Nonlinear Optical Waves}, pages 303--435, 1999.
+
+\bibitem{Rad18}
+A.T. Filippov.
+\newblock {\em Many-sided Soliton}.
+\newblock Nauka, Moscow, 1990.
+
+\bibitem{Rad04}
+Bruce~M Lake, Henry~C Yuen, Harald Rungaldier, and Warren~E Ferguson.
+\newblock Nonlinear deep-water waves: theory and experiment. {P}art 2.
+  {E}volution of a continuous wave train.
+\newblock {\em Journal of Fluid Mechanics}, 83:49--74, 1977.
+
+\bibitem{Rad05}
+Henry~C. Yuen and Warren~E. Ferguson.
+\newblock Relationship between {B}enjamin-{F}eir instability and recurrence in
+  the nonlinear {S}chr\"{o}dinger equation.
+\newblock {\em Physics of Fluids}, 21:1275, 1978.
+
+\bibitem{Rad06}
+E.~Fermi, P~Pasta, S~Ulam, and M~Tsingou.
+\newblock Studies of nonlinear problems {I}.
+\newblock Los Alamos National Laboratory (LANL), 5 1955.
+
+\bibitem{Rad07}
+Ronald~H Hardin and F.~D. Tappert.
+\newblock Application of the split-step {F}ourier method to the numerical
+  solution of nonlinear and variable coefficient wave equations.
+\newblock {\em Siam Review}, 15:423, 1973.
+
+\bibitem{Rad08}
+J.M Sanz-Serna.
+\newblock An explicit finite-difference scheme with exact conservation
+  properties.
+\newblock {\em Journal of Computational Physics}, 47:199--210, 8 1982.
+
+\bibitem{Rad09}
+J~M Sanz-Serna and V~S Manoranjan.
+\newblock A method for the integration in time of certain partial differential
+  equations.
+\newblock {\em Journal of Computational Physics}, 52:273--289, 1983.
+
+\bibitem{Rad010}
+M~Delfour, M~Fortin, and G~Payr.
+\newblock Finite-difference solutions of a non-linear {S}chr\"{o}dinger
+  equation.
+\newblock {\em Journal of Computational Physics}, 44:277--288, 12 1981.
+
+\bibitem{Rad011}
+D.F. Griffiths, A.R. Mitchell, and J.Li. Morris.
+\newblock A numerical study of the nonlinear {S}chr\"{o}dinger equation.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering},
+  45:177--215, 9 1984.
+
+\bibitem{Rad012}
+J.~M. Sanz-Serna.
+\newblock Methods for the numerical solution of the nonlinear {S}chr\"{o}dinger
+  equation.
+\newblock {\em Mathematics of Computation}, 43:21--27, 1984.
+
+\bibitem{Rad013}
+A~Mitchell and J~Morris.
+\newblock A self adaptive difference scheme for the nonlinear {S}chr\"{o}dinger
+  equation.
+\newblock {\em Arab Gulf Journal of Scientific Research}, pages 461--472, 1983.
+
+\bibitem{QIN2022126580}
+Hongyu Qin, Fengyan Wu, and Deng Ding.
+\newblock A linearized compact {ADI} numerical method for the two-dimensional
+  nonlinear delayed {S}chr\"{o}dinger equation.
+\newblock {\em Applied Mathematics and Computation}, 412:126580, 2022.
+
+\bibitem{Rad3}
+Nikolay~A. Kudryashov.
+\newblock Method for finding optical solitons of generalized nonlinear
+  {S}chr\"{o}dinger equations.
+\newblock {\em Optik}, 261:169163, 7 2022.
+
+\bibitem{Rad4}
+Nikolai~A. Kudryashov.
+\newblock Simplest equation method to look for exact solutions of nonlinear
+  differential equations.
+\newblock {\em Chaos, Solitons \& Fractals}, 24:1217--1231, 6 2005.
+
+\bibitem{KudrNifHierarchy}
+Nikolay~A. Kudryashov and Daniil~R. Nifontov.
+\newblock Conservation laws and hamiltonians of the mathematical model with
+  unrestricted dispersion and polynomial nonlinearity.
+\newblock {\em Chaos, Solitons \& Fractals}, 175:114076, 10 2023.
+
+\end{thebibliography}
