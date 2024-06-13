@@ -1,0 +1,178 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{l+s}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s}{\PYGZhy{}2   1   0   0   1}
+\PYG{l+s}{1  \PYGZhy{}2   1   0   0}
+\PYG{l+s}{0   1  \PYGZhy{}2   1   0}
+\PYG{l+s}{0   0   1  \PYGZhy{}2   1}
+\PYG{l+s}{1   0   0   1  \PYGZhy{}2}
+\PYG{l+s}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{k}{function}\PYG{+w}{ }\PYG{n}{create\PYGZus{}FD\PYGZus{}matrix}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{mat}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{zeros}\PYG{p}{(}\PYG{k+kt}{Int}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{n}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{n}\PYG{p}{)}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k}{for}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{o}{:}\PYG{n}{n}
+\PYG{+w}{		}\PYG{n}{mat}\PYG{p}{[}\PYG{n}{i}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}
+\PYG{+w}{		}\PYG{k}{if}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mi}{1}
+\PYG{+w}{			}\PYG{n}{mat}\PYG{p}{[}\PYG{n}{i}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}
+\PYG{+w}{		}\PYG{k}{end}
+\PYG{+w}{		}\PYG{k}{if}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{n}
+\PYG{+w}{			}\PYG{n}{mat}\PYG{p}{[}\PYG{n}{i}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}
+\PYG{+w}{		}\PYG{k}{end}
+\PYG{+w}{	}\PYG{k}{end}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n}{mat}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{n}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}
+\PYG{+w}{	}\PYG{n}{mat}\PYG{p}{[}\PYG{n}{n}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k}{return}\PYG{+w}{ }\PYG{n}{mat}
+\PYG{k}{end}
+\PYG{l+s}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s}{	По начальному условию и заданным промежуткам решает начально\PYGZhy{}краевую}
+\PYG{l+s}{	задачу Фурье или конечно\PYGZhy{}разностным методом.}
+
+\PYG{l+s}{	Опционально:}
+\PYG{l+s}{		\PYGZhy{} сравнивает численное решение с заданным аналитическим;}
+\PYG{l+s}{		\PYGZhy{} вычисляет интегралы в процессе моделирования;}
+\PYG{l+s}{		\PYGZhy{} реализует алгоритм фильтрации излучения;}
+\PYG{l+s}{		\PYGZhy{} сохраняет решение в заданные моменты времени.}
+\PYG{l+s}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{k}{function}\PYG{+w}{ }\PYG{n}{solve}\PYG{p}{(}
+\PYG{+w}{	}\PYG{n}{tspan}\PYG{o}{::}\PYG{k+kt}{Tuple}\PYG{p}{\PYGZob{}}\PYG{k+kt}{Real}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{Real}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{n}{xspan}\PYG{o}{::}\PYG{k+kt}{Tuple}\PYG{p}{\PYGZob{}}\PYG{k+kt}{Real}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{Real}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{n}{tau}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{h}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{initial\PYGZus{}function}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{method}\PYG{o}{::}\PYG{k+kt}{String}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}fourier\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{epsilon\PYGZus{}2}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{epsilon\PYGZus{}3}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{c}{\PYGZsh{} filtration parameters}
+\PYG{+w}{	}\PYG{n}{filtration\PYGZus{}flag}\PYG{o}{::}\PYG{k+kt}{Bool}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{false}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{filtration\PYGZus{}time}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{10.0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{filtration\PYGZus{}factor}\PYG{o}{::}\PYG{k+kt}{Union}\PYG{p}{\PYGZob{}}\PYG{k+kt}{Real}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{Function}\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{1.0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{filtration\PYGZus{}end\PYGZus{}t}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{tspan}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{],}
+\PYG{+w}{	}\PYG{n}{l\PYGZus{}nominal}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{100.0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{c}{\PYGZsh{} tolerance calculations}
+\PYG{+w}{	}\PYG{n}{tolerance\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{false}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{analytical\PYGZus{}solution}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[],}
+\PYG{+w}{	}\PYG{c}{\PYGZsh{} record integrals}
+\PYG{+w}{	}\PYG{n}{integrals\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{false}\PYG{p}{,}
+\PYG{+w}{	}\PYG{c}{\PYGZsh{} times of interest}
+\PYG{+w}{	}\PYG{n}{capture\PYGZus{}times}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[],}
+\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{theta}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.5}
+\PYG{+w}{	}\PYG{n}{L}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{xspan}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{xspan}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+\PYG{+w}{	}\PYG{n}{T}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{tspan}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{tspan}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+\PYG{+w}{	}\PYG{n}{N}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kt}{Int}\PYG{p}{(}\PYG{n}{L}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{n}{h}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{N\PYGZus{}x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{N}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}
+\PYG{+w}{	}\PYG{n}{N\PYGZus{}t}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kt}{Int}\PYG{p}{(}\PYG{n}{round}\PYG{p}{(}\PYG{n}{T}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{n}{tau}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{digits}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{))}
+
+\PYG{+w}{	}\PYG{n}{j}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{range}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{n}{N}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{stop}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{N}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{p}{,}\PYG{+w}{ }\PYG{n}{length}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{N\PYGZus{}x}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{collect}\PYG{p}{(}\PYG{n}{j}\PYG{+w}{ }\PYG{o}{.*}\PYG{+w}{ }\PYG{n}{h}\PYG{p}{)[}\PYG{l+m+mi}{1}\PYG{o}{:}\PYG{k}{end}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{]}
+\PYG{+w}{	}\PYG{n}{t}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{range}\PYG{p}{(}\PYG{n}{tspan}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{tspan}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{length}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{N\PYGZus{}t}\PYG{p}{)}
+
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{n}{method}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}fourier\PYGZdq{}}
+\PYG{+w}{		}\PYG{n}{mun}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{collect}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nb}{pi}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{n}{L}\PYG{+w}{ }\PYG{o}{.*}\PYG{+w}{ }\PYG{n}{range}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{n}{N}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{stop}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{N}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{length}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{N}\PYG{p}{))}
+\PYG{+w}{		}\PYG{n}{direct}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{h}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{n}{L}\PYG{+w}{ }\PYG{o}{.*}\PYG{+w}{ }\PYG{n}{exp}\PYG{o}{.}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{n+nb}{im}\PYG{+w}{ }\PYG{o}{.*}\PYG{+w}{ }\PYG{n}{mun}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{x}\PYG{o}{\PYGZsq{}}\PYG{p}{))}
+\PYG{+w}{		}\PYG{n}{inverse}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{exp}\PYG{o}{.}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{n+nb}{im}\PYG{+w}{ }\PYG{o}{.*}\PYG{+w}{ }\PYG{n}{mun}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{x}\PYG{o}{\PYGZsq{}}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{fourier\PYGZus{}ratio}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{exp}\PYG{o}{.}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{n+nb}{im}\PYG{o}{.}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{mun}\PYG{o}{.\PYGZca{}}\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{o}{.}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{tau}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{M}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{inverse}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{fourier\PYGZus{}ratio}\PYG{+w}{ }\PYG{o}{.*}\PYG{+w}{ }\PYG{n}{direct}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k}{else}\PYG{+w}{ }\PYG{c}{\PYGZsh{} method == \PYGZdq{}finite\PYGZus{}difference\PYGZdq{}}
+\PYG{+w}{		}\PYG{n}{S}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{create\PYGZus{}FD\PYGZus{}matrix}\PYG{p}{(}\PYG{n}{N}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{I}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Diagonal}\PYG{p}{(}\PYG{n}{ones}\PYG{p}{(}\PYG{n}{N}\PYG{p}{))}
+\PYG{+w}{		}\PYG{n}{r}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{tau}\PYG{o}{/}\PYG{n}{h}\PYG{o}{\PYGZca{}}\PYG{l+m+mi}{2}
+\PYG{+w}{		}\PYG{n}{M}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{I}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{n+nb}{im}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{r}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{theta}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{S}\PYG{p}{)}\PYG{o}{\PYGZca{}\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{I}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{n+nb}{im}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{r}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{theta}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{S}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k}{end}
+
+\PYG{+w}{	}\PYG{n}{U}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{initial\PYGZus{}function}\PYG{o}{.}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
+
+\PYG{+w}{	}\PYG{p}{(}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{abs}\PYG{o}{.}\PYG{p}{(}\PYG{n}{U}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{.\PYGZgt{}}\PYG{+w}{ }\PYG{n}{abs}\PYG{p}{(}\PYG{n}{U}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]))}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}\PYG{n}{abs}\PYG{o}{.}\PYG{p}{(}\PYG{n}{U}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{.\PYGZgt{}}\PYG{+w}{ }\PYG{n}{abs}\PYG{p}{(}\PYG{n}{U}\PYG{p}{[}\PYG{k}{end}\PYG{p}{]))}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{||}
+\PYG{+w}{		}\PYG{n}{throw}\PYG{p}{(}\PYG{k+kt}{AssertionError}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Начальный импульс за пределами x\PYGZhy{}интервала.\PYGZdq{}}\PYG{p}{))}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n}{epsilon\PYGZus{}tail}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{1e\PYGZhy{}5}
+\PYG{+w}{	}\PYG{p}{(}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{U}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{])}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{epsilon\PYGZus{}tail}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{U}\PYG{p}{[}\PYG{k}{end}\PYG{p}{])}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{epsilon\PYGZus{}tail}\PYG{p}{)}\PYG{+w}{  }\PYG{o}{||}
+\PYG{+w}{	}\PYG{n+nd}{@warn}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Хвосты солитона превысили величину }\PYG{l+s+si}{\PYGZdl{}epsilon\PYGZus{}tail}\PYG{l+s}{ со значением \PYGZbs{}}
+\PYG{l+s}{		}\PYG{l+s+si}{\PYGZdl{}}\PYG{p}{(}\PYG{n}{max}\PYG{p}{(}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{U}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]),}\PYG{+w}{ }\PYG{n}{abs}\PYG{p}{(}\PYG{n}{U}\PYG{p}{[}\PYG{k}{end}\PYG{p}{])))}\PYG{l+s}{. Попробуйте расширить промежуток по x.\PYGZdq{}}
+
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{n}{filtration\PYGZus{}flag}
+\PYG{+w}{		}\PYG{n}{t\PYGZus{}slider}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{filtration\PYGZus{}time}
+\PYG{+w}{		}\PYG{n}{I1\PYGZus{}dissipated}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{zeros}\PYG{p}{(}\PYG{n}{N\PYGZus{}t}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{I2\PYGZus{}dissipated}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{zeros}\PYG{p}{(}\PYG{n}{N\PYGZus{}t}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k}{end}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{n}{tolerance\PYGZus{}flag}
+\PYG{+w}{		}\PYG{n}{tolerance}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{zeros}\PYG{p}{(}\PYG{n}{N\PYGZus{}t}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k}{end}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{n}{integrals\PYGZus{}flag}
+\PYG{+w}{		}\PYG{n}{I\PYGZus{}1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{zeros}\PYG{p}{(}\PYG{n}{N\PYGZus{}t}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{I\PYGZus{}2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{zeros}\PYG{p}{(}\PYG{n}{N\PYGZus{}t}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{I\PYGZus{}1}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{integral\PYGZus{}1}\PYG{p}{(}\PYG{n}{U}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{I\PYGZus{}2}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{integral\PYGZus{}2}\PYG{p}{(}\PYG{n}{U}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k}{end}
+\PYG{+w}{	}\PYG{n}{capture\PYGZus{}times\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{false}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{o}{\PYGZti{}}\PYG{n}{isempty}\PYG{p}{(}\PYG{n}{capture\PYGZus{}times}\PYG{p}{)}
+\PYG{+w}{		}\PYG{p}{(}\PYG{n}{any}\PYG{p}{(}\PYG{n}{capture\PYGZus{}times}\PYG{+w}{ }\PYG{o}{.\PYGZgt{}}\PYG{+w}{ }\PYG{n}{tspan}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{])}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{n}{any}\PYG{p}{(}\PYG{n}{capture\PYGZus{}times}\PYG{+w}{ }\PYG{o}{.\PYGZlt{}}\PYG{+w}{ }\PYG{n}{tspan}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]))}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}
+\PYG{+w}{			}\PYG{n+nd}{@error}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}capture\PYGZus{}times содержит элемент за пределами времен моделирования\PYGZdq{}}
+\PYG{+w}{		}\PYG{n}{capture\PYGZus{}times\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{true}
+\PYG{+w}{		}\PYG{n}{push!}\PYG{p}{(}\PYG{n}{capture\PYGZus{}times}\PYG{p}{,}\PYG{n+nb}{Inf}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{capture\PYGZus{}times\PYGZus{}slider}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}
+\PYG{+w}{		}\PYG{n}{t\PYGZus{}capture\PYGZus{}entry}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{capture\PYGZus{}times}\PYG{p}{[}\PYG{n}{capture\PYGZus{}times\PYGZus{}slider}\PYG{p}{]}
+\PYG{+w}{		}\PYG{n}{U\PYGZus{}set}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[]}
+\PYG{+w}{	}\PYG{k}{end}
+\PYG{+w}{	}\PYG{n+nd}{@showprogress}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{o}{:}\PYG{n}{N\PYGZus{}t}
+\PYG{+w}{		}\PYG{k}{if}\PYG{+w}{ }\PYG{n}{capture\PYGZus{}times\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{t\PYGZus{}capture\PYGZus{}entry!}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{Inf}
+\PYG{+w}{			}\PYG{n}{t\PYGZus{}current}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{i}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{tau}
+\PYG{+w}{			}\PYG{k}{if}\PYG{+w}{ }\PYG{n}{t\PYGZus{}current}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{t\PYGZus{}capture\PYGZus{}entry}
+\PYG{+w}{				}\PYG{n}{push!}\PYG{p}{(}\PYG{n}{U\PYGZus{}set}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{U}\PYG{p}{)}
+\PYG{+w}{				}\PYG{n}{capture\PYGZus{}times\PYGZus{}slider}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+m+mi}{1}
+\PYG{+w}{				}\PYG{n}{t\PYGZus{}capture\PYGZus{}entry}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{capture\PYGZus{}times}\PYG{p}{[}\PYG{n}{capture\PYGZus{}times\PYGZus{}slider}\PYG{p}{]}
+\PYG{+w}{			}\PYG{k}{end}
+\PYG{+w}{		}\PYG{k}{end}
+\PYG{+w}{		}\PYG{k}{if}\PYG{+w}{ }\PYG{n}{tolerance\PYGZus{}flag}
+\PYG{+w}{			}\PYG{k}{if}\PYG{+w}{ }\PYG{k}{isa}\PYG{p}{(}\PYG{n}{analytical\PYGZus{}solution}\PYG{p}{,}\PYG{k+kt}{Real}\PYG{p}{)}\PYG{+w}{ }\PYG{c}{\PYGZsh{} calculate the \PYGZdq{}pike\PYGZdq{} tolerance}
+\PYG{+w}{				}\PYG{n}{tolerance}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{					}\PYG{n}{maximum}\PYG{p}{(}\PYG{n}{abs}\PYG{o}{.}\PYG{p}{(}\PYG{n}{U}\PYG{p}{))}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{analytical\PYGZus{}solution}
+\PYG{+w}{				}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{n}{maximum}\PYG{p}{(}\PYG{n}{abs}\PYG{o}{.}\PYG{p}{(}\PYG{n}{U}\PYG{p}{))}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mi}{100}
+\PYG{+w}{			}\PYG{k}{else}
+\PYG{+w}{				}\PYG{c}{\PYGZsh{} Percentage tolerance}
+\PYG{+w}{				}\PYG{n}{tolerance}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{maximum}\PYG{p}{(}
+\PYG{+w}{					}\PYG{n}{abs}\PYG{o}{.}\PYG{p}{((}\PYG{n}{abs}\PYG{o}{.}\PYG{p}{(}\PYG{n}{analytical\PYGZus{}solution}\PYG{o}{.}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{i}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{tau}\PYG{p}{))}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{abs}\PYG{o}{.}\PYG{p}{(}\PYG{n}{U}\PYG{p}{)))}
+\PYG{+w}{				}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{n}{maximum}\PYG{p}{(}\PYG{n}{abs}\PYG{o}{.}\PYG{p}{(}\PYG{n}{analytical\PYGZus{}solution}\PYG{o}{.}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{i}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{tau}\PYG{p}{)))}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mi}{100}
+\PYG{+w}{			}\PYG{k}{end}
+\PYG{+w}{		}\PYG{k}{end}
+\PYG{+w}{		}\PYG{k}{if}\PYG{+w}{ }\PYG{n}{filtration\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{i}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{tau}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n}{filtration\PYGZus{}end\PYGZus{}t}\PYG{p}{)}
+\PYG{+w}{			}\PYG{k}{if}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{tau}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{n}{t\PYGZus{}slider}
+\PYG{+w}{				}\PYG{n}{t\PYGZus{}slider}\PYG{o}{+}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{filtration\PYGZus{}time}
+\PYG{+w}{				}\PYG{n}{U}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{power\PYGZus{}I1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{power\PYGZus{}I2}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{filtration}\PYG{p}{(}
+\PYG{+w}{					}\PYG{n}{U}\PYG{p}{,}
+\PYG{+w}{					}\PYG{n}{h}\PYG{p}{,}
+\PYG{+w}{					}\PYG{k}{isa}\PYG{p}{(}\PYG{n}{filtration\PYGZus{}factor}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{Function}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{?}
+\PYG{+w}{						}\PYG{n}{filtration\PYGZus{}factor}\PYG{p}{(}\PYG{n}{i}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{tau}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n}{filtration\PYGZus{}factor}\PYG{p}{,}
+\PYG{+w}{					}\PYG{n}{l\PYGZus{}nominal}\PYG{p}{,}
+\PYG{+w}{				}\PYG{p}{)}
+\PYG{+w}{				}\PYG{n}{I1\PYGZus{}dissipated}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{power\PYGZus{}I1}
+\PYG{+w}{				}\PYG{n}{I2\PYGZus{}dissipated}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{power\PYGZus{}I2}
+\PYG{+w}{			}\PYG{k}{end}
+\PYG{+w}{		}\PYG{k}{end}
+
+\PYG{+w}{		}\PYG{n}{V}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{exp}\PYG{o}{.}\PYG{p}{(}
+\PYG{+w}{				}\PYG{l+m+mi}{1}\PYG{n+nb}{im}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{tau}\PYG{o}{*}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{					}\PYG{p}{(}\PYG{n}{abs}\PYG{o}{.}\PYG{p}{(}\PYG{n}{U}\PYG{p}{))}\PYG{o}{.\PYGZca{}}\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{epsilon\PYGZus{}2}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{abs}\PYG{o}{.}\PYG{p}{(}\PYG{n}{U}\PYG{p}{))}\PYG{o}{.\PYGZca{}}\PYG{l+m+mi}{4}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{epsilon\PYGZus{}3}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{abs}\PYG{o}{.}\PYG{p}{(}\PYG{n}{U}\PYG{p}{))}\PYG{o}{.\PYGZca{}}\PYG{l+m+mi}{6}
+\PYG{+w}{				}\PYG{p}{)}
+\PYG{+w}{			}\PYG{p}{)}\PYG{o}{.}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{U}
+\PYG{+w}{		}\PYG{n}{U}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{M}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{V}
+
+\PYG{+w}{		}\PYG{k}{if}\PYG{+w}{ }\PYG{n}{integrals\PYGZus{}flag}
+\PYG{+w}{			}\PYG{n}{I\PYGZus{}1}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{integral\PYGZus{}1}\PYG{p}{(}\PYG{n}{U}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}
+\PYG{+w}{			}\PYG{n}{I\PYGZus{}2}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{integral\PYGZus{}2}\PYG{p}{(}\PYG{n}{U}\PYG{p}{,}\PYG{n}{h}\PYG{p}{)}
+\PYG{+w}{		}\PYG{k}{end}
+\PYG{+w}{	}\PYG{k}{end}
+\PYG{+w}{	}\PYG{k}{return}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{x}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n}{t}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n}{capture\PYGZus{}times\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{n}{U\PYGZus{}set}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n}{U}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n}{filtration\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{?}
+\PYG{+w}{			}\PYG{p}{(}\PYG{n}{cumsum}\PYG{p}{(}\PYG{n}{I1\PYGZus{}dissipated}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{cumsum}\PYG{p}{(}\PYG{n}{I2\PYGZus{}dissipated}\PYG{p}{))}
+\PYG{+w}{			}\PYG{o}{:}
+\PYG{+w}{			}\PYG{p}{(}\PYG{n+nb}{nothing}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nb}{nothing}\PYG{p}{),}
+\PYG{+w}{		}\PYG{n}{tolerance\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{n}{tolerance}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n+nb}{nothing}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n}{integrals\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{I\PYGZus{}1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{I\PYGZus{}2}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nb}{nothing}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nb}{nothing}\PYG{p}{),}
+\PYG{+w}{	}\PYG{p}{)}
+\PYG{k}{end}
+\end{Verbatim}

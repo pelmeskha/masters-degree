@@ -1,0 +1,266 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{function}\PYG{+w}{ }\PYG{n}{construct\PYGZus{}approximate\PYGZus{}NSE\PYGZus{}3\PYGZus{}5\PYGZus{}solution}\PYG{p}{(}
+\PYG{+w}{	}\PYG{n}{x\PYGZus{}grid}\PYG{o}{::}\PYG{k+kt}{Vector}\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZlt{}:}\PYG{k+kt}{Real}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{n}{h}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{U}\PYG{o}{::}\PYG{k+kt}{Union}\PYG{p}{\PYGZob{}}\PYG{k+kt}{Vector}\PYG{p}{\PYGZob{}}\PYG{k+kt}{ComplexF64}\PYG{p}{\PYGZcb{},}\PYG{k+kt}{Vector}\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZlt{}:}\PYG{k+kt}{Real}\PYG{p}{\PYGZcb{}\PYGZcb{},}
+\PYG{+w}{	}\PYG{n}{epsilon\PYGZus{}2}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{L}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{false}\PYG{p}{,}
+\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{abs\PYGZus{}U}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{abs}\PYG{o}{.}\PYG{p}{(}\PYG{n}{U}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Индекс максимума исходного решения: }\PYG{l+s+si}{\PYGZdl{}}\PYG{p}{(}\PYG{n}{argmax}\PYG{p}{(}\PYG{n}{abs\PYGZus{}U}\PYG{p}{))}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}
+
+\PYG{+w}{	}\PYG{c}{\PYGZsh{} Точное определение максимума (снижение сеточной погрешности}
+\PYG{+w}{	}\PYG{c}{\PYGZsh{} B\PYGZhy{}Сплайновой интерполяцией)}
+\PYG{+w}{	}\PYG{n}{N\PYGZus{}interpolation\PYGZus{}points}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{12}
+\PYG{+w}{	}\PYG{n}{bottom\PYGZus{}gap}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{find\PYGZus{}threshold}\PYG{p}{(}\PYG{n}{abs\PYGZus{}U}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{N\PYGZus{}interpolation\PYGZus{}points}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y\PYGZus{}reduced}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{n\PYGZus{}circ\PYGZus{}shift}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{shift\PYGZus{}pulse\PYGZus{}to\PYGZus{}center}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{x\PYGZus{}grid}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{abs\PYGZus{}U}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{y\PYGZus{}threshold}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{maximum}\PYG{p}{(}\PYG{n}{abs\PYGZus{}U}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{bottom\PYGZus{}gap}
+\PYG{+w}{	}\PYG{p}{)}
+
+\PYG{+w}{	}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Для центрирования импульс будет сдвинут \PYGZbs{}}
+\PYG{l+s}{		на }\PYG{l+s+si}{\PYGZdl{}n\PYGZus{}circ\PYGZus{}shift}\PYG{l+s}{ узлов\PYGZdq{}}\PYG{p}{)}
+
+\PYG{+w}{	}\PYG{n}{x\PYGZus{}range}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{round}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{digits}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{)}\PYG{o}{:}\PYG{n}{h}\PYG{o}{:}\PYG{n}{round}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{[}\PYG{k}{end}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{digits}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{spline\PYGZus{}interpolator}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{cubic\PYGZus{}spline\PYGZus{}interpolation}\PYG{p}{((}\PYG{n}{x\PYGZus{}range}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{y\PYGZus{}reduced}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{minimization\PYGZus{}function}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{xi}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{spline\PYGZus{}interpolator}\PYG{p}{(}\PYG{n}{xi}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{result}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{optimize}\PYG{p}{(}\PYG{n}{minimization\PYGZus{}function}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{minimum}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{maximum}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{))}
+\PYG{+w}{	}\PYG{n}{x\PYGZus{}max}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y\PYGZus{}max}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{result}\PYG{o}{.}\PYG{n}{minimizer}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{result}\PYG{o}{.}\PYG{n}{minimum}
+
+\PYG{+w}{	}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Солитон передвинут. Считается, что его \PYGZbs{}}
+\PYG{l+s}{		интерполированный максимум находится в точке x = }\PYG{l+s+si}{\PYGZdl{}x\PYGZus{}max}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Интерполированный максимум = }\PYG{l+s+si}{\PYGZdl{}y\PYGZus{}max}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}
+
+\PYG{+w}{	}\PYG{n}{k}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.0}
+\PYG{+w}{	}\PYG{n}{possible\PYGZus{}}\PYG{o}{?}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{epsilon\PYGZus{}2}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{y\PYGZus{}max}\PYG{o}{\PYGZca{}}\PYG{l+m+mi}{4}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{y\PYGZus{}max}\PYG{o}{\PYGZca{}}\PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{\PYGZus{}possible\PYGZus{}}\PYG{o}{?}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{possible\PYGZus{}}\PYG{o}{?}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mi}{4}
+\PYG{+w}{	}\PYG{n}{possible\PYGZus{}}\PYG{o}{?}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{\PYGZus{}possible\PYGZus{}}\PYG{o}{?}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{k}\PYG{o}{\PYGZca{}}\PYG{l+m+mi}{2}
+
+\PYG{+w}{	}\PYG{n}{shifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{abs}\PYG{o}{.}\PYG{p}{(}\PYG{n}{NSE\PYGZus{}3\PYGZus{}5\PYGZus{}soliton}\PYG{o}{.}
+\PYG{+w}{		}\PYG{p}{(}\PYG{n}{x\PYGZus{}grid}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{k}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{possible\PYGZus{}}\PYG{o}{?}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{epsilon\PYGZus{}2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{)}
+\PYG{+w}{	}\PYG{p}{)}
+
+\PYG{+w}{	}\PYG{c}{\PYGZsh{} x\PYGZhy{}coordinate correctrion}
+\PYG{+w}{	}\PYG{n}{bottom\PYGZus{}gap\PYGZus{}shifted}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{find\PYGZus{}threshold}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{shifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{N\PYGZus{}interpolation\PYGZus{}points}
+\PYG{+w}{	}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y\PYGZus{}reduced}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{shift\PYGZus{}pulse\PYGZus{}to\PYGZus{}center}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{x\PYGZus{}grid}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n}{shifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5}\PYG{p}{;}
+\PYG{+w}{		}\PYG{n}{y\PYGZus{}threshold}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{maximum}\PYG{p}{(}\PYG{n}{shifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{bottom\PYGZus{}gap\PYGZus{}shifted}
+\PYG{+w}{	}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{x\PYGZus{}range}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{round}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{digits}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{)}\PYG{o}{:}\PYG{n}{h}\PYG{o}{:}\PYG{n}{round}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{[}\PYG{k}{end}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{digits}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{spline\PYGZus{}interpolator}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{cubic\PYGZus{}spline\PYGZus{}interpolation}\PYG{p}{((}\PYG{n}{x\PYGZus{}range}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{y\PYGZus{}reduced}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{minimization\PYGZus{}function}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{xi}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{spline\PYGZus{}interpolator}\PYG{p}{(}\PYG{n}{xi}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{result}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{optimize}\PYG{p}{(}\PYG{n}{minimization\PYGZus{}function}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{minimum}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{maximum}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{))}
+\PYG{+w}{	}\PYG{n}{x\PYGZus{}max\PYGZus{}shifted}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{result}\PYG{o}{.}\PYG{n}{minimizer}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{result}\PYG{o}{.}\PYG{n}{minimum}
+\PYG{+w}{	}\PYG{n}{\PYGZus{}z\PYGZus{}0}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{n}{x\PYGZus{}max\PYGZus{}shifted}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{x\PYGZus{}max}\PYG{p}{)}
+
+\PYG{+w}{	}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Солитон построен, но теперь его интерполированный \PYGZbs{}}
+\PYG{l+s}{	максимум находится в точке x = }\PYG{l+s+si}{\PYGZdl{}x\PYGZus{}max\PYGZus{}shifted}\PYG{l+s}{. Переносим на }\PYG{l+s+si}{\PYGZdl{}\PYGZus{}z\PYGZus{}0}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}
+
+\PYG{+w}{	}\PYG{n}{possible\PYGZus{}solution\PYGZus{}3\PYGZus{}5}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{NSE\PYGZus{}3\PYGZus{}5\PYGZus{}soliton}\PYG{o}{.}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{k}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{possible\PYGZus{}}\PYG{o}{?}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{epsilon\PYGZus{}2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}z\PYGZus{}0}
+\PYG{+w}{	}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{deshifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{abs}\PYG{o}{.}\PYG{p}{(}\PYG{n}{possible\PYGZus{}solution\PYGZus{}3\PYGZus{}5}\PYG{o}{.}\PYG{p}{(}\PYG{n}{x\PYGZus{}grid}\PYG{p}{))}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{n}{debug\PYGZus{}flag}
+\PYG{+w}{		}\PYG{c}{\PYGZsh{} Проверяем что передвинули куда надо}
+\PYG{+w}{		}\PYG{n}{bottom\PYGZus{}gap\PYGZus{}deshifted}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{find\PYGZus{}threshold}\PYG{p}{(}
+\PYG{+w}{			}\PYG{n}{deshifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{N\PYGZus{}interpolation\PYGZus{}points}
+\PYG{+w}{		}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y\PYGZus{}reduced}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{shift\PYGZus{}pulse\PYGZus{}to\PYGZus{}center}\PYG{p}{(}
+\PYG{+w}{			}\PYG{n}{x\PYGZus{}grid}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n}{deshifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5}\PYG{p}{;}
+\PYG{+w}{			}\PYG{n}{y\PYGZus{}threshold}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{maximum}\PYG{p}{(}\PYG{n}{deshifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{bottom\PYGZus{}gap\PYGZus{}deshifted}
+\PYG{+w}{		}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{x\PYGZus{}range}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{round}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{digits}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{)}\PYG{o}{:}\PYG{n}{h}\PYG{o}{:}\PYG{n}{round}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{[}\PYG{k}{end}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{digits}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{spline\PYGZus{}interpolator}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{cubic\PYGZus{}spline\PYGZus{}interpolation}\PYG{p}{((}\PYG{n}{x\PYGZus{}range}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{y\PYGZus{}reduced}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{minimization\PYGZus{}function}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{xi}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{spline\PYGZus{}interpolator}\PYG{p}{(}\PYG{n}{xi}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{result}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{optimize}\PYG{p}{(}
+\PYG{+w}{			}\PYG{n}{minimization\PYGZus{}function}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{minimum}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{maximum}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{)}
+\PYG{+w}{		}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{x\PYGZus{}max\PYGZus{}deshifted}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{result}\PYG{o}{.}\PYG{n}{minimizer}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{result}\PYG{o}{.}\PYG{n}{minimum}
+\PYG{+w}{		}\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Солитон перестроен, и теперь его интерполированный максимум \PYGZbs{}}
+\PYG{l+s}{			находится в точке x = }\PYG{l+s+si}{\PYGZdl{}x\PYGZus{}max\PYGZus{}deshifted}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k}{end}
+\PYG{+w}{	}\PYG{k}{return}\PYG{+w}{ }\PYG{n}{circshift}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{possible\PYGZus{}solution\PYGZus{}3\PYGZus{}5}\PYG{o}{.}\PYG{p}{(}\PYG{n}{x\PYGZus{}grid}\PYG{p}{),}
+\PYG{+w}{		}\PYG{n}{argmax}\PYG{p}{(}\PYG{n}{abs\PYGZus{}U}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{argmax}\PYG{p}{(}\PYG{n}{deshifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5}\PYG{p}{)}
+\PYG{+w}{	}\PYG{p}{)}
+\PYG{k}{end}
+\PYG{k}{function}\PYG{+w}{ }\PYG{n}{construct\PYGZus{}approximate\PYGZus{}NSE\PYGZus{}3\PYGZus{}5\PYGZus{}7\PYGZus{}solution}\PYG{p}{(}
+\PYG{+w}{	}\PYG{n}{x\PYGZus{}grid}\PYG{o}{::}\PYG{k+kt}{Vector}\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZlt{}:}\PYG{k+kt}{Real}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{n}{h}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{abs\PYGZus{}U}\PYG{o}{::}\PYG{k+kt}{Vector}\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZlt{}:}\PYG{k+kt}{Real}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{n}{epsilon\PYGZus{}2}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{L}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{use\PYGZus{}M\PYGZus{}values}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{false}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{M0}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{use\PYGZus{}M1\PYGZus{}value}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{false}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{M1}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{false}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{warn\PYGZus{}ignore}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{false}\PYG{p}{,}
+\PYG{p}{)}
+
+\PYG{+w}{	}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Индекс максимума исходного решения: }\PYG{l+s+si}{\PYGZdl{}}\PYG{p}{(}\PYG{n}{argmax}\PYG{p}{(}\PYG{n}{abs\PYGZus{}U}\PYG{p}{))}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{\PYGZus{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y\PYGZus{}shifted}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{n\PYGZus{}circ\PYGZus{}shift}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{shift\PYGZus{}pulse\PYGZus{}to\PYGZus{}center}\PYG{p}{(}\PYG{n}{x\PYGZus{}grid}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{abs\PYGZus{}U}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Для центрирования импульс будет сдвинут\PYGZbs{}}
+\PYG{l+s}{		на }\PYG{l+s+si}{\PYGZdl{}n\PYGZus{}circ\PYGZus{}shift}\PYG{l+s}{ узлов\PYGZdq{}}\PYG{p}{)}
+
+\PYG{+w}{	}\PYG{c}{\PYGZsh{} Точное определение максимума (снижение сеточной погрешности}
+\PYG{+w}{	}\PYG{c}{\PYGZsh{} B\PYGZhy{}Сплайновой интерполяцией)}
+\PYG{+w}{	}\PYG{n}{N\PYGZus{}interpolation\PYGZus{}points}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{12}
+\PYG{+w}{	}\PYG{n}{bottom\PYGZus{}gap}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{find\PYGZus{}threshold}\PYG{p}{(}\PYG{n}{abs\PYGZus{}U}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{N\PYGZus{}interpolation\PYGZus{}points}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y\PYGZus{}reduced}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{shift\PYGZus{}pulse\PYGZus{}to\PYGZus{}center}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{x\PYGZus{}grid}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{abs\PYGZus{}U}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{y\PYGZus{}threshold}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{maximum}\PYG{p}{(}\PYG{n}{abs\PYGZus{}U}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{bottom\PYGZus{}gap}
+\PYG{+w}{	}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{x\PYGZus{}range}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{round}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{digits}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{)}\PYG{o}{:}\PYG{n}{h}\PYG{o}{:}\PYG{n}{round}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{[}\PYG{k}{end}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{digits}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{spline\PYGZus{}interpolator}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{cubic\PYGZus{}spline\PYGZus{}interpolation}\PYG{p}{((}\PYG{n}{x\PYGZus{}range}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{y\PYGZus{}reduced}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{minimization\PYGZus{}function}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{xi}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{spline\PYGZus{}interpolator}\PYG{p}{(}\PYG{n}{xi}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{result}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{optimize}\PYG{p}{(}\PYG{n}{minimization\PYGZus{}function}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{minimum}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{maximum}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{))}
+\PYG{+w}{	}\PYG{n}{x\PYGZus{}max}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y\PYGZus{}max}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{result}\PYG{o}{.}\PYG{n}{minimizer}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{result}\PYG{o}{.}\PYG{n}{minimum}
+\PYG{+w}{	}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Солитон передвинут. Считается, что его \PYGZbs{}}
+\PYG{l+s}{		интерполированный максимум находится в точке x = }\PYG{l+s+si}{\PYGZdl{}x\PYGZus{}max}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Интерполированный максимум = }\PYG{l+s+si}{\PYGZdl{}y\PYGZus{}max}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{n}{use\PYGZus{}M\PYGZus{}values}
+\PYG{+w}{		}\PYG{k}{if}\PYG{+w}{ }\PYG{o}{\PYGZti{}}\PYG{n}{use\PYGZus{}M1\PYGZus{}value}
+\PYG{+w}{			}\PYG{n}{M1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{y\PYGZus{}max}\PYG{o}{\PYGZca{}}\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{M0}\PYG{p}{)}
+\PYG{+w}{		}\PYG{k}{end}
+\PYG{+w}{		}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}M1 = }\PYG{l+s+si}{\PYGZdl{}M1}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{\PYGZus{}epsilon\PYGZus{}2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}epsilon}\PYG{o}{?}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}
+\PYG{+w}{	}\PYG{k}{else}
+\PYG{+w}{		}\PYG{n}{D}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{sqrt}\PYG{p}{(}\PYG{l+m+mi}{9}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{epsilon\PYGZus{}2}\PYG{o}{\PYGZca{}}\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{y\PYGZus{}max}\PYG{o}{\PYGZca{}}\PYG{l+m+mi}{4}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{6}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{y\PYGZus{}max}\PYG{o}{\PYGZca{}}\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{epsilon\PYGZus{}2}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{b}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{6}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{epsilon\PYGZus{}2}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{y\PYGZus{}max}\PYG{o}{\PYGZca{}}\PYG{l+m+mi}{2}
+\PYG{+w}{		}\PYG{n}{M0}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{b}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{D}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{epsilon\PYGZus{}2}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{M1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{y\PYGZus{}max}\PYG{o}{\PYGZca{}}\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{M0}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{\PYGZus{}epsilon\PYGZus{}2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}epsilon}\PYG{o}{?}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{M0\PYGZus{}M1\PYGZus{}to\PYGZus{}epsilon2\PYGZus{}epsilon3}\PYG{p}{(}\PYG{n}{M0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{M1}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Параметры подобраны для epsilon\PYGZus{}2 = \PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n}{\PYGZus{}epsilon\PYGZus{}2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}, epsilon? = \PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}epsilon}\PYG{o}{?}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k}{end}
+
+\PYG{+w}{	}\PYG{n}{interpolator}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{precompile\PYGZus{}NSE\PYGZus{}3\PYGZus{}5\PYGZus{}7\PYGZus{}soliton}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{\PYGZus{}epsilon\PYGZus{}2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}epsilon}\PYG{o}{?}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{L}\PYG{p}{;}
+\PYG{+w}{		}\PYG{n}{use\PYGZus{}M\PYGZus{}values}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{use\PYGZus{}M\PYGZus{}values}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{M\PYGZus{}0}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{M0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{M\PYGZus{}1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{M1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{warn\PYGZus{}ignore}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{warn\PYGZus{}ignore}
+\PYG{+w}{	}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{\PYGZus{}possible\PYGZus{}solution\PYGZus{}3\PYGZus{}5\PYGZus{}7}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{NSE\PYGZus{}3\PYGZus{}5\PYGZus{}7\PYGZus{}soliton}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{interpolator}
+\PYG{+w}{	}\PYG{p}{)}
+
+\PYG{+w}{	}\PYG{c}{\PYGZsh{} x\PYGZhy{}coordinate correctrion}
+\PYG{+w}{	}\PYG{n}{shifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5\PYGZus{}7}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{abs}\PYG{o}{.}\PYG{p}{(}\PYG{n}{\PYGZus{}possible\PYGZus{}solution\PYGZus{}3\PYGZus{}5\PYGZus{}7}\PYG{o}{.}\PYG{p}{(}\PYG{n}{x\PYGZus{}grid}\PYG{p}{))}
+\PYG{+w}{	}\PYG{n}{bottom\PYGZus{}gap\PYGZus{}shifted}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{find\PYGZus{}threshold}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{shifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5\PYGZus{}7}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{N\PYGZus{}interpolation\PYGZus{}points}
+\PYG{+w}{	}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y\PYGZus{}reduced}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{shift\PYGZus{}pulse\PYGZus{}to\PYGZus{}center}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{x\PYGZus{}grid}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n}{shifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5\PYGZus{}7}\PYG{p}{;}
+\PYG{+w}{		}\PYG{n}{y\PYGZus{}threshold}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{maximum}\PYG{p}{(}\PYG{n}{shifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5\PYGZus{}7}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{bottom\PYGZus{}gap\PYGZus{}shifted}
+\PYG{+w}{	}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{x\PYGZus{}range}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{round}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{digits}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{)}\PYG{o}{:}\PYG{n}{h}\PYG{o}{:}\PYG{n}{round}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{[}\PYG{k}{end}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{digits}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{spline\PYGZus{}interpolator}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{cubic\PYGZus{}spline\PYGZus{}interpolation}\PYG{p}{((}\PYG{n}{x\PYGZus{}range}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{y\PYGZus{}reduced}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{minimization\PYGZus{}function}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{xi}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{spline\PYGZus{}interpolator}\PYG{p}{(}\PYG{n}{xi}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{result}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{optimize}\PYG{p}{(}\PYG{n}{minimization\PYGZus{}function}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{minimum}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{maximum}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{))}
+\PYG{+w}{	}\PYG{n}{x\PYGZus{}max\PYGZus{}shifted}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{result}\PYG{o}{.}\PYG{n}{minimizer}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{result}\PYG{o}{.}\PYG{n}{minimum}
+\PYG{+w}{	}\PYG{n}{\PYGZus{}z\PYGZus{}0}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{n}{x\PYGZus{}max\PYGZus{}shifted}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{x\PYGZus{}max}\PYG{p}{)}
+
+\PYG{+w}{	}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Солитон построен, но теперь его интерполированный\PYGZbs{}}
+\PYG{l+s}{	максимум находится в точке x = }\PYG{l+s+si}{\PYGZdl{}x\PYGZus{}max\PYGZus{}shifted}\PYG{l+s}{. Переносим на }\PYG{l+s+si}{\PYGZdl{}\PYGZus{}z\PYGZus{}0}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}
+
+\PYG{+w}{	}\PYG{n}{interpolator}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{precompile\PYGZus{}NSE\PYGZus{}3\PYGZus{}5\PYGZus{}7\PYGZus{}soliton}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{\PYGZus{}epsilon\PYGZus{}2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}epsilon}\PYG{o}{?}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{L}\PYG{p}{;}
+\PYG{+w}{		}\PYG{n}{use\PYGZus{}M\PYGZus{}values}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{use\PYGZus{}M\PYGZus{}values}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{M\PYGZus{}0}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{M0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{M\PYGZus{}1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{M1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{warn\PYGZus{}ignore}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{warn\PYGZus{}ignore}
+\PYG{+w}{	}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{possible\PYGZus{}solution\PYGZus{}3\PYGZus{}5\PYGZus{}7}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{NSE\PYGZus{}3\PYGZus{}5\PYGZus{}7\PYGZus{}soliton}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}z\PYGZus{}0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{interpolator}
+\PYG{+w}{	}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{deshifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5\PYGZus{}7}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{abs}\PYG{o}{.}\PYG{p}{(}\PYG{n}{possible\PYGZus{}solution\PYGZus{}3\PYGZus{}5\PYGZus{}7}\PYG{o}{.}\PYG{p}{(}\PYG{n}{x\PYGZus{}grid}\PYG{p}{))}
+
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{n}{debug\PYGZus{}flag}
+\PYG{+w}{		}\PYG{c}{\PYGZsh{} Проверяем что передвинули куда надо}
+\PYG{+w}{		}\PYG{n}{bottom\PYGZus{}gap\PYGZus{}deshifted}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{find\PYGZus{}threshold}\PYG{p}{(}
+\PYG{+w}{			}\PYG{n}{deshifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5\PYGZus{}7}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n}{N\PYGZus{}interpolation\PYGZus{}points}
+\PYG{+w}{		}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y\PYGZus{}reduced}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{shift\PYGZus{}pulse\PYGZus{}to\PYGZus{}center}\PYG{p}{(}
+\PYG{+w}{			}\PYG{n}{x\PYGZus{}grid}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n}{deshifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5\PYGZus{}7}\PYG{p}{;}
+\PYG{+w}{			}\PYG{n}{y\PYGZus{}threshold}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{maximum}\PYG{p}{(}\PYG{n}{deshifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5\PYGZus{}7}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{bottom\PYGZus{}gap\PYGZus{}deshifted}
+\PYG{+w}{		}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{x\PYGZus{}range}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{round}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{digits}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{)}\PYG{o}{:}\PYG{n}{h}\PYG{o}{:}\PYG{n}{round}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{[}\PYG{k}{end}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{digits}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{spline\PYGZus{}interpolator}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{cubic\PYGZus{}spline\PYGZus{}interpolation}\PYG{p}{((}\PYG{n}{x\PYGZus{}range}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{y\PYGZus{}reduced}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{minimization\PYGZus{}function}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{xi}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{spline\PYGZus{}interpolator}\PYG{p}{(}\PYG{n}{xi}\PYG{p}{)}
+\PYG{+w}{		}\PYG{n}{result}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{optimize}\PYG{p}{(}\PYG{n}{minimization\PYGZus{}function}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{minimum}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{maximum}\PYG{p}{(}\PYG{n}{x\PYGZus{}reduced}\PYG{p}{))}
+\PYG{+w}{		}\PYG{n}{x\PYGZus{}max\PYGZus{}deshifted}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{result}\PYG{o}{.}\PYG{n}{minimizer}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{result}\PYG{o}{.}\PYG{n}{minimum}
+\PYG{+w}{		}\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Солитон перестроен, и теперь его интерполированный максимум\PYGZbs{}}
+\PYG{l+s}{			находится в точке x = }\PYG{l+s+si}{\PYGZdl{}x\PYGZus{}max\PYGZus{}deshifted}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k}{end}
+
+\PYG{+w}{	}\PYG{k}{return}\PYG{+w}{ }\PYG{n}{circshift}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{possible\PYGZus{}solution\PYGZus{}3\PYGZus{}5\PYGZus{}7}\PYG{o}{.}\PYG{p}{(}\PYG{n}{x\PYGZus{}grid}\PYG{p}{),}
+\PYG{+w}{		}\PYG{n}{argmax}\PYG{p}{(}\PYG{n}{abs\PYGZus{}U}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{argmax}\PYG{p}{(}\PYG{n}{deshifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5\PYGZus{}7}\PYG{p}{)}
+\PYG{+w}{	}\PYG{p}{)}
+\PYG{+w}{	}\PYG{c}{\PYGZsh{}\PYGZhy{}argmax(deshifted\PYGZus{}grid\PYGZus{}solution\PYGZus{}3\PYGZus{}5\PYGZus{}7)}
+\PYG{k}{end}
+\PYG{k}{function}\PYG{+w}{ }\PYG{n}{argmin\PYGZus{}observed\PYGZus{}change}\PYG{p}{(}\PYG{n}{old\PYGZus{}index}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{vector}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{false}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{new\PYGZus{}index}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{argmin}\PYG{p}{(}\PYG{n}{vector}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}был индекс }\PYG{l+s+si}{\PYGZdl{}old\PYGZus{}index}\PYG{l+s}{, стал индекс }\PYG{l+s+si}{\PYGZdl{}new\PYGZus{}index}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k}{return}\PYG{+w}{ }\PYG{n}{new\PYGZus{}index}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{old\PYGZus{}index}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{new\PYGZus{}index}
+\PYG{k}{end}
+\PYG{c}{\PYGZsh{} Улучшенная по точности, но более медленная функция подбора аналитического решения.}
+\PYG{k}{function}\PYG{+w}{ }\PYG{n}{construct\PYGZus{}best\PYGZus{}approximate\PYGZus{}NSE\PYGZus{}3\PYGZus{}5\PYGZus{}7\PYGZus{}solution}\PYG{p}{(}
+\PYG{+w}{	}\PYG{n}{x\PYGZus{}grid}\PYG{o}{::}\PYG{k+kt}{Vector}\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZlt{}:}\PYG{k+kt}{Real}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{n}{h}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{abs\PYGZus{}U}\PYG{o}{::}\PYG{k+kt}{Vector}\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZlt{}:}\PYG{k+kt}{Real}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{n}{L}\PYG{o}{::}\PYG{k+kt}{Real}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{M0\PYGZus{}initial}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{M0\PYGZus{}gap}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{1.0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{M0\PYGZus{}h}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.5}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{false}\PYG{p}{,}
+\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{y\PYGZus{}max}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{maximum}\PYG{p}{(}\PYG{n}{abs\PYGZus{}U}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{M0\PYGZus{}vector\PYGZus{}length}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{div}\PYG{p}{(}\PYG{n}{M0\PYGZus{}gap}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{M0\PYGZus{}h}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{construction\PYGZus{}function}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{M0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{M1}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{abs}\PYG{o}{.}\PYG{p}{(}\PYG{n}{construct\PYGZus{}approximate\PYGZus{}NSE\PYGZus{}3\PYGZus{}5\PYGZus{}7\PYGZus{}solution}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{x\PYGZus{}grid}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{h}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{abs\PYGZus{}U}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{L}\PYG{p}{;}
+\PYG{+w}{		}\PYG{n}{use\PYGZus{}M\PYGZus{}values}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{true}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{M0}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{M0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{use\PYGZus{}M1\PYGZus{}value}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{true}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{M1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{M1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{warn\PYGZus{}ignore}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{true}\PYG{p}{,}
+\PYG{+w}{	}\PYG{p}{))}
+\PYG{+w}{	}\PYG{n}{error\PYGZus{}function}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{soliton}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{relative\PYGZus{}error\PYGZus{}to\PYGZus{}amplitude}\PYG{p}{(}\PYG{n}{abs\PYGZus{}U}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{soliton}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{middle\PYGZus{}index}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kt}{Int}\PYG{p}{(}\PYG{n}{div}\PYG{p}{(}\PYG{n}{M0\PYGZus{}gap}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{M0\PYGZus{}h}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}
+
+\PYG{+w}{	}\PYG{n}{error\PYGZus{}argmin}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}
+\PYG{+w}{	}\PYG{n}{solutions\PYGZus{}with\PYGZus{}same\PYGZus{}amplitude}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kt}{Vector}\PYG{p}{\PYGZob{}}\PYG{k+kt}{Float64}\PYG{p}{\PYGZcb{}([])}
+
+\PYG{+w}{	}\PYG{k}{for}\PYG{+w}{ }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{o}{:}\PYG{l+m+mi}{6}\PYG{+w}{ }\PYG{c}{\PYGZsh{} Целевое количество шагов дихотомии}
+\PYG{+w}{		}\PYG{n}{stop\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{false}
+\PYG{+w}{		}\PYG{k}{while}\PYG{+w}{ }\PYG{o}{\PYGZti{}}\PYG{n}{stop\PYGZus{}flag}
+\PYG{+w}{			}\PYG{n}{M0\PYGZus{}vector}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{round}\PYG{o}{.}\PYG{p}{(}\PYG{n}{collect}\PYG{p}{(}
+\PYG{+w}{				}\PYG{n}{M0\PYGZus{}initial}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{M0\PYGZus{}vector\PYGZus{}length}\PYG{o}{*}\PYG{n}{M0\PYGZus{}h}\PYG{o}{:}\PYG{n}{M0\PYGZus{}h}\PYG{l+s+ss}{:M0\PYGZus{}initial}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{M0\PYGZus{}vector\PYGZus{}length}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{M0\PYGZus{}h}
+\PYG{+w}{			}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{digits}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{)}
+
+\PYG{+w}{			}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Массив поиска: \PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{M0\PYGZus{}vector}\PYG{p}{)}
+
+\PYG{+w}{			}\PYG{n}{M0\PYGZus{}vector}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{filter}\PYG{p}{(}\PYG{n}{x}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{M0\PYGZus{}vector}\PYG{p}{)}
+\PYG{+w}{			}\PYG{n}{M1\PYGZus{}vector}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{+w}{ }\PYG{o}{.*}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{y\PYGZus{}max}\PYG{o}{\PYGZca{}}\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{o}{.\PYGZhy{}}\PYG{+w}{ }\PYG{n}{M0\PYGZus{}vector}\PYG{p}{)}
+\PYG{+w}{			}\PYG{n}{solutions\PYGZus{}with\PYGZus{}same\PYGZus{}amplitude}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{construction\PYGZus{}function}\PYG{o}{.}\PYG{p}{(}
+\PYG{+w}{				}\PYG{n}{M0\PYGZus{}vector}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{M1\PYGZus{}vector}
+\PYG{+w}{			}\PYG{p}{)}
+\PYG{+w}{			}\PYG{n}{errors}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{error\PYGZus{}function}\PYG{o}{.}\PYG{p}{(}\PYG{n}{solutions\PYGZus{}with\PYGZus{}same\PYGZus{}amplitude}\PYG{p}{)}
+\PYG{+w}{			}\PYG{n}{error\PYGZus{}argmin}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{stop\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{argmin\PYGZus{}observed\PYGZus{}change}\PYG{p}{(}
+\PYG{+w}{				}\PYG{n}{middle\PYGZus{}index}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{errors}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{debug\PYGZus{}flag}
+\PYG{+w}{			}\PYG{p}{)}
+
+\PYG{+w}{			}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{n}{errors}\PYG{p}{)}
+\PYG{+w}{			}\PYG{n}{stop\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{				}\PYG{n}{M0\PYGZus{}initial}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{M0\PYGZus{}vector}\PYG{p}{[}\PYG{n}{error\PYGZus{}argmin}\PYG{p}{];}
+\PYG{+w}{				}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Останавливатся рано. Перемещаемся на }\PYG{l+s+si}{\PYGZdl{}M0\PYGZus{}initial}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{			}\PYG{p}{)}
+\PYG{+w}{			}\PYG{n}{stop\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{				}\PYG{n}{M0\PYGZus{}initial}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{M0\PYGZus{}vector}\PYG{p}{[}\PYG{n}{error\PYGZus{}argmin}\PYG{p}{];}
+\PYG{+w}{				}\PYG{n}{M0\PYGZus{}h}\PYG{+w}{ }\PYG{o}{/=}\PYG{+w}{ }\PYG{n}{M0\PYGZus{}vector\PYGZus{}length}\PYG{p}{;}
+\PYG{+w}{				}\PYG{n}{debug\PYGZus{}flag}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Достигли равновесия, уменьшаем шаг.\PYGZbs{}}
+\PYG{l+s}{					Теперь M0\PYGZus{}initial = }\PYG{l+s+si}{\PYGZdl{}M0\PYGZus{}initial}\PYG{l+s}{, M0\PYGZus{}h = }\PYG{l+s+si}{\PYGZdl{}M0\PYGZus{}h}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{			}\PYG{p}{)}
+\PYG{+w}{		}\PYG{k}{end}
+\PYG{+w}{	}\PYG{k}{end}
+\PYG{+w}{	}\PYG{k}{return}\PYG{+w}{ }\PYG{n}{solutions\PYGZus{}with\PYGZus{}same\PYGZus{}amplitude}\PYG{p}{[}\PYG{n}{error\PYGZus{}argmin}\PYG{p}{]}
+\PYG{k}{end}
+\end{Verbatim}

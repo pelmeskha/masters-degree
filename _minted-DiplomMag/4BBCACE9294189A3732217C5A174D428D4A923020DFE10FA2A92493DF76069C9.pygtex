@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{function}\PYG{+w}{ }\PYG{n}{integral\PYGZus{}2}\PYG{p}{(}
+\PYG{+w}{	}\PYG{n}{U}\PYG{o}{::}\PYG{k+kt}{Union}\PYG{p}{\PYGZob{}}\PYG{k+kt}{Vector}\PYG{p}{\PYGZob{}}\PYG{k+kt}{ComplexF64}\PYG{p}{\PYGZcb{},}\PYG{+w}{ }\PYG{k+kt}{Vector}\PYG{p}{\PYGZob{}}\PYG{k+kt}{Float64}\PYG{p}{\PYGZcb{}\PYGZcb{},}
+\PYG{+w}{	}\PYG{n}{h}\PYG{o}{::}\PYG{k+kt}{Float64}\PYG{p}{,}
+\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{dU}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[(}\PYG{n}{U}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{U}\PYG{p}{[}\PYG{k}{end}\PYG{p}{]),}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{U}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{o}{:}\PYG{k}{end}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{U}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{o}{:}\PYG{k}{end}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{])}\PYG{o}{...}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{U}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{U}\PYG{p}{[}\PYG{k}{end}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{])]}\PYG{o}{./}\PYG{p}{(}\PYG{l+m+mf}{2.0}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{h}\PYG{p}{)}
+\PYG{+w}{	}\PYG{n}{dU\PYGZus{}dx}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{dU}\PYG{o}{./}\PYG{p}{(}\PYG{n}{ones}\PYG{p}{(}\PYG{n}{length}\PYG{p}{(}\PYG{n}{U}\PYG{p}{))}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{h}\PYG{p}{)}
+
+\PYG{+w}{	}\PYG{k}{return}\PYG{+w}{ }\PYG{n}{real}\PYG{p}{(}
+\PYG{+w}{		}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{n+nb}{im}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{h}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{sum}\PYG{p}{(}
+\PYG{+w}{			}\PYG{n}{dU\PYGZus{}dx}\PYG{+w}{ }\PYG{o}{.*}\PYG{+w}{ }\PYG{n}{conj}\PYG{p}{(}\PYG{n}{U}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{.\PYGZhy{}}\PYG{+w}{ }\PYG{n}{U}\PYG{+w}{ }\PYG{o}{.*}\PYG{+w}{ }\PYG{n}{conj}\PYG{p}{(}\PYG{n}{dU\PYGZus{}dx}\PYG{p}{)}
+\PYG{+w}{		}\PYG{p}{)}
+\PYG{+w}{	}\PYG{p}{)}
+\PYG{k}{end}
+\end{Verbatim}
